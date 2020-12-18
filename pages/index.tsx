@@ -3,6 +3,7 @@ import { RootState } from '../redux/types'
 import { connect, ConnectedProps } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { ApplicationActions } from '../redux/states/ApplicationState/ApplicationSlice'
+import Layout from '../components/Layout'
 
 export const firebase_config = {
 	apiKey: 'AIzaSyBh2o3MomQpCFYdxLX_cOILJRsrh82HPrk',
@@ -31,7 +32,7 @@ class HomePage extends React.Component<PropsFromRedux & {}> {
 	}
 
 	render() {
-		return <div>Welcome to Next.js!</div>
+		return <Layout>{/* pass props */}</Layout>
 	}
 }
 
