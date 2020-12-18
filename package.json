@@ -6,6 +6,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
+		"postbuild": "next-sitemap --config sitemap_config.js",
 		"start": "next start"
 	},
 	"repository": {
@@ -24,6 +25,7 @@
 		"@types/react-redux": "^7.1.12",
 		"@types/redux-logger": "^3.0.8",
 		"husky": "^4.3.6",
+		"next-sitemap": "^1.3.16",
 		"prettier": "^2.2.1",
 		"pretty-quick": "^3.1.0",
 		"typescript": "^4.1.3"
