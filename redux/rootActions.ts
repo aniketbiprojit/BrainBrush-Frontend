@@ -1,4 +1,4 @@
-import { ApplicationActions } from './states/ApplicationState/ApplicationSlics'
+import { ApplicationActions } from './states/ApplicationState/ApplicationSlice'
 
 export default {
 	ApplicationActions: ApplicationActions,
