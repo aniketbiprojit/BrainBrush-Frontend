@@ -1,6 +1,5 @@
 import firebase from 'firebase'
 import React, { Component, Fragment } from 'react'
-import { firebase_config } from '..'
 
 interface ILoginProps {}
 
@@ -13,11 +12,7 @@ export default class Login extends Component<ILoginProps, ILoginState> {
 		super(props)
 	}
 
-	componentDidMount() {
-		if (firebase.apps.length === 0) {
-			firebase.initializeApp(firebase_config)
-		}
-	}
+	componentDidMount() {}
 
 	state = {
 		displayName: '',
@@ -36,7 +31,7 @@ export default class Login extends Component<ILoginProps, ILoginState> {
 							this.setState({ displayName })
 						}}
 					>
-						Login
+						Google Login
 					</h1>
 				</a>
 				<br />
