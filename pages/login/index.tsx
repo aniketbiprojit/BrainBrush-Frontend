@@ -1,5 +1,10 @@
 import firebase from 'firebase'
+import { connect } from 'react-redux'
 import React, { Component, Fragment } from 'react'
+import { ConnectedProps } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { ApplicationActions } from '../../redux/states/ApplicationState/ApplicationSlice'
+import { RootState } from '../../redux/types'
 
 interface ILoginProps {}
 
@@ -7,12 +12,26 @@ interface ILoginState {
 	displayName: String
 }
 
-export default class Login extends Component<ILoginProps, ILoginState> {
-	constructor(props: ILoginProps) {
+const mapStateToProps = (state: RootState) => ({
+	ApplicationState: state.ApplicationState,
+})
+
+const dispatchProps = (dispatch) => bindActionCreators({ updateLogin: ApplicationActions.updateLogInStatus }, dispatch)
+
+const connector = connect(mapStateToProps, dispatchProps)
+
+type PropsFromRedux = ConnectedProps<typeof connector>
+
+type CombinedProps = ILoginProps & PropsFromRedux
+
+class Login extends Component<CombinedProps, ILoginState> {
+	constructor(props: CombinedProps) {
 		super(props)
 	}
 
-	componentDidMount() {}
+	componentDidMount() {
+		console.log(this.props.ApplicationState)
+	}
 
 	state = {
 		displayName: '',
@@ -40,3 +59,5 @@ export default class Login extends Component<ILoginProps, ILoginState> {
 		)
 	}
 }
+
+export default connector(Login)
