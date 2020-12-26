@@ -5,4 +5,9 @@
 
 .navbar a {
     color: white;
+    font-weight: 300;
+}
+
+a.navbar-brand {
+    font-weight: 600;
 }

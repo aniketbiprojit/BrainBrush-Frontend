@@ -7,7 +7,6 @@ const Layout = (props) => (
 			<title>BrainBrush</title>
 		</Head>
 		<Navbar />
-		<div className='disclaimer container h4'>placeholder css at the moment.</div>
 		{/* {props.children} */}
 	</div>
 )
