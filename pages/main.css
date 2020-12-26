@@ -1,0 +1,262 @@
+/** MAIN *** Keep Utilities used site-wide
+ *
+ * USE CSS MODULES FOR PAGE SPECIFIC CSS
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    font-family: 'Poppins', sans-serif;
+
+    --primary-color: #1D3557;
+    --primary-color-alt: #457B9D;
+    --primary-color-light: #A8DADC;
+
+    --secondary-color: #0496FF;
+    --secondary-color-alt: #FE6D73;
+    --secondary-color-light: #3FA7D6;
+    --secondary-color-highlight: #FFC327;
+
+    --white: #EAEAEA;
+    --black: #000; 
+
+    --grey: #333;
+    --white-pure: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+	text-decoration: none;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/* BIG HEADER */
+.h1 {
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* BIG HEADER */
+.h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* ---- GRIDS AND FLEX ---- */
+
+.flex {
+	/* time to flex :) */
+	display: flex;
+
+	/* moves boxes to center (main-axis: defined by flex direction) */
+	justify-content: center;
+
+	/* aligns items vertically (cross-axis: defined by flex direction) */
+	align-items: center;
+
+	/* fit container */
+	height: 100%;
+}
+
+.grid {
+	display: grid;
+
+	/* divide space in fractions for each child within container */
+	/* repeat(2, 1fr) == 1fr 1fr */
+	grid-template-columns: repeat(2, 1fr);
+
+	/* space between grid items */
+	gap: 20px;
+
+	/* center items */
+	justify-content: center;
+	align-items: center;
+
+	/* fit grid to container */
+	height: 100%;
+}
+
+.grid-3 {
+	/* 3 items in one row */
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+	/* 4 items in one row */
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5 {
+	/* 5 items in one row */
+	grid-template-columns: repeat(5, 1fr);
+}
+
+/* ---- TEXT COLORS ---- */
+
+.text-primary {
+	color: var(--primary-color);
+}
+
+.text-secondary {
+	color: var(--secondary-color);
+}
+
+.text-dark {
+	color: var(--dark-color);
+}
+
+.text-light {
+	color: var(--light-color);
+}
+
+/* ---- END OF TEXT COLORS ---- */
+
+/* ---- TEXT SIZES ---- */
+
+.lead {
+	font-size: 20px;
+}
+
+.sm {
+	font-size: 1rem;
+}
+
+.rg {
+	font-size: 1.25rem;
+}
+
+.md {
+	font-size: 2rem;
+}
+
+.lg {
+	font-size: 3rem;
+}
+
+.xl {
+	font-size: 4rem;
+}
+
+.xxl {
+	font-size: 8rem;
+}
+
+/* ---- END OF TEXT SIZES ---- */
+
+/* ---- MARGINS ---- */
+
+/* rem base unit 16px */
+
+.no-mg {
+	margin: 0 0;
+}
+
+.my-1 {
+	margin: 1rem 0;
+}
+
+.my-2 {
+	margin: 1.5rem 0;
+}
+
+.my-3 {
+	margin: 2rem 0;
+}
+
+.my-4 {
+	margin: 3rem 0;
+}
+
+.my-5 {
+	margin: 4rem 0;
+}
+
+.my-10 {
+	margin: 8rem 0;
+}
+
+.myt-10 {
+	margin: 8rem 0 0 0;
+}
+
+.my-15 {
+	margin: 12rem 0;
+}
+
+.m-1 {
+	margin: 1rem;
+}
+
+.m-2 {
+	margin: 1.5rem;
+}
+
+.m-3 {
+	margin: 2rem;
+}
+
+.m-4 {
+	margin: 3rem;
+}
+
+.m-5 {
+	margin: 4rem;
+}
+
+/* ---- END OF MARGINS ---- */
+
+/* ---- PADDINGS ---- */
+
+.no-pad {
+	padding: 0 0;
+}
+
+.py-1 {
+	padding: 1rem 0;
+}
+
+.py-2 {
+	padding: 1.5rem 0;
+}
+
+.py-3 {
+	padding: 2rem 0;
+}
+
+.py-4 {
+	padding: 3rem 0;
+}
+
+.py-5 {
+	padding: 4rem 0;
+}
+
+.p-1 {
+	padding: 1rem;
+}
+
+.p-2 {
+	padding: 1.5rem;
+}
+
+.p-3 {
+	padding: 2rem;
+}
+
+.p-4 {
+	padding: 3rem;
+}
+
+.p-5 {
+	padding: 4rem;
+}
+
+/* ---- END OF PADDINGS ---- */

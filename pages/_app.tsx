@@ -7,6 +7,8 @@ import store from '../redux/store'
 
 import { Provider } from 'react-redux'
 
+import './main.css'
+
 export default function App({ Component, pageProps }: AppProps) {
 	useEffect(() => {
 		if (firebase.apps.length === 0) {
