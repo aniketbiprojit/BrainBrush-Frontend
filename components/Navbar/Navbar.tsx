@@ -5,12 +5,12 @@ import styles from './Navbar.module.css'
 const Navbar = () => (
 	<div className='container'>
 		<nav className={styles.navbar}>
-			<div className='container'>
-				<a href='#' className='navbar-brand'>
+			<div className='container grid'>
+				<a href='#' className='navbar-brand m-2'>
 					BrainBrush
-			</a>
-				<div className='collapse navbar-collapse'>
-					<ul className='navbar-nav ml-auto'>
+			    </a>
+				<div className='nav-buttons'>
+					<ul className='grid grid-4'>
 						<li className='nav-item'>
 							<Link href='#home'>
 								<a className='nav-link'>Home</a>
