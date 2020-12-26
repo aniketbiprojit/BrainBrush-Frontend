@@ -43,11 +43,48 @@
     color: var(--primary-color);
 }
 
-/* BIG HEADER */
+/* SUB HEADER */
 .h2 {
     font-size: 36px;
     font-weight: 500;
+    color: var(--secondary-color-light);
+}
+
+/* HEADER */
+.h3 {
+    font-size: 24px;
+    font-weight: 500;
     color: var(--primary-color);
+}
+
+/* Paragraph */
+p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--grey);
+}
+
+/* Sub Text */
+.stext {
+    font-size: 14px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--primary-color-light);
+}
+
+/* Quote Text */
+.qtext {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--secondary-color-alt);
+}
+
+/* Link */
+a {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black);
 }
 
 /* ---- GRIDS AND FLEX ---- */
