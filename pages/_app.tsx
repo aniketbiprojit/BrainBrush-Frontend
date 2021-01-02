@@ -7,7 +7,8 @@ import store from '../redux/store'
 
 import { Provider } from 'react-redux'
 
-import './main.css'
+// import "tailwindcss/tailwind.css";
+import '../styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
 	useEffect(() => {

@@ -1,0 +1,101 @@
+/** MAIN *** Keep Utilities used site-wide
+ *
+ * USE CSS MODULES FOR PAGE SPECIFIC CSS
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+:root {
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+
+	list-style-type: none;
+	text-decoration: none;
+}
+
+/* BIG HEADER */
+.h1 {
+	font-size: 48px;
+	font-weight: 500;
+	color: var(--primary-color);
+}
+
+/* SUB HEADER */
+.h2 {
+	font-size: 36px;
+	font-weight: 500;
+	color: var(--secondary-color-light);
+}
+
+/* HEADER */
+.h3 {
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--primary-color);
+}
+
+/* Paragraph */
+p {
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--grey);
+}
+
+/* Sub Text */
+.stext {
+	font-size: 14px;
+	font-weight: 700;
+	font-style: italic;
+	color: var(--primary-color-light);
+}
+
+/* Quote Text */
+.qtext {
+	font-size: 18px;
+	font-weight: 500;
+	font-style: italic;
+	color: var(--secondary-color-alt);
+}
+
+/* Link */
+a {
+	font-size: 16px;
+	font-weight: 300;
+	color: var(--black);
+}
+
+/* ---- TEXT COLORS ---- */
+
+.text-primary {
+	color: var(--primary-color);
+}
+
+.text-secondary {
+	color: var(--secondary-color);
+}
+
+.text-dark {
+	color: var(--dark-color);
+}
+
+.text-light {
+	color: var(--light-color);
+}
+
+/* ---- END OF TEXT COLORS ---- */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
