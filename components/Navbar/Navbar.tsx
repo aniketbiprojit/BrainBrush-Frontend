@@ -11,19 +11,19 @@ const Navbar = () => (
 		<ul className='bg-primary flex items-center justify-between p-8'>
 			<li>
 				<Link href='/'>
-					<a className='text-white no-underline'>Brainbrush</a>
+					<a className='text-white font-semibold no-underline'>Brainbrush</a>
 				</Link>
 			</li>
-			<ul className='flex items-center justify-between space-x-4'>
+			<ul className='flex items-center justify-between space-x-5'>
 				{links.map(({ href, label }) => (
 					<li key={`${href}${label}`}>
-						<a href={href} className='text-white no-underline btn-blue'>
+						<a href={href} className='text-white no-underline'>
 							{label}
 						</a>
 					</li>
 				))}
 				<li>
-					<a href='#' className='text-white no-underline btn-blue'>
+					<a href='#' className='text-white bg-secondary-light py-2 px-4 rounded'>
 						Login
 					</a>
 				</li>
