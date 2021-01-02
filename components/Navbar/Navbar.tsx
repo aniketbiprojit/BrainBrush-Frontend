@@ -1,5 +1,8 @@
 import Link from 'next/link'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
 const links = [
 	{ href: '#', label: 'Home' },
 	{ href: '#', label: 'Companies' },
@@ -9,15 +12,19 @@ const links = [
 const Navbar = () => (
 	<nav>
 		<ul className='bg-primary flex items-center justify-between p-8'>
+
+			{/* LOGO */}
 			<li>
 				<Link href='/'>
 					<a className='text-white font-semibold no-underline'>Brainbrush</a>
 				</Link>
 			</li>
+
+			{/* SEARCH BAR */}
 			<div className='relative flex w-full sm:w-7/12 md:w-5/12 px-4 flex-wrap items-stretch lg:ml-auto'>
 				<div className='flex'>
 					<span className='font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-black rounded-full text-sm bg-white items-center rounded-r-none pl-2 py-1 text-black border-r-0 placeholder-primary'>
-						<i className='fas fa-search'></i>
+					<FontAwesomeIcon icon={faSearch} />
 					</span>
 				</div>
 				<input
@@ -26,6 +33,8 @@ const Navbar = () => (
 					placeholder='Search for forcasts, reports ...'
 				/>
 			</div>
+
+			{/* BUTTONS */}
 			<ul className='flex items-center justify-between space-x-5'>
 				{links.map(({ href, label }) => (
 					<li key={`${href}${label}`}>
