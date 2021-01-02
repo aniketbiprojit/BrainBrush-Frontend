@@ -7,8 +7,6 @@
 
 @tailwind base;
 
-/* Write your own custom base styles here */
-
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
@@ -71,6 +69,10 @@ p {
 a {
 	font-size: 16px;
 	font-weight: 300;
+}
+
+.red-button:hover {
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
 }
 
 /* ---- END OF TEXT COLORS ---- */

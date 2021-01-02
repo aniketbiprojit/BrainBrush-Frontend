@@ -46,7 +46,7 @@ const Navbar = () => {
 						</li>
 					))}
 					<li>
-						<a href='#' className='text-white bg-secondary-light py-2 px-4 rounded'>
+						<a href='#' className='text-white bg-secondary-light py-2 px-4 rounded red-button'>
 							Login
 					</a>
 					</li>
