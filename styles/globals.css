@@ -25,6 +25,10 @@
 	text-decoration: none;
 }
 
+body {
+	@apply bg-white;
+}
+
 /* BIG HEADER */
 .h1 {
 	font-size: 48px;
