@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import styles from './Navbar.module.css'
 
 const Navbar = () => (
 	<div className='container'>
-		<nav className={styles.navbar}>
+		<nav className=''>
 			<div className='container grid'>
 				<a href='#' className='navbar-brand m-2'>
 					BrainBrush
