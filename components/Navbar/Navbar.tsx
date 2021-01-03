@@ -5,12 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
+
+	// Links to pages
 	const links = [
 		{ href: '#', label: 'Home' },
 		{ href: '#', label: 'Companies' },
 		{ href: '#', label: 'Register' },
 	]
 
+	// Styles using tailwindcss
 	const styles = {
 		container: "bg-primary flex items-center justify-between p-8",
 		logo: "text-white font-semibold flex-wrap no-underline pr-4 ml-0 pl-0 md:ml-10 md:text-2xl",
