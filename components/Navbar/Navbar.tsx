@@ -1,6 +1,10 @@
+// React
 import React from 'react'
+
+// NextJs Link
 import Link from 'next/link'
 
+// Font Awesome Import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
