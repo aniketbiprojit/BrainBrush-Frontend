@@ -5,24 +5,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
-	// Links to pages
 	const links = [
 		{ href: '#', label: 'Home' },
 		{ href: '#', label: 'Companies' },
 		{ href: '#', label: 'Register' },
 	]
 
-	// Styles using tailwindcss
+	const search = {
+		container: 'relative w-full sm:w-7/12 md:w-5/12 px-4 flex-wrap items-stretch hidden sm:flex',
+		icon:
+			'font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-black rounded-md text-sm bg-white items-center rounded-r-none pl-2 py-3 text-black border-r-0 placeholder-primary',
+		text:
+			'px-2 py-3 h-10 border border-solid  border-black rounded-md text-sm leading-snug text-black bg-white shadow-none outline-none focus:outline-none w-full font-normal rounded-l-none flex-1 border-l-0 placeholder-primary',
+	}
+
 	const styles = {
 		container: 'bg-primary flex items-center justify-between p-8',
 		logo: 'text-white font-semibold flex-wrap no-underline pr-4 ml-0 pl-0 md:ml-10 md:text-2xl',
-		search: {
-			container: 'relative w-full sm:w-7/12 md:w-5/12 px-4 flex-wrap items-stretch hidden sm:flex',
-			icon:
-				'font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-black rounded-md text-sm bg-white items-center rounded-r-none pl-2 py-3 text-black border-r-0 placeholder-primary',
-			text:
-				'px-2 py-3 h-10 border border-solid  border-black rounded-md text-sm leading-snug text-black bg-white shadow-none outline-none focus:outline-none w-full font-normal rounded-l-none flex-1 border-l-0 placeholder-primary',
-		},
+		search,
 		button: {
 			container: 'flex items-center justify-between space-x-5',
 			text: 'text-white no-underline hover:text-secondary-light',
