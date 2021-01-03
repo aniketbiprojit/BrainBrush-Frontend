@@ -18,20 +18,20 @@ const Navbar = () => {
 				{/* LOGO */}
 				<li>
 					<Link href='/'>
-						<a className='text-white font-semibold flex-wrap no-underline'>Brainbrush</a>
+						<a className='text-white font-semibold flex-wrap no-underline logo'>Brainbrush</a>
 					</Link>
 				</li>
 
 				{/* SEARCH BAR */}
-				<div className='relative flex w-full sm:w-7/12 md:w-5/12 px-4 flex-wrap items-stretch'>
+				<div className='relative flex w-full sm:w-7/12 md:w-5/12 px-8 flex-wrap items-stretch'>
 					<div className='flex'>
-						<span className='font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-black rounded-full text-sm bg-white items-center rounded-r-none pl-2 py-1 text-black border-r-0 placeholder-primary'>
+						<span className='font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-black rounded-full text-sm bg-white items-center rounded-r-none pl-2 py-3 text-black border-r-0 placeholder-primary'>
 							<FontAwesomeIcon icon={faSearch} />
 						</span>
 					</div>
 					<input
 						type='text'
-						className='px-2 py-1 h-8 border border-solid  border-black rounded-full text-sm leading-snug text-black bg-white shadow-none outline-none focus:outline-none w-full font-normal rounded-l-none flex-1 border-l-0 placeholder-primary'
+						className='px-2 py-3 h-10 border border-solid  border-black rounded-full text-sm leading-snug text-black bg-white shadow-none outline-none focus:outline-none w-full font-normal rounded-l-none flex-1 border-l-0 placeholder-primary'
 						placeholder='Search for forcasts, reports ...'
 					/>
 				</div>

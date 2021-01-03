@@ -47,7 +47,7 @@ body {
 
 /* Paragraph */
 p {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 500;
 }
 
@@ -67,7 +67,7 @@ p {
 
 /* Link */
 a {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 300;
 }
 
@@ -75,7 +75,9 @@ a {
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
 }
 
-/* ---- END OF TEXT COLORS ---- */
+.logo {
+	font-size: 1.333rem;
+}
 
 /* Start purging... */
 @tailwind utilities;
