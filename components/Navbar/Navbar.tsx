@@ -32,7 +32,7 @@ const Navbar = () => {
 					</Link>
 				</li>
 
-				<SearchBar></SearchBar>
+				<SearchBar />
 
 				<ul className={styles.button.container}>
 					{links.map(({ href, label }) => (
