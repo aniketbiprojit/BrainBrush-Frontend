@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../Navbar/Navbar'
+import Emailer from '../Emailer/Emailer'
 import Footer from '../Footer/Footer'
 
 const Layout = (props) => (
@@ -8,7 +9,7 @@ const Layout = (props) => (
 			<title>BrainBrush</title>
 		</Head>
 		<Navbar />
-		{/* {props.children} */}
+		<Emailer />
 		<Footer />
 	</div>
 )
