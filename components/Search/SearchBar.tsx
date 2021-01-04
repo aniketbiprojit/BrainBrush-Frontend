@@ -18,7 +18,7 @@ const SearchBar = (props) => {
 					<FontAwesomeIcon icon={faSearch} />
 				</span>
 			</div>
-			<input type='text' className={styles.text} placeholder='Search for forcasts, reports ...' />
+			<input type='text' className={styles.text} placeholder={props.msg} />
 		</div>
 	)
 }
