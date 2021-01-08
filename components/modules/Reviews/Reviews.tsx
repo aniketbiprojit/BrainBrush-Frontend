@@ -1,4 +1,4 @@
-import { Rewrite } from 'next/dist/lib/load-custom-routes'
+// import { Rewrite } from 'next/dist/lib/load-custom-routes'
 
 const Reviews = (props) => {
 	return (
