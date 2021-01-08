@@ -1,6 +1,5 @@
 // React
 import React from 'react'
-
 // NextJs Link
 import Link from 'next/link'
 
@@ -14,7 +13,7 @@ const Navbar = (props) => {
 	]
 
 	const styles = {
-		container: 'bg-transparent fixed z-10 w-screen object-top flex items-center justify-between p-8',
+		container: 'bg-transparent duration-300 fixed z-10 w-screen object-top flex items-center justify-between p-8',
 		logo: 'text-white font-semibold flex-wrap no-underline pr-4 ml-0 pl-0 md:ml-10 md:text-2xl',
 		button: {
 			container: 'flex items-center justify-between space-x-5',
@@ -25,7 +24,7 @@ const Navbar = (props) => {
 
 	return (
 		<nav>
-			<ul className={styles.container}>
+			<ul className={styles.container} id='nav-container'>
 				<li>
 					<Link href='/'>
 						<a className={styles.logo}>Brainbrush</a>
