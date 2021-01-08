@@ -14,24 +14,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      
-      - uses: actions/checkout@v2
-      
-      - name: build-nextjs
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm install -g yarn
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
-      
-      - name: commit-to-deployment
-        uses: EndBug/add-and-commit@v6
-        with:
-          author_name: Aniket Biprojit Chowhdury
-          author_email: aniket_chowdhury@hotmail.com
-          branch: deployment
-          token: ${{ secrets.GITHUB_TOKEN }}
         
       - name: ssh-and-deploy
         uses: appleboy/ssh-action@master
