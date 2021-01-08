@@ -1,0 +1,22 @@
+name: NextJS Build
+
+on:
+  pull_request:
+    branches: [ deployment ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      with:
+        node-version: 12
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
