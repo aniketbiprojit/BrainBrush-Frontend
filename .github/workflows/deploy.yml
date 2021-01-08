@@ -25,4 +25,9 @@ jobs:
           username: ${{ secrets.USER_NAME }}
           port: 22
           host: ${{ secrets.HOST_NAME }}
-          script: whoami
+          script: |
+            cd /home/azureuser/public/deployments/BrainBrush-Frontend
+            ls -la
+            git checkout deployment
+            git pull
+            pm2 restart brainbrush_frontend_3003
