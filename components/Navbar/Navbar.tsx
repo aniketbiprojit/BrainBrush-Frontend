@@ -4,7 +4,7 @@ import React from 'react'
 // NextJs Link
 import Link from 'next/link'
 
-import SearchBar from '../Search/SearchBar'
+import SearchBar from '../SearchBar/SearchBar'
 
 const Navbar = () => {
 	const links = [

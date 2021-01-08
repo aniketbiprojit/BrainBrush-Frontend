@@ -1,4 +1,4 @@
-import SearchBar from '../Search/SearchBar'
+import SearchBar from '../SearchBar/SearchBar'
 
 const Footer = () => {
 	const links = [
