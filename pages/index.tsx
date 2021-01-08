@@ -4,7 +4,7 @@ import { connect, ConnectedProps } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { ApplicationActions } from '../redux/states/ApplicationState/ApplicationSlice'
 
-import Layout from '../components/Layout/Layout'
+import Layout from '../components/Layouts/Home/Home'
 
 export const firebase_config = {
 	apiKey: 'AIzaSyBh2o3MomQpCFYdxLX_cOILJRsrh82HPrk',
