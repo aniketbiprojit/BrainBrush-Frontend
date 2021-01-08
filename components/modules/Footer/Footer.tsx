@@ -1,4 +1,4 @@
-import SearchBar from '../SearchBar/SearchBar'
+import SearchCompact from '../SearchCompact/SearchCompact'
 
 const Footer = () => {
 	const links = [
@@ -32,7 +32,7 @@ const Footer = () => {
 						</li>
 					))}
 				</ul>
-				<SearchBar msg='Search across our service...' />
+				<SearchCompact msg='Search across our service...' />
 			</div>
 			<div className={styles.container}>
 				<div className={styles.copy}>© BrainBrush 2020. All rights reserved.</div>

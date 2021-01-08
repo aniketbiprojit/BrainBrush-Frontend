@@ -4,7 +4,7 @@ import React from 'react'
 // NextJs Link
 import Link from 'next/link'
 
-import SearchBar from '../SearchBar/SearchBar'
+import SearchCompact from '../SearchCompact/SearchCompact'
 
 const Navbar = () => {
 	const links = [
@@ -32,7 +32,7 @@ const Navbar = () => {
 					</Link>
 				</li>
 
-				<SearchBar msg='Search for companies, listing ...' />
+				<SearchCompact msg='Search for companies, listing ...' />
 
 				<ul className={styles.button.container}>
 					{links.map(({ href, label }) => (

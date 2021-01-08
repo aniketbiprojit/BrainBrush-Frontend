@@ -9,8 +9,11 @@ const Layout = (props) => (
 		<Head>
 			<title>BrainBrush</title>
 		</Head>
+		{/* return top navbar */}
 		<Navbar />
+		{/* Returns Main Search Box */}
 		<Search />
+		{/* Returns Emailer */}
 		<div className='p-20'>
 			<SearchWithButton
 				msg='Sign up to get date with our Newsletter!'
@@ -19,6 +22,7 @@ const Layout = (props) => (
 				shadow='0 4px 50px rgba(254,109,115,0.33)'
 			/>
 		</div>
+		{/* Returns Footer */}
 		<Footer />
 	</div>
 )
