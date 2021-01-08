@@ -7,8 +7,7 @@ const Search = (props) => {
 				<SearchWithButton
 					msg='Get up to date with the latest happenings!'
 					placeholder='Search for listing, financial reports, companies ...'
-					button='Login'
-					nomargins='true'
+					button='Search'
 				/>
 				<div id='recent' className='mt-5'>
 					*Recent searches here*
