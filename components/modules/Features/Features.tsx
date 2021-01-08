@@ -7,8 +7,8 @@ const Features = (props) => {
 			<div className='text-3xl font-semibold text-center text-primary'>What is BrainBrush?</div>
 			<div className='flex flex-col justify-center py-20'>
 				<div className='relative py-3 sm:max-w-xl sm:mx-auto'>
-					<div className='absolute inset-0 transform shadow-lg skew-y-8 bg-gradient-to-r from-secondary to-primary-light sm:skew-y-0 sm:rotate-6 sm:rounded-3xl'></div>
-					<div className='relative px-4 py-10 bg-gray-100 shadow-lg sm:rounded-3xl sm:p-20'>
+					<div className='inset-0 transform bg-transparent sm:shadow-lg sm:visible sm:absolute skew-y-8 sm:bg-gradient-to-r sm:from-secondary sm:to-primary-light sm:skew-y-0 sm:rotate-6 sm:rounded-3xl'></div>
+					<div className='relative px-4 py-10 bg-transparent sm:bg-white sm:shadow-lg sm:rounded-3xl sm:p-20'>
 						<div className='max-w-md mx-auto'>
 							<div className='text-5xl text-secondary-light'>
 								<FontAwesomeIcon icon={faArrowCircleDown} />

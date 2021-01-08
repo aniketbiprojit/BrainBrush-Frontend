@@ -17,7 +17,7 @@ const Navbar = (props) => {
 		logo: 'text-white font-semibold flex-wrap no-underline pr-4 ml-0 pl-0 md:ml-10 md:text-2xl',
 		button: {
 			container: 'flex items-center justify-between space-x-5',
-			text: 'text-white no-underline hover:text-secondary-light font-bold',
+			text: 'text-white no-underline hover:text-yellow-300 font-bold',
 			button: 'text-white bg-secondary-dark py-2 px-4 mr-0 md:mr-10 rounded red-button',
 		},
 	}

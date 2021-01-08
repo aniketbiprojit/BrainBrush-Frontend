@@ -35,10 +35,10 @@ class Layout extends React.Component {
 				<div className='' id='features'>
 					<Features />
 				</div>
-				<div className='mt-20'>
+				<div className='p-0 m-0'>
 					<Reviews />
 				</div>
-				<div className='m-20'>
+				<div className='mb-48'>
 					<SearchWithButton
 						msg='Sign up to get date with our Newsletter!'
 						placeholder="We won't send you spam :)"
