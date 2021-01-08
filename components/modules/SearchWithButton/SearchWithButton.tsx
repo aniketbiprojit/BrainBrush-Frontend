@@ -17,6 +17,10 @@ const SearchWithButton = (props) => {
 		head: 'text-primary text-center text-lg md:text-3xl font-bold pb-4',
 	}
 
+	if (props.color === 'black') {
+		styles.head = 'text-gray-900 text-center text-lg md:text-3xl font-bold pb-4'
+	}
+
 	return (
 		<div className={styles.box}>
 			<div className={styles.head}>{props.msg}</div>

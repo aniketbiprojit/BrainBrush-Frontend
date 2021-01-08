@@ -32,8 +32,7 @@ class Layout extends React.Component {
 				<div id='search'>
 					<Search />
 				</div>
-				{/* Returns Emailer */}
-				<div className='mt-20' id='features'>
+				<div className='' id='features'>
 					<Features />
 				</div>
 				<div className='mt-20'>
