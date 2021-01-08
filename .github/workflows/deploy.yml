@@ -26,6 +26,7 @@ jobs:
           port: 22
           host: ${{ secrets.HOST_NAME }}
           script: |
+            source /home/azureuser/.bashrc
             cd /home/azureuser/public/deployments/BrainBrush-Frontend
             ls -la
             # git checkout deployment
