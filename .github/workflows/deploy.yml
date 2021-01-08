@@ -28,6 +28,6 @@ jobs:
           script: |
             cd /home/azureuser/public/deployments/BrainBrush-Frontend
             ls -la
-            git checkout deployment
+            # git checkout deployment
             git pull
             /home/azureuser/.nvm/versions/node/v14.15.4/bin/pm2 restart brainbrush_frontend_3003
