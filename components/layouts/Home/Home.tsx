@@ -3,6 +3,8 @@ import Navbar from '../../modules/Navbar/Navbar'
 import SearchWithButton from '../../modules/SearchWithButton/SearchWithButton'
 import Footer from '../../modules/Footer/Footer'
 import Search from '../../modules/Search/Search'
+import Features from '../../modules/Features/Features'
+import Reviews from '../../modules/Reviews/Reviews'
 
 const Layout = (props) => (
 	<div>
@@ -12,9 +14,17 @@ const Layout = (props) => (
 		{/* return top navbar */}
 		<Navbar />
 		{/* Returns Main Search Box */}
-		<Search />
+		<div className='mt-20'>
+			<Search />
+		</div>
 		{/* Returns Emailer */}
-		<div className='p-20'>
+		<div className='mt-20'>
+			<Features />
+		</div>
+		<div className='mt-20'>
+			<Reviews />
+		</div>
+		<div className='m-20'>
 			<SearchWithButton
 				msg='Sign up to get date with our Newsletter!'
 				placeholder="We won't send you spam :)"
