@@ -14,9 +14,7 @@ const Layout = (props) => (
 		{/* return top navbar */}
 		<Navbar />
 		{/* Returns Main Search Box */}
-		<div className='mt-20'>
-			<Search />
-		</div>
+		<Search />
 		{/* Returns Emailer */}
 		<div className='mt-20'>
 			<Features />

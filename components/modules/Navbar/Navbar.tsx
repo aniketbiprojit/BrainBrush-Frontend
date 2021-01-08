@@ -14,12 +14,12 @@ const Navbar = (props) => {
 	]
 
 	const styles = {
-		container: 'bg-primary flex items-center justify-between p-8',
+		container: 'bg-transparent fixed z-10 w-screen object-top flex items-center justify-between p-8',
 		logo: 'text-white font-semibold flex-wrap no-underline pr-4 ml-0 pl-0 md:ml-10 md:text-2xl',
 		button: {
 			container: 'flex items-center justify-between space-x-5',
-			text: 'text-white no-underline hover:text-secondary-light',
-			button: 'text-white bg-secondary-light py-2 px-4 mr-0 md:mr-10 rounded red-button',
+			text: 'text-white no-underline hover:text-secondary-light font-bold',
+			button: 'text-white bg-secondary-dark py-2 px-4 mr-0 md:mr-10 rounded red-button',
 		},
 	}
 
