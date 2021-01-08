@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 import SearchCompact from '../SearchCompact/SearchCompact'
 
-const Navbar = () => {
+const Navbar = (props) => {
 	const links = [
 		{ href: '#', label: 'Home' },
 		{ href: '#', label: 'Companies' },

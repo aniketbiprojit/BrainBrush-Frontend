@@ -1,4 +1,13 @@
-const Emailer = (props) => {
+/** PROVIDE PROPS
+ *
+ * @param props.msg >> Main header message
+ * @param props.shadow >> Backgroud shadow on div
+ * @param props.placeholder >> placeholder msg in search box
+ * @param props.button >> button text
+ *
+ */
+
+const SearchWithButton = (props) => {
 	const styles = {
 		box: 'grid text-center gap-3 w-full',
 		container: 'justify-self-center relative w-full md:w-7/12 lg:w-5/12 w-3/12 flex-wrap items-stretch flex text-center',
@@ -26,4 +35,4 @@ const Emailer = (props) => {
 	)
 }
 
-export default Emailer
+export default SearchWithButton
