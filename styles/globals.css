@@ -11,6 +11,10 @@
 @tailwind components;
 /* Stop purging. */
 
+html {
+	scroll-behaviour: smooth;
+}
+
 :root {
 	font-family: 'Poppins', sans-serif;
 }
