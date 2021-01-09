@@ -1,4 +1,4 @@
-import SearchCompact from '../SearchCompact/SearchCompact'
+import SearchCompact from '../Search/SearchCompact'
 
 const Footer = (props) => {
 	const links = [

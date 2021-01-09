@@ -1,4 +1,4 @@
-import SearchWithButton from '../SearchWithButton/SearchWithButton'
+import SearchWithButton from './SearchWithButton'
 
 const Search = (props) => {
 	const styles = {

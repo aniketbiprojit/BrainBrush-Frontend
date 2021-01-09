@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../../modules/Navbar/Navbar'
-import SearchWithButton from '../../modules/SearchWithButton/SearchWithButton'
+import SearchWithButton from '../../modules/Search/SearchWithButton'
 import Footer from '../../modules/Footer/Footer'
 import Search from '../../modules/Search/Search'
 import Features from '../../modules/Features/Features'

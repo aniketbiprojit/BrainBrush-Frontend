@@ -3,7 +3,7 @@ import React from 'react'
 // NextJs Link
 import Link from 'next/link'
 
-import SearchCompact from '../SearchCompact/SearchCompact'
+import SearchCompact from '../Search/SearchCompact'
 
 const Navbar = (props) => {
 	const links = [
