@@ -14,18 +14,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        
-      - name: ssh-and-deploy
-        uses: appleboy/ssh-action@master
+      - uses: actions/checkout@v2
+      
+      - name: Run Build
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      
+#       - name: ssh-and-deploy
+      - name: scp-and-deploy
+#         uses: appleboy/ssh-action@master
+        uses: appleboy/scp-action@master
         with:
           key: ${{ secrets.SSH_KEY }}
           username: ${{ secrets.USER_NAME }}
           port: 22
           host: ${{ secrets.HOST_NAME }}
-          script: |
-            source /home/azureuser/.bashrc
-            cd /home/azureuser/public/deployments/BrainBrush-Frontend
-            ls -la
-            # git checkout deployment
-            git pull
-            /home/azureuser/.nvm/versions/node/v14.15.4/bin/node /home/azureuser/.nvm/versions/node/v14.15.4/bin/pm2 restart brainbrush_frontend_3003
+          source: ./out
+          target: /home/azureuser/public/deployments/BrainBrush-Frontend
+#           script: |
+#             source /home/azureuser/.bashrc
+#             cd /home/azureuser/public/deployments/BrainBrush-Frontend
+#             ls -la
+#             # git checkout deployment
+#             git pull
+#             /home/azureuser/.nvm/versions/node/v14.15.4/bin/node /home/azureuser/.nvm/versions/node/v14.15.4/bin/pm2 restart brainbrush_frontend_3003
