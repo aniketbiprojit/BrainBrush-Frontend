@@ -11,19 +11,19 @@ const Blogs = () => {
 					color='bg-yellow-300'
 				/>
 				<Blog
-					companyName='Microsoft'
+					companyName='Uber'
 					msg='Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel consequuntur omnis vero, id corporis repellat mollitia quisquam architecto? Sit amet consectetur consequuntur omnis vero.'
-					color='bg-yellow-300'
+					color='bg-gray-400'
 				/>
 				<Blog
-					companyName='Microsoft'
+					companyName='LinkedIn'
 					msg='Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel consequuntur omnis vero, id corporis repellat mollitia quisquam architecto? Sit amet consectetur consequuntur omnis vero.'
-					color='bg-yellow-300'
+					color='bg-blue-400'
 				/>
 				<Blog
-					companyName='Microsoft'
+					companyName='Apple'
 					msg='Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel consequuntur omnis vero, id corporis repellat mollitia quisquam architecto? Sit amet consectetur consequuntur omnis vero.'
-					color='bg-yellow-300'
+					color='bg-gray-300'
 				/>
 			</div>
 			<div className='p-5 m-auto text-2xl text-center text-white rounded-xl bg-secondary-light max-w-max red-button'>View More!</div>
