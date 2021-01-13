@@ -8,6 +8,7 @@ module.exports = {
 					DEFAULT: '#1D3557',
 					dark: '#457B9D',
 					light: '#A8DADC',
+					highlight: '#ABDADC',
 				},
 				secondary: {
 					DEFAULT: '#0496FF',
