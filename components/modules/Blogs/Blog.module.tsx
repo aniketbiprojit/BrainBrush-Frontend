@@ -1,11 +1,12 @@
 const Blog = (props) => {
 	return (
 		<div
-			className='grid grid-cols-2 grid-rows-6 gap-5 p-10 border-2 border-gray-400 shadow-2xl align-items-center rounded-2xl'
+			className='grid grid-cols-2 grid-rows-6 gap-5 p-10 duration-200 border-2 border-gray-400 shadow-2xl align-items-center rounded-2xl'
 			style={{
 				height: '33vh',
 				width: '33vh',
 			}}
+			id='blog-card'
 		>
 			<div className='text-4xl font-semibold text-primary justify-self-start'>{props.companyName}</div>
 			<div className={'rounded-full w-9 h-9 justify-self-end ' + props.color}></div>
