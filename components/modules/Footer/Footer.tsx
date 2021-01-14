@@ -11,7 +11,7 @@ const Footer = (props) => {
 	]
 
 	const styles = {
-		container: 'bg-primary flex items-center justify-between p-8',
+		container: 'bg-primary flex items-center justify-between p-20',
 		search: 'justify-items-end w-full p-0 contents-end items-end',
 		menu: {
 			container: 'flex items-center justify-between space-x-5',
