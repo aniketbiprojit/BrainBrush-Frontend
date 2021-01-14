@@ -2,9 +2,9 @@ import Review from './Review.module'
 
 const Reviews = () => {
 	return (
-		<div className='flex flex-col justify-center w-full gap-32 p-32'>
-			<div className='text-5xl font-semibold text-center text-primary header'>Here from our Customers!</div>
-			<div className='flex flex-row m-auto gap-28 blogs'>
+		<div className='flex flex-col justify-center w-full p-4 pt-24 lg:gap-32 lg:p-32'>
+			<div className='p-6 text-5xl font-semibold text-center lg:p-0 text-primary header'>Here from our Customers!</div>
+			<div className='flex flex-col m-auto lg:flex-row lg:gap-28 blogs'>
 				<Review
 					companyName='Miranda A.'
 					msg='Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi expedita qui perspiciatis, tenetur nostrum facilis quisquam ex aspernatur quam! Blanditiis harum eos rerum cum illo nemo dolorem illum voluptas maiores reiciendis atque, alias explicabo laboriosam aut unde iure eveniet quod iste quasi sit. Dolorem eius asperiores nemo illum placeat!'
