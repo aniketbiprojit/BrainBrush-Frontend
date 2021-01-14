@@ -43,7 +43,7 @@ class Layout extends React.Component {
 				<div className='p-0 m-0'>
 					<Reviews />
 				</div>
-				<div className=''>
+				<div className='px-24 lg:px-0'>
 					<SearchWithButton
 						msg='Sign up to get date with our Newsletter!'
 						placeholder="We won't send you spam :)"
