@@ -32,7 +32,6 @@ const Footer = (props) => {
 						</li>
 					))}
 				</ul>
-				<SearchCompact msg='Search across our service...' />
 			</div>
 			<div className={styles.container}>
 				<div className={styles.copy}>© BrainBrush 2020. All rights reserved.</div>

@@ -1,7 +1,7 @@
 const Review = (props) => {
 	return (
 		<div
-			className='grid grid-cols-2 grid-rows-5 gap-5 p-10 mb-10 text-center duration-200 bg-white shadow-2xl lg:mb-0 align-items-center rounded-2xl'
+			className='grid grid-cols-2 grid-rows-5 gap-5 p-10 mb-10 text-center duration-300 bg-white shadow-2xl lg:transform hover:-translate-y-8 lg:mb-0 align-items-center rounded-2xl'
 			id='review-card'
 		>
 			<div className='text-4xl font-semibold text-gray-800 justify-self-start'>{props.companyName}</div>
