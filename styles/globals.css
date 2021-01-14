@@ -7,14 +7,6 @@
 
 @tailwind base;
 
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
-html {
-	scroll-behaviour: smooth;
-}
-
 :root {
 	font-family: 'Poppins', sans-serif;
 }
@@ -27,10 +19,19 @@ html {
 	text-decoration: none;
 }
 
+html {
+	@apply w-screen;
+	overflow-x: hidden;
+}
+
 body {
 	@apply bg-white;
 	overflow-x: hidden;
 }
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
 
 /* BIG HEADER */
 .h1 {

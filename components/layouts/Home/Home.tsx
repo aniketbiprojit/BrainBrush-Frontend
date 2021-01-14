@@ -26,6 +26,7 @@ class Layout extends React.Component {
 			<div className='bg-gray-200'>
 				<Head>
 					<title>BrainBrush</title>
+					<meta name='viewport' content='width=device-width, initial-scale=0.70, maximum-scale=0.70'></meta>
 				</Head>
 				{/* return top navbar */}
 				<Navbar />

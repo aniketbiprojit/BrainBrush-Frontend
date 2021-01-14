@@ -9,16 +9,16 @@ const Features = () => {
 			<div className='grid text-6xl text-white justify-items-center grid-col-1 '>
 				<FontAwesomeIcon
 					icon={faArrowDown}
-					className='p-2 duration-500 transform -translate-y-56 bg-transparent rounded-xl ring-4 ring-secondary-highlight hover:-translate-y-48 hover:bg-secondary-highlight hover:text-black'
+					className='p-2 duration-500 transform -translate-y-32 bg-transparent lg:-translate-y-56 rounded-xl ring-4 ring-secondary-highlight hover:-translate-y-24 lg:hover:-translate-y-48 hover:bg-secondary-highlight hover:text-black'
 					onClick={() => document.getElementById('features').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })}
 				/>
 			</div>
-			<div className='text-3xl font-semibold text-center text-primary' id='features'>
+			<div className='text-2xl font-semibold text-center lg:text-5xl text-primary' id='features'>
 				What is BrainBrush?
 			</div>
-			<div className='grid items-center grid-cols-1 p-20 xl:grid-cols-2 justify-items-center'>
+			<div className='grid items-center grid-cols-1 p-8 py-20 lg:p-20 gap-y-20 lg:gap-y-48 justify-items-center'>
 				<Feature />
-				<Feature />
+				<Feature img='left' />
 			</div>
 		</div>
 	)
