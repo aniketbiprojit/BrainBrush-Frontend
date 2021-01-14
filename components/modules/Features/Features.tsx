@@ -13,12 +13,12 @@ const Features = () => {
 					onClick={() => document.getElementById('features').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })}
 				/>
 			</div>
-			<div className='text-3xl font-semibold text-center text-primary' id='features'>
+			<div className='text-5xl font-semibold text-center text-primary' id='features'>
 				What is BrainBrush?
 			</div>
-			<div className='grid items-center grid-cols-1 p-20 xl:grid-cols-2 justify-items-center'>
+			<div className='grid items-center grid-cols-1 p-20 gap-y-48 justify-items-center'>
 				<Feature />
-				<Feature />
+				<Feature img='left' />
 			</div>
 		</div>
 	)

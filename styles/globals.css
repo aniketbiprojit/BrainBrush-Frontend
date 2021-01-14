@@ -7,10 +7,6 @@
 
 @tailwind base;
 
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
 html {
 	scroll-behaviour: smooth;
 }
@@ -31,6 +27,10 @@ body {
 	@apply bg-white;
 	overflow-x: hidden;
 }
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
 
 /* BIG HEADER */
 .h1 {
