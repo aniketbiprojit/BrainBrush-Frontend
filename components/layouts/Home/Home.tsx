@@ -5,6 +5,7 @@ import Footer from '../../modules/Footer/Footer'
 import Search from '../../modules/Search/Search'
 import Features from '../../modules/Features/Features'
 import Reviews from '../../modules/Reviews/Reviews'
+import Blogs from '../../modules/Blogs/Blogs'
 import React from 'react'
 
 class Layout extends React.Component {
@@ -34,6 +35,9 @@ class Layout extends React.Component {
 				</div>
 				<div className='' id='features'>
 					<Features />
+				</div>
+				<div className='' id='blogs'>
+					<Blogs />
 				</div>
 				<div className='p-0 m-0'>
 					<Reviews />
