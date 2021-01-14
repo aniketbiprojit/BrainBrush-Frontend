@@ -28,9 +28,9 @@ const Feature = (props) => {
 				<div className='text-lg text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
 				<br />
 				<div className='text-lg text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing cumque non?</div>
-				<div className='flex items-end justify-center flex-grow gap-10 mt-12 lg:justify-start'>
-					<button className={'row-start-6 w-32 h-10 rounded-full red-button bg-red-300'}>Share</button>
-					<button className={'row-start-6 w-32 h-10 rounded-full red-button bg-blue-200'}>View More</button>
+				<div className='flex items-end justify-center flex-grow mt-12 lg:justify-start'>
+					<button className={'row-start-6 w-32 h-10 rounded-full red-button bg-red-300 mx-4'}>Share</button>
+					<button className={'row-start-6 w-32 h-10 rounded-full red-button bg-blue-200 mx-4'}>View More</button>
 				</div>
 			</div>
 			<div id='image' className={image}>
