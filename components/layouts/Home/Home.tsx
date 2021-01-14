@@ -23,7 +23,7 @@ class Layout extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className='bg-gray-200'>
 				<Head>
 					<title>BrainBrush</title>
 				</Head>
@@ -42,7 +42,7 @@ class Layout extends React.Component {
 				<div className='p-0 m-0'>
 					<Reviews />
 				</div>
-				<div className='mb-48'>
+				<div className=''>
 					<SearchWithButton
 						msg='Sign up to get date with our Newsletter!'
 						placeholder="We won't send you spam :)"
