@@ -6,16 +6,12 @@ const Feature = (props) => {
 	if (props.img === 'left') {
 		image = 'm-auto row-start-1'
 	} else {
-		image = 'm-auto start'
+		image = 'm-auto row-start-1 lg:col-start-2'
 	}
 
 	return (
 		<div
-			className='grid grid-cols-2 gap-5 p-10 duration-200 bg-white shadow-2xl start align-items-center rounded-2xl'
-			style={{
-				height: '50vh',
-				width: '100vh',
-			}}
+			className='grid grid-cols-1 gap-5 p-10 duration-200 bg-white shadow-2xl lg:h-full lg:w-2/3 lg:grid-cols-2 start align-items-center rounded-2xl'
 			id='feature-card'
 		>
 			<div id='text' className='flex flex-col max-h-max'>
@@ -32,7 +28,7 @@ const Feature = (props) => {
 				<div className='text-lg text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
 				<br />
 				<div className='text-lg text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing cumque non?</div>
-				<div className='flex items-end flex-grow gap-10 mt-12'>
+				<div className='flex items-end justify-center flex-grow gap-10 mt-12 lg:justify-start'>
 					<button className={'row-start-6 w-32 h-10 rounded-full red-button bg-red-300'}>Share</button>
 					<button className={'row-start-6 w-32 h-10 rounded-full red-button bg-blue-200'}>View More</button>
 				</div>

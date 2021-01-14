@@ -16,7 +16,7 @@ const Features = () => {
 			<div className='text-2xl font-semibold text-center lg:text-5xl text-primary' id='features'>
 				What is BrainBrush?
 			</div>
-			<div className='grid items-center grid-cols-1 p-20 gap-y-48 justify-items-center'>
+			<div className='grid items-center grid-cols-1 p-8 py-20 lg:p-20 gap-y-20 lg:gap-y-48 justify-items-center'>
 				<Feature />
 				<Feature img='left' />
 			</div>
