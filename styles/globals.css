@@ -7,10 +7,6 @@
 
 @tailwind base;
 
-html {
-	scroll-behaviour: smooth;
-}
-
 :root {
 	font-family: 'Poppins', sans-serif;
 }
