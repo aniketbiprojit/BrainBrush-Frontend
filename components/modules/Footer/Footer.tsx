@@ -11,7 +11,7 @@ const Footer = (props) => {
 	]
 
 	const styles = {
-		container: 'bg-primary flex items-center justify-between p-20',
+		container: 'bg-primary flex flex-col lg:flex-row items-center justify-between p-20',
 		search: 'justify-items-end w-full p-0 contents-end items-end',
 		menu: {
 			container: 'flex items-center justify-between space-x-5',
@@ -32,7 +32,6 @@ const Footer = (props) => {
 						</li>
 					))}
 				</ul>
-				<SearchCompact msg='Search across our service...' />
 			</div>
 			<div className={styles.container}>
 				<div className={styles.copy}>© BrainBrush 2020. All rights reserved.</div>
