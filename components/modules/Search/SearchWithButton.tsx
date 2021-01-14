@@ -9,7 +9,7 @@
 
 const SearchWithButton = (props) => {
 	const styles = {
-		box: 'grid text-center gap-3 w-full',
+		box: 'grid text-center gap-3 w-full mb-48 mt-20',
 		container: 'justify-self-center relative w-full md:w-7/12 lg:w-5/12 w-3/12 flex-wrap items-stretch flex text-center',
 		text:
 			'px-4 py-10 h-10 border border-solid border-black rounded-xl text-2xl leading-snug text-black bg-white shadow-none outline-none focus:outline-none w-full font-normal flex-1 placeholder-primary border-r-0 rounded-r-none',
@@ -19,6 +19,7 @@ const SearchWithButton = (props) => {
 
 	if (props.color === 'black') {
 		styles.head = 'text-gray-900 text-center text-xl md:text-4xl font-bold pb-4'
+		styles.box = 'grid text-center gap-3 w-full'
 	}
 
 	return (
