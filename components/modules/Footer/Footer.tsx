@@ -15,7 +15,7 @@ const Footer = (props) => {
 			container: 'flex items-center justify-between space-x-5',
 			text: 'text-white no-underline hover:text-secondary-light',
 		},
-		copy: 'text-white no-underline text-center w-full pt-16 border-t border-gray-500',
+		copy: 'text-white no-underline text-center w-full pt-16 lg:border-t lg:border-gray-500',
 	}
 
 	return (
