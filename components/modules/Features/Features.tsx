@@ -19,6 +19,7 @@ const Features = () => {
 			<div className='grid items-center grid-cols-1 p-8 py-20 lg:p-20 gap-y-20 lg:gap-y-48 justify-items-center'>
 				<Feature />
 				<Feature img='left' />
+				<Feature />
 			</div>
 		</div>
 	)
