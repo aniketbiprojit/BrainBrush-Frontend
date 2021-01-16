@@ -2,7 +2,7 @@ import SearchWithButton from './SearchWithButton'
 
 const Search = (props) => {
 	const styles = {
-		container: 'flex flex-col items-center w-screen pt-72 lg:pt-96 bg-gradient-to-tr from-indigo-200 to-purple-400',
+		container: 'flex flex-col items-center w-screen pt-72 lg:pt-96 bg-gradient-to-tr from-purple-500 to-blue-600',
 		search: 'grid w-screen px-8 lg:px-20 justify-items-center',
 		recent: 'mt-10 mb-64 lg:mb-0',
 	}
