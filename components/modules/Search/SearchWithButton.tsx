@@ -19,8 +19,8 @@ const SearchWithButton = (props) => {
 	}
 
 	if (props.color === 'black') {
-		styles.head = 'text-gray-900 text-center text-xl md:text-4xl font-bold pb-4'
-		styles.box = 'grid text-center gap-3 w-full'
+		styles.head = 'text-gray-300 text-center text-xl md:text-4xl font-bold pb-4'
+		styles.box = 'grid text-center gap-5 w-full'
 	}
 
 	return (
