@@ -48,12 +48,7 @@ class Layout extends React.Component {
 					<Reviews />
 				</div>
 				<div className='px-24 lg:px-0'>
-					<SearchWithButton
-						msg='Sign up to get date with our Newsletter!'
-						placeholder="We won't send you spam :)"
-						button='Login'
-						shadow='0 4px 50px rgba(254,109,115,0.33)'
-					/>
+					<SearchWithButton msg='Sign up to get date with our Newsletter!' placeholder="We won't send you spam :)" button='Login' />
 				</div>
 				{/* Returns Footer */}
 				<Footer />
