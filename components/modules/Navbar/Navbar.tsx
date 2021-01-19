@@ -30,8 +30,9 @@ const Navbar = (props) => {
 						<a className={styles.logo}>Brainbrush</a>
 					</Link>
 				</li>
-
-				<SearchCompact msg='Search for companies, listing ...' />
+				<div className='flex justify-center w-full'>
+					<SearchCompact msg='Search for companies, listing ...' />
+				</div>
 
 				<ul className={styles.button.container}>
 					{links.map(({ href, label }) => (
