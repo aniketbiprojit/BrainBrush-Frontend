@@ -11,13 +11,15 @@ import React from 'react'
 class Layout extends React.Component {
 	componentDidMount() {
 		window.addEventListener('scroll', (e) => {
-			if (window.pageYOffset >= document.getElementById('features').offsetTop - window.innerHeight / 1.5) {
+			if (window.pageYOffset >= document.getElementById('features').offsetTop - window.innerHeight / 2) {
 				document.getElementById('nav-container').classList.add('bg-primary')
+				document.getElementById('nav-container').classList.add('shadow-xl')
 				document.getElementById('nav-container').classList.remove('bg-transparent')
 				document.getElementById('searchbar').classList.add('sm:flex')
 			} else {
 				document.getElementById('nav-container').classList.add('bg-transparent')
 				document.getElementById('nav-container').classList.remove('bg-primary')
+				document.getElementById('nav-container').classList.remove('shadow-xl')
 				document.getElementById('searchbar').classList.remove('sm:flex')
 			}
 		})

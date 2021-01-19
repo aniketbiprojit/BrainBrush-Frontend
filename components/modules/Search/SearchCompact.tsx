@@ -10,7 +10,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const SearchBar = (props) => {
 	const styles = {
-		container: 'relative w-full sm:w-7/12 lg:w-5/12 px-4 flex-wrap items-stretch hidden sm:flex',
+		container: 'relative w-full sm:w-7/12 lg:w-5/12 px-4 flex-wrap items-stretch hidden',
 		icon:
 			'font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-black rounded-md text-sm bg-primary-highlight items-center rounded-l-none pr-3 pl-3 py-2 text-black border-l-0 items-center placeholder-primary',
 		text:

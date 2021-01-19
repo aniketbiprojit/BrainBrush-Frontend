@@ -4,7 +4,7 @@ const Blogs = () => {
 	return (
 		<div className='flex flex-col justify-center w-full gap-20 lg:gap-32'>
 			<div className='px-5 text-5xl font-semibold text-center text-primary header lg:px-0'>Here are some relevant stories for you!</div>
-			<div className='flex flex-col m-auto lg:flex-row blogs'>
+			<div className='flex flex-row flex-wrap justify-center m-auto blogs'>
 				<Blog
 					companyName='Microsoft'
 					msg='Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel consequuntur omnis vero, id corporis repellat mollitia quisquam architecto? Sit amet consectetur consequuntur omnis vero.'
