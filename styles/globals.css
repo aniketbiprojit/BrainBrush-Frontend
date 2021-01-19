@@ -107,3 +107,9 @@ a {
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
+
+@layer utilities {
+	.w-400px {
+		width: 400px;
+	}
+}
