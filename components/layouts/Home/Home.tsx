@@ -14,9 +14,11 @@ class Layout extends React.Component {
 			if (window.pageYOffset >= document.getElementById('features').offsetTop - window.innerHeight / 1.5) {
 				document.getElementById('nav-container').classList.add('bg-primary')
 				document.getElementById('nav-container').classList.remove('bg-transparent')
+				document.getElementById('searchbar').classList.add('sm:flex')
 			} else {
 				document.getElementById('nav-container').classList.add('bg-transparent')
 				document.getElementById('nav-container').classList.remove('bg-primary')
+				document.getElementById('searchbar').classList.remove('sm:flex')
 			}
 		})
 	}

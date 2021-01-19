@@ -18,7 +18,7 @@ const SearchBar = (props) => {
 	}
 
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} id='searchbar'>
 			<input type='text' className={styles.text} placeholder={props.msg} />
 			<div className='flex'>
 				<span className={styles.icon}>

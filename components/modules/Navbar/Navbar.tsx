@@ -13,7 +13,7 @@ const Navbar = (props) => {
 	]
 
 	const styles = {
-		container: 'bg-transparent duration-300 fixed z-10 w-screen object-top flex items-center justify-between p-8',
+		container: 'bg-transparent duration-300 fixed z-10 w-screen object-top flex items-center justify-between p-8 h-28',
 		logo: 'text-white font-semibold flex-wrap no-underline pr-4 ml-0 pl-0 md:ml-10 md:text-2xl',
 		button: {
 			container: 'flex items-center justify-between space-x-5',
