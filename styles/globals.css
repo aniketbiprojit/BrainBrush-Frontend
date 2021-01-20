@@ -87,7 +87,7 @@ a {
 }
 
 .red-button:hover {
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+	box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.25) inset;
 	cursor: pointer;
 	user-select: none;
 }
