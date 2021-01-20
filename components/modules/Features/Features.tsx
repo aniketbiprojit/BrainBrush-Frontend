@@ -7,7 +7,7 @@ import { GiDiceFire, GiSpaceship, GiSpeedometer } from 'react-icons/gi'
 
 const Features = () => {
 	return (
-		<div className='bg-gray-200 lg:mb-20'>
+		<div className='bg-gray-200 lg:mb-10'>
 			<div className='grid text-6xl text-white justify-items-center grid-col-1 '>
 				<FontAwesomeIcon
 					icon={faArrowDown}

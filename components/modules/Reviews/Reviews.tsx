@@ -2,7 +2,7 @@ import Review from './Review.module'
 
 const Reviews = () => {
 	return (
-		<div className='flex flex-col justify-center w-full p-4 pt-24 lg:p-32'>
+		<div className='flex flex-col justify-center w-full p-4 pt-10 lg:p-20'>
 			<div className='p-6 mb-20 text-5xl font-semibold text-center lg:p-0 text-primary header '>Here from our Customers!</div>
 			<div className='flex flex-row flex-wrap justify-center m-auto lg:gap-28 blogs'>
 				<Review
