@@ -80,7 +80,7 @@ a {
 /* CUSTOMS */
 
 #nav {
-	background: url('banner.jpg'), linear-gradient(to right, #1d355788, #0262bb88);
+	background: linear-gradient(to right, #1d355788, #0262bb44), url('banner.jpg');
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;

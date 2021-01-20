@@ -1,5 +1,8 @@
 import SearchWithButton from './SearchWithButton'
 
+// Font Awesome Import
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const Search = (props) => {
 	const styles = {
 		container: 'flex flex-col items-center w-screen pt-96 lg:pt-96',
@@ -19,8 +22,8 @@ const Search = (props) => {
 					search='true'
 				/>
 			</div>
-			<div id='recent' className={styles.recent}>
-				*Recent searches here*
+			<div id='recent' className={styles.recent + ' bg-gray-500 bg-opacity-50 p-2 rounded-full px-5'}>
+				{/* <FontAwesomeIcon icon='fab fa-google' className='mr-2' /> */}
 			</div>
 			<svg className='relative w-screen transform translate-y-2' viewBox='0 0 3108 650' fill='none'>
 				<path
