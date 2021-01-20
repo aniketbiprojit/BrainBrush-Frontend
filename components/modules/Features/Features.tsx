@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 
+import { GiDiceFire, GiSpaceship, GiSpeedometer } from 'react-icons/gi'
+
 const Features = () => {
 	return (
 		<div className='bg-gray-200 lg:mb-20'>
@@ -17,9 +19,9 @@ const Features = () => {
 				What is BrainBrush?
 			</div>
 			<div className='grid items-center grid-cols-1 p-8 py-20 lg:p-20 gap-y-20 lg:gap-y-48 justify-items-center'>
-				<Feature />
-				<Feature img='left' />
-				<Feature />
+				<Feature img={<GiDiceFire size={300} className='text-secondary' />} />
+				<Feature pos='left' img={<GiSpeedometer size={300} className='text-indigo-500' />} />
+				<Feature img={<GiSpaceship size={300} className='text-secondary-light' />} />
 			</div>
 		</div>
 	)

@@ -3,7 +3,7 @@
 
 const Feature = (props) => {
 	let image
-	if (props.img === 'left') {
+	if (props.pos === 'left') {
 		image = 'm-auto row-start-1'
 	} else {
 		image = 'm-auto row-start-1 lg:col-start-2'
@@ -34,7 +34,7 @@ const Feature = (props) => {
 				</div>
 			</div>
 			<div id='image' className={image}>
-				Image here
+				{props.img}
 			</div>
 		</div>
 	)
