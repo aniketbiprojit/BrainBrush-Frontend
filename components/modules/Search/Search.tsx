@@ -22,7 +22,7 @@ const Search = (props) => {
 					search='true'
 				/>
 			</div>
-			<div id='recent' className={styles.recent + ' bg-gray-500 bg-opacity-50 p-2 rounded-full flex flex-row items-center'}>
+			<div id='recent' className={styles.recent + ' bg-gray-400 bg-opacity-50 p-2 rounded-full flex flex-row items-center'}>
 				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
 					<FaGoogle size={18} className='ml-2 mr-1' />
 					Google
