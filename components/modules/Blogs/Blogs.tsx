@@ -2,8 +2,8 @@ import Blog from './Blog.module'
 
 const Blogs = () => {
 	return (
-		<div className='flex flex-col justify-center w-full gap-20 lg:gap-32'>
-			<div className='px-5 text-5xl font-semibold text-center text-primary header lg:px-0'>Here are some relevant stories for you!</div>
+		<div className='flex flex-col justify-center w-full'>
+			<div className='px-5 mb-10 text-5xl font-semibold text-center text-primary header lg:px-0'>Here are some relevant stories for you!</div>
 			<div className='flex flex-row flex-wrap justify-center m-auto blogs'>
 				<Blog
 					companyName='Microsoft'
@@ -26,7 +26,7 @@ const Blogs = () => {
 					color='bg-gray-300'
 				/>
 			</div>
-			<div className='p-5 m-auto text-2xl text-center text-white rounded-xl bg-secondary-light max-w-max red-button'>View More!</div>
+			<div className='p-5 m-auto mt-10 text-2xl text-center text-white rounded-xl bg-secondary-light max-w-max red-button'>View More!</div>
 		</div>
 	)
 }
