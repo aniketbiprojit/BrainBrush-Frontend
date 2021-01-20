@@ -27,8 +27,6 @@ const SearchWithButton = (props) => {
 		styles.box = 'grid text-center gap-5 w-full'
 	}
 
-	var icon = true
-
 	return (
 		<div className={styles.box}>
 			<div className={styles.head + ' text-3xl md:text-4xl'}>{props.line1}</div>
