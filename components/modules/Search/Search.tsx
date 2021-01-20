@@ -11,7 +11,8 @@ const Search = (props) => {
 		<div className={styles.container} id='nav'>
 			<div className={styles.search}>
 				<SearchWithButton
-					msg='Get up to date with the latest happenings!'
+					line1='Get up to date with the latest happenings!'
+					line2='Last updated 15 minutes ago!'
 					placeholder='Search for listing, financial reports, companies ...'
 					button='Search'
 					color='black'
