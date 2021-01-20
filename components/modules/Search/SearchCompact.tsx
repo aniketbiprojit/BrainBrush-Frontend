@@ -32,8 +32,8 @@ const SearchBar = (props) => {
 			<input type='text' className={styles.text} placeholder={props.msg} />
 			<div className='flex'>
 				<span className={styles.icon}>
-					<FontAwesomeIcon icon={faSearch} className='mr-2' />
-					Search
+					{props.button ? '' : <FontAwesomeIcon icon={faSearch} className='mr-2' />}
+					{props.button ? props.button : 'Search'}
 				</span>
 			</div>
 		</div>
