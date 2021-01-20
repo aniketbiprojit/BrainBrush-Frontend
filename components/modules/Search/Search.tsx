@@ -2,8 +2,8 @@ import SearchWithButton from './SearchWithButton'
 
 const Search = (props) => {
 	const styles = {
-		container: 'flex flex-col items-center w-screen pt-96 lg:pt-96 bg-gradient-to-r from-primary to-secondary-dark',
-		search: 'grid w-screen px-20 justify-items-center',
+		container: 'flex flex-col items-center w-screen pt-96 lg:pt-96',
+		search: 'grid w-screen px-10 lg:px-20 justify-items-center',
 		recent: 'mb-64 mt-10 lg:mb-0',
 	}
 
@@ -16,6 +16,7 @@ const Search = (props) => {
 					placeholder='Search for listing, financial reports, companies ...'
 					button='Search'
 					color='black'
+					search='true'
 				/>
 			</div>
 			<div id='recent' className={styles.recent}>

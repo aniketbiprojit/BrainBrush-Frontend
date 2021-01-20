@@ -15,7 +15,6 @@ class Layout extends React.Component {
 				document.getElementById('nav-container').classList.add('shadow-xl')
 				document.getElementById('nav-container').classList.remove('bg-transparent')
 				document.getElementById('searchbar').classList.add('sm:flex')
-				document.getElementById('searchbar').classList.remove('hidden')
 			} else {
 				document.getElementById('nav-container').classList.add('bg-transparent')
 				document.getElementById('nav-container').classList.remove('bg-primary')
