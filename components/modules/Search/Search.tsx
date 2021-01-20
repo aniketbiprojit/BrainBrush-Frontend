@@ -1,24 +1,44 @@
 import SearchWithButton from './SearchWithButton'
 
+// Font Awesome Import
+import { FaGoogle, FaAirbnb, FaAdobe, FaUber } from 'react-icons/fa'
+
 const Search = (props) => {
 	const styles = {
-		container: 'flex flex-col items-center w-screen pt-72 lg:pt-96 bg-gradient-to-tr from-purple-500 to-blue-600',
-		search: 'grid w-screen px-8 lg:px-20 justify-items-center',
-		recent: 'mt-10 mb-64 lg:mb-0',
+		container: 'flex flex-col items-center w-screen pt-96 lg:pt-96',
+		search: 'grid w-screen px-10 lg:px-20 justify-items-center',
+		recent: 'mb-64 mt-10 lg:mb-0',
 	}
 
 	return (
 		<div className={styles.container} id='nav'>
 			<div className={styles.search}>
 				<SearchWithButton
-					msg='Get up to date with the latest happenings!'
+					line1='Get up to date with the latest happenings!'
+					line2='Last updated 15 minutes ago!'
 					placeholder='Search for listing, financial reports, companies ...'
 					button='Search'
 					color='black'
+					search='true'
 				/>
 			</div>
-			<div id='recent' className={styles.recent}>
-				*Recent searches here*
+			<div id='recent' className={styles.recent + ' bg-gray-400 bg-opacity-50 p-2 rounded-full flex flex-row items-center'}>
+				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
+					<FaGoogle size={18} className='ml-2 mr-1' />
+					Google
+				</div>
+				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
+					<FaAirbnb size={18} className='ml-2 mr-1' />
+					Airbnb
+				</div>
+				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
+					<FaAdobe size={18} className='ml-2 mr-1' />
+					Adobe
+				</div>
+				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
+					<FaUber size={18} className='ml-2 mr-1' />
+					Uber
+				</div>
 			</div>
 			<svg className='relative w-screen transform translate-y-2' viewBox='0 0 3108 650' fill='none'>
 				<path

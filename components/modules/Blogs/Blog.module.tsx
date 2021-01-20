@@ -1,7 +1,7 @@
 const Blog = (props) => {
 	return (
 		<div
-			className='grid grid-cols-2 grid-rows-6 p-10 mx-10 my-5 duration-200 bg-white border-2 border-gray-400 shadow-2xl w-96 align-items-center rounded-2xl'
+			className='grid grid-cols-2 grid-rows-6 p-10 mx-10 my-10 duration-300 bg-white border-2 border-gray-400 hover:shadow-xl w-96 align-items-center rounded-2xl'
 			id='blog-card'
 		>
 			<div className='text-4xl font-semibold text-primary justify-self-start'>{props.companyName}</div>
