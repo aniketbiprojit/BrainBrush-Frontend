@@ -1,7 +1,7 @@
 import SearchWithButton from './SearchWithButton'
 
 // Font Awesome Import
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaGoogle, FaAirbnb, FaAdobe, FaUber } from 'react-icons/fa'
 
 const Search = (props) => {
 	const styles = {
@@ -22,8 +22,23 @@ const Search = (props) => {
 					search='true'
 				/>
 			</div>
-			<div id='recent' className={styles.recent + ' bg-gray-500 bg-opacity-50 p-2 rounded-full px-5'}>
-				{/* <FontAwesomeIcon icon='fab fa-google' className='mr-2' /> */}
+			<div id='recent' className={styles.recent + ' bg-gray-500 bg-opacity-50 p-2 rounded-full flex flex-row items-center'}>
+				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
+					<FaGoogle size={18} className='ml-2 mr-1' />
+					Google
+				</div>
+				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
+					<FaAirbnb size={18} className='ml-2 mr-1' />
+					Airbnb
+				</div>
+				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
+					<FaAdobe size={18} className='ml-2 mr-1' />
+					Adobe
+				</div>
+				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
+					<FaUber size={18} className='ml-2 mr-1' />
+					Uber
+				</div>
 			</div>
 			<svg className='relative w-screen transform translate-y-2' viewBox='0 0 3108 650' fill='none'>
 				<path
