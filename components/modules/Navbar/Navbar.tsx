@@ -31,7 +31,7 @@ const Navbar = (props) => {
 					</Link>
 				</li>
 				<div className='flex justify-center w-full'>
-					<SearchCompact msg='Search for companies, listing ...' />
+					<SearchCompact msg='Search for companies, listing ...' setAnim='true' />
 				</div>
 
 				<ul className={styles.button.container}>

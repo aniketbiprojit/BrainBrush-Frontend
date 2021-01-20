@@ -1,3 +1,5 @@
+import SearchCompact from '../Search/SearchCompact'
+
 const Footer = (props) => {
 	const links = [
 		{ href: '#', label: 'Home' },
@@ -30,7 +32,10 @@ const Footer = (props) => {
 						</li>
 					))}
 				</ul>
-				<div className='flex items-center justify-between px-10 py-5 text-white lg:py-0'>
+				<div className='flex justify-center mt-5 lg:w-1/3 lg:ml-2 lg:mr-10 lg:mt-0'>
+					<SearchCompact msg='Why not subscribe? We don`t spam :)' expand='true' />
+				</div>
+				<div className='flex items-center justify-between py-5 text-white lg:py-0'>
 					<div className='mx-2 text-center'>Contact Us</div>
 					<div className='mx-2 text-center'>Privacy Policy</div>
 					<div className='mx-2 text-center'>Our Terms & Conditions</div>
