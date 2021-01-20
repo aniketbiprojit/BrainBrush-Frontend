@@ -11,7 +11,7 @@ const Feature = (props) => {
 
 	return (
 		<div
-			className='grid grid-cols-1 gap-5 p-10 duration-200 bg-white shadow-2xl lg:h-full lg:w-2/3 lg:grid-cols-2 start align-items-center rounded-2xl'
+			className='grid grid-cols-1 gap-5 p-10 duration-200 bg-white border-2 border-gray-400 lg:h-full lg:w-2/3 lg:grid-cols-2 start align-items-center rounded-2xl'
 			id='feature-card'
 		>
 			<div id='text' className='flex flex-col max-h-max'>
