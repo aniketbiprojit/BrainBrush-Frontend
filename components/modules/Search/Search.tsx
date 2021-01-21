@@ -10,6 +10,8 @@ const Search = (props) => {
 		recent: 'mb-64 mt-10 lg:mb-0',
 	}
 
+	var icon_size = 20
+
 	return (
 		<div className={styles.container} id='nav'>
 			<div className={styles.search}>
@@ -23,20 +25,20 @@ const Search = (props) => {
 				/>
 			</div>
 			<div id='recent' className={styles.recent + ' bg-gray-400 bg-opacity-50 p-2 rounded-full flex flex-row items-center'}>
-				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
-					<FaGoogle size={18} className='ml-2 mr-1' />
+				<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+					<FaGoogle size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-0' />
 					Google
 				</div>
-				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
-					<FaAirbnb size={18} className='ml-2 mr-1' />
+				<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+					<FaAirbnb size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
 					Airbnb
 				</div>
-				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
-					<FaAdobe size={18} className='ml-2 mr-1' />
+				<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+					<FaAdobe size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
 					Adobe
 				</div>
-				<div className='flex flex-row p-2 px-4 duration-100 rounded-full hover:bg-gray-400'>
-					<FaUber size={18} className='ml-2 mr-1' />
+				<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+					<FaUber size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
 					Uber
 				</div>
 			</div>
