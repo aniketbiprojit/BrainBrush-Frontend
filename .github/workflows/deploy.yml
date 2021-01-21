@@ -3,7 +3,7 @@ name: Azure Deploy SSH
 
 on:
   push:
-    branches: [ deployment ]
+    branches: [ testing ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
