@@ -1,0 +1,44 @@
+name: Production deploy
+
+on:
+    push:
+        branches: [deployment]
+
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+    # This workflow contains a single job called "build"
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Run Build
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12
+            - run: npm install -g yarn
+            - run: yarn install --frozen-lockfile
+            - run: yarn build
+            - run: cp public/* out
+
+            #       - name: ssh-and-deploy
+            - name: scp-and-deploy
+              #         uses: appleboy/ssh-action@master
+              uses: appleboy/scp-action@master
+              with:
+                  key: ${{ secrets.SSH_KEY }}
+                  username: ${{ secrets.DEPLOY_USER_NAME }}
+                  port: 22
+                  host: ${{ secrets.DEPLOY_HOST_NAME }}
+                  source: ./out/*
+                  target: /var/www/html/
+#           script: |
+#             source /home/azureuser/.bashrc
+#             cd /home/azureuser/public/deployments/BrainBrush-Frontend
+#             ls -la
+#             # git checkout deployment
+#             git pull
+#             /home/azureuser/.nvm/versions/node/v14.15.4/bin/node /home/azureuser/.nvm/versions/node/v14.15.4/bin/pm2 restart brainbrush_frontend_3003
