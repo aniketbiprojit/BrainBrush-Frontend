@@ -33,7 +33,7 @@ jobs:
                   username: ${{ secrets.DEPLOY_USER_NAME }}
                   port: 22
                   host: ${{ secrets.DEPLOY_HOST_NAME }}
-                  source: ./out/*
+                  source: ./out/
                   target: /var/www/html/
 #           script: |
 #             source /home/azureuser/.bashrc
