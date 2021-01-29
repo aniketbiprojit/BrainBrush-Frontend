@@ -1,5 +1,9 @@
 import Review from './Review.module'
 
+/** Review Section
+ * @imports Review Module
+ * @todo Fetch reviews from reviews.json
+ */
 const Reviews = () => {
 	return (
 		<div className='flex flex-col justify-center w-full p-4 pt-10 lg:p-20'>
