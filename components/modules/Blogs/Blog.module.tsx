@@ -2,7 +2,7 @@
  * Single Blog component
  * @param props companyName, msg, color
  */
-const Blog = (props) => {
+const Blog = (props: any) => {
 	return (
 		<div
 			className='grid grid-cols-2 grid-rows-6 p-10 mx-10 my-10 duration-300 bg-white border-2 border-gray-400 hover:shadow-xl w-96 align-items-center rounded-2xl'

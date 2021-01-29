@@ -10,7 +10,7 @@ import SearchCompact from '../Search/SearchCompact'
  * @imports Link (nextjs)
  * @imports Search Compact (module)
  */
-const Navbar = (props) => {
+const Navbar = (props: any) => {
 	const links = [
 		{ href: '#', label: 'Home' },
 		{ href: '#', label: 'Companies' },

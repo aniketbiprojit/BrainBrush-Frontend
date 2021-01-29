@@ -1,7 +1,7 @@
 /** Feature Module
  * @param props pos, img
  */
-const Feature = (props) => {
+const Feature = (props: any) => {
 	let image
 	if (props.pos === 'left') {
 		image = 'm-auto row-start-1'

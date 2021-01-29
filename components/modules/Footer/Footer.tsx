@@ -3,7 +3,7 @@ import SearchCompact from '../Search/SearchCompact'
 /** Footer Section
  * @param props null
  */
-const Footer = (props) => {
+const Footer = (props: any) => {
 	const links = [
 		{ href: '#', label: 'Home' },
 		{ href: '#', label: 'Companies' },
