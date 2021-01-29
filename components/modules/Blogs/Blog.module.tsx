@@ -1,3 +1,7 @@
+/**
+ * Single Blog component
+ * @param props companyName, msg, color
+ */
 const Blog = (props) => {
 	return (
 		<div

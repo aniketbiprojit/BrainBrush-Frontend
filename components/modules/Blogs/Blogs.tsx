@@ -1,5 +1,9 @@
 import Blog from './Blog.module'
 
+/**
+ * Blog Section
+ * @imports blog module
+ */
 const Blogs = () => {
 	return (
 		<div className='flex flex-col justify-center w-full pt-10 pb-10' id='blog-bg'>
