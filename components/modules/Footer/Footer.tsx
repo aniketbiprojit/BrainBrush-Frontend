@@ -1,3 +1,4 @@
+import { FaMapMarked, FaMapSigns } from 'react-icons/fa'
 import SearchCompact from '../Search/SearchCompact.module'
 
 /** Footer Section
@@ -20,16 +21,17 @@ const Footer = (props: any) => {
 	]
 
 	const styles = {
-		logo: 'text-2xl font-semibold text-white',
+		logo: 'text-4xl font-semibold text-white',
 		container: 'bg-primary flex text-left justify-evenly p-14',
 		menu: {
-			header: 'font-bold text-lg p-2 text-white ',
+			header: 'font-bold text-lg p-2 text-white flex flex-row',
+			icon: 'px-2 text-2xl',
 			container: 'flex flex-col items-right space-x-5',
 			text: 'text-white no-underline hover:text-secondary-light',
 		},
-		copy: 'text-white no-underline text-center w-full pt-16',
+		copy: 'text-white no-underline text-center w-full',
 		search: {
-			box: 'flex flex-col justify-center mt-5 md:w-1/3 lg:w-1/4 lg:ml-2 lg:mr-10 lg:mt-0',
+			box: 'flex flex-col justify-start mt-5 md:w-1/3 lg:w-1/4 lg:ml-2 lg:mr-10 lg:mt-0',
 			header: 'py-2 text-xl font-semibold text-white',
 		},
 	}
@@ -39,7 +41,12 @@ const Footer = (props: any) => {
 			<div className={styles.container}>
 				<div className={styles.logo}>Brainbrush</div>
 				<ul className={styles.menu.container} id='footerList'>
-					<li className={styles.menu.header}>Discover</li>
+					<li className={styles.menu.header}>
+						<div className={styles.menu.icon}>
+							<FaMapMarked />
+						</div>
+						Discover
+					</li>
 					{links_discover.map(({ href, label }) => (
 						<li key={`${href}${label}`}>
 							<a href={href} className={styles.menu.text}>
@@ -49,7 +56,12 @@ const Footer = (props: any) => {
 					))}
 				</ul>
 				<ul className={styles.menu.container}>
-					<li className={styles.menu.header}>Company</li>
+					<li className={styles.menu.header}>
+						<div className={styles.menu.icon}>
+							<FaMapSigns />
+						</div>
+						Company
+					</li>
 					{links_company.map(({ href, label }) => (
 						<li key={`${href}${label}`}>
 							<a href={href} className={styles.menu.text}>
