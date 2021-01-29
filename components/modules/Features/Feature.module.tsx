@@ -1,6 +1,6 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
-
+/** Feature Module
+ * @param props pos, img
+ */
 const Feature = (props) => {
 	let image
 	if (props.pos === 'left') {

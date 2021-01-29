@@ -5,6 +5,12 @@ import React from 'react'
 
 import { GiDiceFire, GiSpaceship, GiSpeedometer } from 'react-icons/gi'
 
+/**
+ * Feature Section
+ * @imports Feature Module
+ * @imports Font Awesome icons
+ * @imports React-icons
+ */
 const Features = () => {
 	return (
 		<div className='bg-gray-200 lg:mb-10'>
