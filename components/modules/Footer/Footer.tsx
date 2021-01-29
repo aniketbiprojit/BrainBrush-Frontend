@@ -1,11 +1,12 @@
 import SearchCompact from '../Search/SearchCompact.module'
+import './footer.module.css'
 
 /** Footer Section
  * @param props null
  */
 const Footer = (props: any) => {
 	const links_discover = [
-		{ href: '#', label: 'BrainBrush' },
+		{ href: '#', label: 'Discover' },
 		{ href: '#', label: 'About Us' },
 		{ href: '#', label: 'Blogs' },
 		{ href: '#', label: 'FAQs' },
@@ -21,7 +22,8 @@ const Footer = (props: any) => {
 	]
 
 	const styles = {
-		container: 'bg-primary flex items-center justify-between p-14',
+		logo: 'text-2xl font-semibold text-white',
+		container: 'bg-primary flex items-center justify-evenly p-14',
 		menu: {
 			container: 'flex flex-col items-right space-x-5',
 			text: 'text-white no-underline hover:text-secondary-light',
@@ -32,6 +34,7 @@ const Footer = (props: any) => {
 	return (
 		<div>
 			<div className={styles.container}>
+				<div className={styles.logo}>Brainbrush</div>
 				<ul className={styles.menu.container}>
 					{links_discover.map(({ href, label }) => (
 						<li key={`${href}${label}`}>
@@ -50,7 +53,8 @@ const Footer = (props: any) => {
 						</li>
 					))}
 				</ul>
-				<div className='flex justify-center mt-5 lg:w-1/3 lg:ml-2 lg:mr-10 lg:mt-0'>
+				<div className='flex flex-col justify-center mt-5 lg:w-1/4 lg:ml-2 lg:mr-10 lg:mt-0'>
+					<div className='py-2 text-xl font-semibold text-white'>Subscribe to our newsletter!</div>
 					<SearchCompact msg='Why not subscribe? We don`t spam :)' expand='true' button='Subscribe' />
 				</div>
 			</div>
