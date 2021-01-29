@@ -2,15 +2,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-/** PROVIDE PROPS
- *
- * @param props.msg >> Main header message
- * @param props.shadow >> Backgroud shadow on div
- * @param props.placeholder >> placeholder msg in search box
- * @param props.button >> button text
- *
+/** Search with button (Module)
+ * @imports Font-Awesome icons
+ * @imports React-icons
+ * @param props msg, shadow, button, placeholder, line1, line2
  */
-
 const SearchWithButton = (props) => {
 	const styles = {
 		box: 'grid text-center gap-3 w-full mb-48 mt-20',

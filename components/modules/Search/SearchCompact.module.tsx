@@ -2,12 +2,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-/**
- *
- * @param props.msg: Placeholder Message
- *
+/** Search bar compact (module)
+ * @imports React-icons
+ * @imports font-awesome icons
+ * @param props msg, setAnim, expand, button
  */
-
 const SearchBar = (props) => {
 	var styles = {
 		container: 'flex w-full sm:w-7/12 lg:w-5/12 flex-wrap items-stretch',

@@ -1,4 +1,4 @@
-import SearchCompact from '../Search/SearchCompact'
+import SearchCompact from '../Search/SearchCompact.module'
 
 /** Footer Section
  * @param props null

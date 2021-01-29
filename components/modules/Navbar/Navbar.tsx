@@ -3,7 +3,7 @@ import React from 'react'
 // NextJs Link
 import Link from 'next/link'
 
-import SearchCompact from '../Search/SearchCompact'
+import SearchCompact from '../Search/SearchCompact.module'
 
 /** Navbar Section
  * @param props null
