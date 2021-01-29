@@ -1,4 +1,8 @@
-const Review = (props) => {
+/** Review Module
+ *
+ * @param props companyName, msg
+ */
+const Review = (props: any) => {
 	return (
 		<div
 			className='grid grid-cols-2 grid-rows-5 gap-5 p-10 mx-5 mb-10 text-center duration-300 bg-white border-2 border-gray-400 hover:shadow-xl w-400px lg:mb-0 align-items-center rounded-2xl'
