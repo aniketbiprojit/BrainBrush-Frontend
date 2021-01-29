@@ -1,12 +1,21 @@
 import Head from 'next/head'
 import Navbar from '../../modules/Navbar/Navbar'
-import Footer from '../../modules/Footer/Footer'
 import Search from '../../modules/Search/Search'
 import Features from '../../modules/Features/Features'
-import Reviews from '../../modules/Reviews/Reviews'
 import Blogs from '../../modules/Blogs/Blogs'
+import Reviews from '../../modules/Reviews/Reviews'
+import Footer from '../../modules/Footer/Footer'
 import React from 'react'
 
+/** HOME PAGE LAYOUT CLASS
+ * @imports Head (nextjs)
+ * @imports Navbar Section
+ * @imports Search Section
+ * @imports Features Section
+ * @imports Blogs Section
+ * @imports Reviews Section
+ * @imports Footer Section
+ */
 class Layout extends React.Component {
 	componentDidMount() {
 		window.addEventListener('scroll', (e) => {
@@ -47,11 +56,6 @@ class Layout extends React.Component {
 				<div className='p-0 m-0'>
 					<Reviews />
 				</div>
-				{/* REMOVED EMAILER */}
-				{/* <div className='px-24 lg:px-0'>
-					<SearchWithButton msg='Sign up to get date with our Newsletter!' placeholder="We won't send you spam :)" button='Login' />
-				</div> */}
-				{/* Returns Footer */}
 				<Footer />
 			</div>
 		)
