@@ -27,7 +27,7 @@ const Footer = (props: any) => {
 			header: 'font-bold text-lg p-2 text-white flex flex-row',
 			icon: 'px-2 text-2xl text-secondary-light',
 			container: 'flex flex-col items-right space-x-5',
-			text: 'text-white no-underline hover:text-secondary-light',
+			text: 'text-gray-400 font-medium no-underline hover:text-secondary-light',
 		},
 		copy: 'text-white no-underline text-center w-full',
 		search: {
