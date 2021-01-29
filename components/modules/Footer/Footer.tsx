@@ -25,7 +25,7 @@ const Footer = (props: any) => {
 		container: 'bg-primary flex text-left justify-evenly p-14',
 		menu: {
 			header: 'font-bold text-lg p-2 text-white flex flex-row',
-			icon: 'px-2 text-2xl',
+			icon: 'px-2 text-2xl text-secondary-light',
 			container: 'flex flex-col items-right space-x-5',
 			text: 'text-white no-underline hover:text-secondary-light',
 		},
