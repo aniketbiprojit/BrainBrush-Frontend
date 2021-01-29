@@ -33,7 +33,11 @@ const Footer = (props: any) => {
 		search: {
 			box: 'flex flex-col justify-start mt-5 md:w-1/3 lg:w-1/4 lg:ml-2 lg:mr-10 lg:mt-0',
 			header: 'text-xl font-semibold text-white',
-			subheader: 'py-2 text-sm font-semibold text-blue-300',
+			subheader: 'py-4 text-sm font-semibold text-blue-300',
+			terms: {
+				box: 'py-4',
+				check: 'py-4',
+			},
 		},
 	}
 
@@ -75,6 +79,12 @@ const Footer = (props: any) => {
 					<div className={styles.search.header}>Subscribe to our newsletter!</div>
 					<div className={styles.search.subheader}>Don't worry, we won't spam you.</div>
 					<SearchCompact msg='Your Email ...' expand='true' button='Subscribe' />
+					<div className={styles.search.terms.check}>
+						<input type='checkbox' id='box-1' />
+						<label htmlFor='box-1'>
+							I agree to the <span className='text-secondary-light hover:text-gray-300'>Terms and Conditions</span>
+						</label>
+					</div>
 				</div>
 			</div>
 			<div className={styles.container}>
