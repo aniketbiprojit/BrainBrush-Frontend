@@ -4,24 +4,26 @@ import SearchCompact from '../Search/SearchCompact.module'
  * @param props null
  */
 const Footer = (props: any) => {
-	const links = [
+	const links_discover = [
 		{ href: '#', label: 'BrainBrush' },
 		{ href: '#', label: 'About Us' },
-		{ href: '#', label: 'Privacy Policy' },
+		{ href: '#', label: 'Blogs' },
 		{ href: '#', label: 'FAQs' },
 		{ href: '#', label: 'Glossary' },
+	]
+
+	const links_company = [
+		{ href: '#', label: 'Privacy Policy' },
+		{ href: '#', label: 'Directory' },
 		{ href: '#', label: 'Contact Us' },
 		{ href: '#', label: 'Submit Your Company' },
 		{ href: '#', label: 'Advertise with Us' },
-		{ href: '#', label: 'Directory' },
-		{ href: '#', label: 'Blogs' },
 	]
 
 	const styles = {
-		container: 'bg-primary flex flex-col lg:flex-row items-center justify-between p-14',
-		search: 'justify-items-end w-full p-0 contents-end items-end',
+		container: 'bg-primary flex items-center justify-between p-14',
 		menu: {
-			container: 'flex items-center justify-between space-x-5',
+			container: 'flex flex-col items-right space-x-5',
 			text: 'text-white no-underline hover:text-secondary-light',
 		},
 		copy: 'text-white no-underline text-center w-full pt-16',
@@ -31,7 +33,16 @@ const Footer = (props: any) => {
 		<div>
 			<div className={styles.container}>
 				<ul className={styles.menu.container}>
-					{links.map(({ href, label }) => (
+					{links_discover.map(({ href, label }) => (
+						<li key={`${href}${label}`}>
+							<a href={href} className={styles.menu.text}>
+								{label}
+							</a>
+						</li>
+					))}
+				</ul>
+				<ul className={styles.menu.container}>
+					{links_company.map(({ href, label }) => (
 						<li key={`${href}${label}`}>
 							<a href={href} className={styles.menu.text}>
 								{label}
