@@ -1,21 +1,19 @@
 import SearchCompact from '../Search/SearchCompact.module'
-import './footer.module.css'
 
 /** Footer Section
  * @param props null
  */
 const Footer = (props: any) => {
 	const links_discover = [
-		{ href: '#', label: 'Discover' },
 		{ href: '#', label: 'About Us' },
 		{ href: '#', label: 'Blogs' },
 		{ href: '#', label: 'FAQs' },
 		{ href: '#', label: 'Glossary' },
+		{ href: '#', label: 'Directory' },
 	]
 
 	const links_company = [
 		{ href: '#', label: 'Privacy Policy' },
-		{ href: '#', label: 'Directory' },
 		{ href: '#', label: 'Contact Us' },
 		{ href: '#', label: 'Submit Your Company' },
 		{ href: '#', label: 'Advertise with Us' },
@@ -23,19 +21,25 @@ const Footer = (props: any) => {
 
 	const styles = {
 		logo: 'text-2xl font-semibold text-white',
-		container: 'bg-primary flex items-center justify-evenly p-14',
+		container: 'bg-primary flex text-left justify-evenly p-14',
 		menu: {
+			header: 'font-bold text-lg p-2 text-white ',
 			container: 'flex flex-col items-right space-x-5',
 			text: 'text-white no-underline hover:text-secondary-light',
 		},
 		copy: 'text-white no-underline text-center w-full pt-16',
+		search: {
+			box: 'flex flex-col justify-center mt-5 md:w-1/3 lg:w-1/4 lg:ml-2 lg:mr-10 lg:mt-0',
+			header: 'py-2 text-xl font-semibold text-white',
+		},
 	}
 
 	return (
 		<div>
 			<div className={styles.container}>
 				<div className={styles.logo}>Brainbrush</div>
-				<ul className={styles.menu.container}>
+				<ul className={styles.menu.container} id='footerList'>
+					<li className={styles.menu.header}>Discover</li>
 					{links_discover.map(({ href, label }) => (
 						<li key={`${href}${label}`}>
 							<a href={href} className={styles.menu.text}>
@@ -45,6 +49,7 @@ const Footer = (props: any) => {
 					))}
 				</ul>
 				<ul className={styles.menu.container}>
+					<li className={styles.menu.header}>Company</li>
 					{links_company.map(({ href, label }) => (
 						<li key={`${href}${label}`}>
 							<a href={href} className={styles.menu.text}>
@@ -53,8 +58,8 @@ const Footer = (props: any) => {
 						</li>
 					))}
 				</ul>
-				<div className='flex flex-col justify-center mt-5 lg:w-1/4 lg:ml-2 lg:mr-10 lg:mt-0'>
-					<div className='py-2 text-xl font-semibold text-white'>Subscribe to our newsletter!</div>
+				<div className={styles.search.box}>
+					<div className={styles.search.header}>Subscribe to our newsletter!</div>
 					<SearchCompact msg='Why not subscribe? We don`t spam :)' expand='true' button='Subscribe' />
 				</div>
 			</div>
