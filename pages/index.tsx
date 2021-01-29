@@ -37,11 +37,7 @@ class HomePage extends React.Component<PropsFromRedux & {}> {
 	}
 
 	render() {
-		return (
-			<>
-				<Home></Home>
-			</>
-		)
+		return <Home></Home>
 	}
 }
 
