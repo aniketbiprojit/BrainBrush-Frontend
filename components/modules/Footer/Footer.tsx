@@ -22,13 +22,14 @@ const Footer = (props: any) => {
 
 	const styles = {
 		logo: 'text-4xl font-semibold text-white',
-		container: 'bg-primary flex text-left justify-evenly p-14',
+		container: 'bg-primary flex text-left justify-evenly px-14 py-20',
 		menu: {
 			header: 'font-bold text-lg p-2 pb-8 text-white flex flex-row',
 			icon: 'px-2 text-2xl text-secondary-light',
 			container: 'flex flex-col items-right space-x-5',
 			text: 'text-gray-400 font-medium no-underline hover:text-secondary-light',
 		},
+		copyContainer: 'bg-primary flex text-left justify-evenly p-8 border-t border-gray-600',
 		copy: 'text-white no-underline text-center w-full',
 		search: {
 			box: 'flex flex-col justify-start mt-5 md:w-1/3 lg:w-1/4 lg:ml-2 lg:mr-10 lg:mt-0',
@@ -87,7 +88,7 @@ const Footer = (props: any) => {
 					</div>
 				</div>
 			</div>
-			<div className={styles.container}>
+			<div className={styles.copyContainer}>
 				<div className={styles.copy}>© BrainBrush 2020. All rights reserved.</div>
 			</div>
 		</div>
