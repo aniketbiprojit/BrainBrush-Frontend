@@ -5,6 +5,11 @@ import Link from 'next/link'
 
 import SearchCompact from '../Search/SearchCompact'
 
+/** Navbar Section
+ * @param props null
+ * @imports Link (nextjs)
+ * @imports Search Compact (module)
+ */
 const Navbar = (props) => {
 	const links = [
 		{ href: '#', label: 'Home' },
