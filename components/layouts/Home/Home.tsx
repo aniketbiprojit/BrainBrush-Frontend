@@ -8,6 +8,8 @@ import Footer from '../../modules/Footer/Footer'
 import React from 'react'
 
 /** HOME PAGE LAYOUT CLASS
+ * @class Home
+ *
  * @imports Head (nextjs)
  * @imports Navbar Section
  * @imports Search Section
@@ -16,8 +18,12 @@ import React from 'react'
  * @imports Reviews Section
  * @imports Footer Section
  */
-class Layout extends React.Component {
+class Home extends React.Component {
 	componentDidMount() {
+		/** Controls navbar scroll anim
+		 * @listens scroll
+		 * @todo improve scroll timings
+		 */
 		window.addEventListener('scroll', (e) => {
 			if (window.pageYOffset >= document.getElementById('features').offsetTop - window.innerHeight / 2) {
 				document.getElementById('nav-container').classList.add('bg-primary')
@@ -62,4 +68,4 @@ class Layout extends React.Component {
 	}
 }
 
-export default Layout
+export default Home
