@@ -24,7 +24,7 @@ const Footer = (props: any) => {
 		logo: 'text-4xl font-semibold text-white',
 		container: 'bg-primary flex text-left justify-evenly p-14',
 		menu: {
-			header: 'font-bold text-lg p-2 text-white flex flex-row',
+			header: 'font-bold text-lg p-2 pb-8 text-white flex flex-row',
 			icon: 'px-2 text-2xl text-secondary-light',
 			container: 'flex flex-col items-right space-x-5',
 			text: 'text-gray-400 font-medium no-underline hover:text-secondary-light',
@@ -32,7 +32,8 @@ const Footer = (props: any) => {
 		copy: 'text-white no-underline text-center w-full',
 		search: {
 			box: 'flex flex-col justify-start mt-5 md:w-1/3 lg:w-1/4 lg:ml-2 lg:mr-10 lg:mt-0',
-			header: 'py-2 text-xl font-semibold text-white',
+			header: 'text-xl font-semibold text-white',
+			subheader: 'py-2 text-sm font-semibold text-blue-300',
 		},
 	}
 
@@ -72,7 +73,8 @@ const Footer = (props: any) => {
 				</ul>
 				<div className={styles.search.box}>
 					<div className={styles.search.header}>Subscribe to our newsletter!</div>
-					<SearchCompact msg='Why not subscribe? We don`t spam :)' expand='true' button='Subscribe' />
+					<div className={styles.search.subheader}>Don't worry, we won't spam you.</div>
+					<SearchCompact msg='Your Email ...' expand='true' button='Subscribe' />
 				</div>
 			</div>
 			<div className={styles.container}>

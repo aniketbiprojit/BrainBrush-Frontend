@@ -18,6 +18,8 @@ const SearchBar = (props) => {
 
 	if (props.expand === 'true') {
 		styles.container = 'flex w-full sm:w-9/12 lg:w-full flex-row items-stretch'
+		styles.text += ' font-medium py-6 text-lg'
+		styles.icon += ' font-medium text-lg'
 	}
 
 	var isAnim = props.setAnim === 'true' ? 'searchbar' : 'searchbar-nonAnim'
