@@ -38,6 +38,20 @@ const Features = () => {
 				}}
 				id='image'
 			></div>
+			<div
+				className='object2'
+				onMouseMove={(e) => {
+					document.querySelectorAll('.object2').forEach(() => {
+						let dx = 0.05
+						let dy = -0.11
+						let x = e.clientX * dx
+						let y = e.clientY * dy
+
+						document.getElementById('image2').style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)'
+					})
+				}}
+				id='image2'
+			></div>
 			<div className='grid items-center grid-cols-1 p-8 py-20 lg:p-20 gap-y-20 lg:gap-y-28 justify-items-center'>
 				<Feature img={<GiDiceFire size={300} className='text-secondary fbox' />} />
 				<Feature pos='left' img={<GiSpeedometer size={300} className='text-indigo-500 fbox' />} />
