@@ -107,12 +107,17 @@ a {
 	position: absolute;
 	top: 120%;
 	left: -5%;
-	z-index: 999;
+	z-index: 2;
 	height: 100%;
 	width: 100%;
 	object-fit: contain;
 	background: url('./f1.png');
 	background-repeat: no-repeat;
+	filter: drop-shadow(50px -15px 25px rgba(0, 0, 0, 0.3));
+}
+
+#feature-card {
+	z-index: 1;
 }
 
 /*Checkboxes styles*/

@@ -28,9 +28,10 @@ const Features = () => {
 				className='object'
 				onMouseMove={(e) => {
 					document.querySelectorAll('.object').forEach(() => {
-						let dx = 0.05
+						let dx = 0.033
+						let dy = -0.1
 						let x = e.clientX * dx
-						let y = e.clientY * dx
+						let y = e.clientY * dy
 
 						document.getElementById('image').style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)'
 					})
