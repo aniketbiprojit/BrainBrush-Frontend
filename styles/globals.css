@@ -100,7 +100,7 @@ a {
 }
 
 #blog-card:hover {
-	transform: scale(1.25);
+	transform: scale(1.025);
 }
 
 .object {
@@ -123,7 +123,6 @@ a {
 	z-index: 2;
 	height: 100%;
 	width: 100%;
-	rotate: 105deg;
 	object-fit: contain;
 	background: url('./f1.png');
 	background-repeat: no-repeat;
