@@ -103,6 +103,18 @@ a {
 	transform: scale(1.25);
 }
 
+.object {
+	position: absolute;
+	top: 120%;
+	left: 5%;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	object-fit: fill;
+	background: url('./f1.png');
+	background-repeat: no-repeat;
+}
+
 /*Checkboxes styles*/
 input[type='checkbox'] {
 	display: none;

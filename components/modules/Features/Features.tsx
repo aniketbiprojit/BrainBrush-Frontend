@@ -24,10 +24,11 @@ const Features = () => {
 			<div className='text-2xl font-semibold text-center lg:text-5xl text-primary' id='features'>
 				What is BrainBrush?
 			</div>
+			<div className='object'></div>
 			<div className='grid items-center grid-cols-1 p-8 py-20 lg:p-20 gap-y-20 lg:gap-y-28 justify-items-center'>
-				<Feature img={<GiDiceFire size={300} className='text-secondary' />} />
-				<Feature pos='left' img={<GiSpeedometer size={300} className='text-indigo-500' />} />
-				<Feature img={<GiSpaceship size={300} className='text-secondary-light' />} />
+				<Feature img={<GiDiceFire size={300} className='text-secondary fbox' />} />
+				<Feature pos='left' img={<GiSpeedometer size={300} className='text-indigo-500 fbox' />} />
+				<Feature img={<GiSpaceship size={300} className='text-secondary-light fbox' />} />
 			</div>
 		</div>
 	)
