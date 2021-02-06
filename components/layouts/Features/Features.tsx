@@ -25,9 +25,9 @@ const Features = () => {
 				What is BrainBrush?
 			</div>
 			<div
-				className='object'
+				className='object-box'
 				onMouseMove={(e) => {
-					document.querySelectorAll('.object').forEach(() => {
+					document.querySelectorAll('.object-box').forEach(() => {
 						let dx = 0.033
 						let dy = -0.1
 						let x = e.clientX * dx
@@ -41,9 +41,9 @@ const Features = () => {
 				<img className='img1' />
 			</div>
 			<div
-				className='object2'
+				className='object2-box'
 				onMouseMove={(e) => {
-					document.querySelectorAll('.object2').forEach(() => {
+					document.querySelectorAll('.object2-box').forEach(() => {
 						let dx = 0.05
 						let dy = -0.11
 						let x = e.clientX * dx
