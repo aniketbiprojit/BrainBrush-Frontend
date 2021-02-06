@@ -11,7 +11,7 @@ const Feature = (props: any) => {
 
 	return (
 		<div
-			className='grid grid-cols-1 gap-5 p-10 duration-200 bg-white border-2 border-gray-400 lg:h-full lg:w-2/3 lg:grid-cols-2 start align-items-center rounded-2xl'
+			className='grid grid-cols-1 gap-5 p-10 duration-200 bg-transparent lg:h-full lg:w-2/3 lg:grid-cols-2 start align-items-center rounded-2xl'
 			id='feature-card'
 		>
 			<div id='text' className='flex flex-col max-h-max'>
@@ -28,10 +28,6 @@ const Feature = (props: any) => {
 				<div className='text-lg text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
 				<br />
 				<div className='text-lg text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing cumque non?</div>
-				<div className='flex items-end justify-center flex-grow mt-12 lg:justify-start'>
-					<button className={'row-start-6 w-32 h-10 rounded-full red-button bg-red-300 mx-4'}>Share</button>
-					<button className={'row-start-6 w-32 h-10 rounded-full red-button bg-blue-200 mx-4'}>View More</button>
-				</div>
 			</div>
 			<div id='image' className={image}>
 				{props.img}
