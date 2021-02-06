@@ -37,7 +37,9 @@ const Features = () => {
 					})
 				}}
 				id='image'
-			></div>
+			>
+				<img className='img1' />
+			</div>
 			<div
 				className='object2'
 				onMouseMove={(e) => {
@@ -51,7 +53,9 @@ const Features = () => {
 					})
 				}}
 				id='image2'
-			></div>
+			>
+				<img className='img2' />
+			</div>
 			<div className='grid items-center grid-cols-1 p-8 py-20 lg:p-20 gap-y-20 lg:gap-y-28 justify-items-center'>
 				<Feature className='text-secondary fbox' pos='left' />
 				<Feature className='text-indigo-500 fbox' />

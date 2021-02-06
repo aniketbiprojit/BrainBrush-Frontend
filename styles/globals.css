@@ -80,14 +80,14 @@ a {
 /* CUSTOMS */
 
 #nav {
-	background: linear-gradient(to right, #1d355788, #0262bb44), url('banner.jpg');
+	background: linear-gradient(to right, #1d355788, #0262bb44), url('./assets/banner.jpg');
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
 
 #blog-bg {
-	background: linear-gradient(to right, #1d355788, #0262bb44), url('banner.jpg');
+	background: linear-gradient(to right, #1d355788, #0262bb44), url('./assets/banner.jpg');
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -106,13 +106,19 @@ a {
 .object {
 	position: absolute;
 	top: 120%;
-	left: -5%;
-	z-index: 2;
+	left: 5%;
+	z-index: 999;
+	height: 25vw;
+	width: 25vw;
+	border: 0 transparent #000;
+}
+
+.object .img1 {
 	height: 100%;
 	width: 100%;
-	object-fit: contain;
-	background: url('./f1.png');
+	background: url('./assets/f1.png');
 	background-repeat: no-repeat;
+	background-size: contain;
 	filter: drop-shadow(50px -15px 25px rgba(0, 0, 0, 0.3));
 }
 
@@ -121,11 +127,17 @@ a {
 	top: 200%;
 	left: 75%;
 	z-index: 2;
+	height: 25vw;
+	width: 25vw;
+	border: 0 transparent #000;
+}
+
+.object2 .img2 {
 	height: 100%;
 	width: 100%;
-	object-fit: contain;
-	background: url('./f1.png');
+	background: url('./assets/f1.png');
 	background-repeat: no-repeat;
+	background-size: contain;
 	filter: drop-shadow(50px -15px 25px rgba(0, 0, 0, 0.3));
 }
 
