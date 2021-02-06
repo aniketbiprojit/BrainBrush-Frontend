@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Navbar from '../../modules/Navbar/Navbar'
-import Search from '../../modules/Search/Search'
-import Features from '../../modules/Features/Features'
-import Blogs from '../../modules/Blogs/Blogs'
-import Reviews from '../../modules/Reviews/Reviews'
-import Footer from '../../modules/Footer/Footer'
+import Navbar from './layouts/Navbar/Navbar'
+import Search from './layouts/Search/Search'
+import Features from './layouts/Features/Features'
+import Blogs from './layouts/Blogs/Blogs'
+import Reviews from './layouts/Reviews/Reviews'
+import Footer from './layouts/Footer/Footer'
 import React from 'react'
 
 /** HOME PAGE LAYOUT CLASS
