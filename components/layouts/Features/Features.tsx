@@ -54,9 +54,9 @@ const Features = () => {
 			>
 				<img className='img2' />
 			</div> */}
-			<div className='grid items-center grid-cols-1 p-8 py-20 lg:p-20 gap-y-20 lg:gap-y-28 justify-items-center'>
+			<div className='grid items-center grid-cols-1 py-20 gap-y-20 lg:gap-y-28 justify-items-center'>
 				<Feature className='text-secondary fbox' pos='left' />
-				<Feature className='text-indigo-500 fbox' />
+				<Feature className='text-indigo-500 fbox' colored='yes' />
 				<Feature className='text-secondary-light fbox' pos='left' />
 			</div>
 		</div>
