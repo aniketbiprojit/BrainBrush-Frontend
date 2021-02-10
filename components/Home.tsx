@@ -1,3 +1,9 @@
+/**
+ * This is the home page
+ *
+ * it imports all sections from layouts
+ */
+
 import Head from 'next/head'
 import Navbar from './layouts/Navbar/Navbar'
 import Search from './layouts/Search/Search'
