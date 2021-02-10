@@ -12,7 +12,7 @@ const Feature = (props: any) => {
 	return (
 		<div
 			className={
-				'grid grid-cols-1 gap-5 p-48 duration-200 lg:h-full lg:w-4/5 lg:grid-cols-2 start align-items-center rounded-2xl ' +
+				'grid grid-cols-1 gap-5 p-16 lg:p-48 duration-200 lg:h-full lg:w-4/5 lg:grid-cols-2 start align-items-center rounded-2xl ' +
 				(props.colored === 'yes' ? ' bg-gradient-to-r from-blue-600 to-blue-500 text-white ' : '')
 			}
 			id='feature-card'
