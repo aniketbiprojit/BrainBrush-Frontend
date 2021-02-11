@@ -3,9 +3,14 @@ import React from 'react'
 // NextJs Link
 import Link from 'next/link'
 
-import SearchCompact from '../Search/SearchCompact'
+import SearchCompact from '../Search/SearchCompact.module'
 
-const Navbar = (props) => {
+/** Navbar Section
+ * @param props null
+ * @imports Link (nextjs)
+ * @imports Search Compact (module)
+ */
+const Navbar = (props: any) => {
 	const links = [
 		{ href: '#', label: 'Home' },
 		{ href: '#', label: 'Companies' },

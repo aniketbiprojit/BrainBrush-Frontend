@@ -1,8 +1,12 @@
 import Blog from './Blog.module'
 
+/**
+ * Blog Section
+ * @imports blog module
+ */
 const Blogs = () => {
 	return (
-		<div className='flex flex-col justify-center w-full pt-10 pb-10' id='blog-bg'>
+		<div className='flex flex-col justify-center w-full pt-48 pb-48' id='blog-bg'>
 			<div className='px-5 mb-10 text-5xl font-semibold text-center text-white header lg:px-0'>Here are some relevant stories for you!</div>
 			<div className='flex flex-row flex-wrap justify-center m-auto blogs'>
 				<Blog

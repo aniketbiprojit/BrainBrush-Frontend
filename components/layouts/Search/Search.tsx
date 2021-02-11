@@ -1,9 +1,14 @@
-import SearchWithButton from './SearchWithButton'
+import SearchWithButton from './SearchWithButton.module'
 
 // Font Awesome Import
 import { FaGoogle, FaAirbnb, FaAdobe, FaUber } from 'react-icons/fa'
 
-const Search = (props) => {
+/** Search Section (HERO SECTION)
+ * @imports SearchWithButton (module)
+ * @imports React-icons
+ * @param props null
+ */
+const Search = (props: any) => {
 	const styles = {
 		container: 'flex flex-col items-center w-screen pt-96 lg:pt-96',
 		search: 'grid w-screen px-10 lg:px-20 justify-items-center',

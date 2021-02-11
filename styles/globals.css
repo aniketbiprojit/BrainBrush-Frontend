@@ -1,6 +1,6 @@
 /** MAIN *** Keep Utilities used site-wide
  *
- * USE CSS MODULES FOR PAGE SPECIFIC CSS
+ * Only add custom text for specific features
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -80,14 +80,14 @@ a {
 /* CUSTOMS */
 
 #nav {
-	background: linear-gradient(to right, #1d355788, #0262bb44), url('banner.jpg');
+	background: linear-gradient(to right, #1d355788, #0262bb44), url('./assets/banner.jpg');
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
 
 #blog-bg {
-	background: linear-gradient(to right, #1d355788, #0262bb44), url('banner.jpg');
+	background: linear-gradient(to right, #1d355788, #0262bb44), url('./assets/banner.jpg');
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -100,26 +100,100 @@ a {
 }
 
 #blog-card:hover {
-	transform: scale(1.25);
+	transform: scale(1.025);
 }
 
-::-webkit-scrollbar {
-	width: 6px;
-	height: 6px;
+.object-box {
+	position: absolute;
+	top: 120%;
+	left: 5%;
+	z-index: 2;
+	height: 25vw;
+	width: 25vw;
+	border: 0 solid #000;
 }
-::-webkit-scrollbar-track {
-	border-radius: 10px;
-	background: rgba(0, 0, 0, 0.1);
+
+.object-box .img1 {
+	height: 100%;
+	width: 100%;
+	background: url('./assets/f1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	filter: drop-shadow(50px -15px 25px rgba(0, 0, 0, 0.3));
+	border-style: none;
 }
-::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	background: rgba(0, 0, 0, 0.2);
+
+.object2-box {
+	position: absolute;
+	top: 200%;
+	left: 75%;
+	z-index: 2;
+	height: 25vw;
+	width: 25vw;
+	border: 0 solid #000;
 }
-::-webkit-scrollbar-thumb:hover {
-	background: rgba(0, 0, 0, 0.4);
+
+.object2-box .img2 {
+	height: 100%;
+	width: 100%;
+	background: url('./assets/f1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	filter: drop-shadow(50px -15px 25px rgba(0, 0, 0, 0.3));
+	border-style: none;
 }
-::-webkit-scrollbar-thumb:active {
-	background: rgba(0, 0, 0, 0.9);
+
+#feature-card {
+	z-index: 1;
+}
+
+/*Checkboxes styles*/
+input[type='checkbox'] {
+	display: none;
+}
+
+input[type='checkbox'] + label {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 20px;
+	font: 14px/20px 'Open Sans', Arial, sans-serif;
+	color: white;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+input[type='checkbox'] + label:last-child {
+	margin-bottom: 0;
+}
+
+input[type='checkbox'] + label:before {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid rgba(168, 218, 220, 1);
+	border-radius: 5px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.6;
+	-webkit-transition: all 0.12s, border-color 0.08s;
+	transition: all 0.12s, border-color 0.08s;
+}
+
+input[type='checkbox']:checked + label:before {
+	width: 10px;
+	top: -5px;
+	left: 5px;
+	border-radius: 0;
+	opacity: 1;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 /* Start purging... */

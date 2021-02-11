@@ -1,14 +1,35 @@
+/**
+ * This is the home page
+ *
+ * it imports all sections from layouts
+ */
+
 import Head from 'next/head'
-import Navbar from '../../modules/Navbar/Navbar'
-import Footer from '../../modules/Footer/Footer'
-import Search from '../../modules/Search/Search'
-import Features from '../../modules/Features/Features'
-import Reviews from '../../modules/Reviews/Reviews'
-import Blogs from '../../modules/Blogs/Blogs'
+import Navbar from './layouts/Navbar/Navbar'
+import Search from './layouts/Search/Search'
+import Features from './layouts/Features/Features'
+import Blogs from './layouts/Blogs/Blogs'
+import Reviews from './layouts/Reviews/Reviews'
+import Footer from './layouts/Footer/Footer'
 import React from 'react'
 
-class Layout extends React.Component {
+/** HOME PAGE LAYOUT CLASS
+ * @class Home
+ *
+ * @imports Head (nextjs)
+ * @imports Navbar Section
+ * @imports Search Section
+ * @imports Features Section
+ * @imports Blogs Section
+ * @imports Reviews Section
+ * @imports Footer Section
+ */
+class Home extends React.Component {
 	componentDidMount() {
+		/** Controls navbar scroll anim
+		 * @listens scroll
+		 * @todo improve scroll timings
+		 */
 		window.addEventListener('scroll', (e) => {
 			if (window.pageYOffset >= document.getElementById('features').offsetTop - window.innerHeight / 2) {
 				document.getElementById('nav-container').classList.add('bg-primary')
@@ -47,15 +68,10 @@ class Layout extends React.Component {
 				<div className='p-0 m-0'>
 					<Reviews />
 				</div>
-				{/* REMOVED EMAILER */}
-				{/* <div className='px-24 lg:px-0'>
-					<SearchWithButton msg='Sign up to get date with our Newsletter!' placeholder="We won't send you spam :)" button='Login' />
-				</div> */}
-				{/* Returns Footer */}
 				<Footer />
 			</div>
 		)
 	}
 }
 
-export default Layout
+export default Home
