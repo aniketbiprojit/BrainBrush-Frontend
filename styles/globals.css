@@ -207,4 +207,9 @@ input[type='checkbox']:checked + label:before {
 }
 .whitetext {
 	color: white !important;
+	padding-bottom: 100px;
+}
+.review {
+	/* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
+	clip-path: polygon(0% 0%, 100% 0%, 100% 91%, 75% 91%, 75% 100%, 49% 91%, 0 91%);
 }
