@@ -14,7 +14,7 @@ const Reviews = () => {
 					companyName='Miran A.'
 					msg='Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi expedita qui perspiciatis, tenetur nostrum facilis quisquam ex aspernatur quam! Blanditiis harum eos rerum cum illo nemo dolorem illum voluptas maiores reiciendis atque, alias explicabo laboriosam aut unde iure eveniet quod iste quasi sit. Dolorem eius asperiores nemo illum placeat!'
 					color='bg-yellow-300'
-					center='bg-white'
+					center='bg-safed padbutoon'
 				/>
 				<Review
 					companyName='John R.'
@@ -26,7 +26,7 @@ const Reviews = () => {
 					companyName='Bella B.'
 					msg='Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi expedita qui perspiciatis, tenetur nostrum facilis quisquam ex aspernatur quam! Blanditiis harum eos rerum cum illo nemo dolorem illum voluptas maiores reiciendis atque, alias explicabo laboriosam aut unde iure eveniet quod iste quasi sit. Dolorem eius asperiores nemo illum placeat!'
 					color='bg-blue-400'
-					center='bg-white'
+					center='bg-safed padbutoon'
 				/>
 			</div>
 		</div>
