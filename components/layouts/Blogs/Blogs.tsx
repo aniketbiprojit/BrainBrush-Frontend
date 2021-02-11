@@ -30,7 +30,7 @@ const Blogs = () => {
 					color='bg-gray-300'
 				/>
 			</div>
-			<div className='p-5 m-auto mt-10 text-3xl font-bold text-center text-white rounded-xl bg-secondary-light max-w-max red-button'>
+			<div className='p-5 m-auto mt-10 text-2xl font-bold text-center text-white duration-200 bg-transparent border-4 hover:text-black rounded-xl border-secondary-highlight hover:bg-secondary-highlight max-w-max'>
 				View More!
 			</div>
 		</div>
