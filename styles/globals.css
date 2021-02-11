@@ -213,3 +213,7 @@ input[type='checkbox']:checked + label:before {
 	/* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
 	clip-path: polygon(0% 0%, 100% 0%, 100% 91%, 75% 91%, 75% 100%, 49% 91%, 0 91%);
 }
+.borderButton {
+	border: 2px solid #b8b8b8;
+	/* background-color: #b8b8b8; */
+}

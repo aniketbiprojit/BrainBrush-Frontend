@@ -16,7 +16,7 @@ const Blog = (props: any) => {
 				<div className={'rounded-full w-9 h-9 justify-self-end ' + props.color}></div>
 				<div className='col-span-2 row-span-4 m-auto text-sm text-justify text-gray-700 lg:text-md justify-self-start'>{props.msg}</div>
 				<button className={'row-start-6 rounded-full red-button mx-2 ' + props.color}>Share</button>
-				<button className={'row-start-6 rounded-full red-button mx-2 ' + props.color}>View More</button>
+				<button className={'row-start-6 rounded-full red-button mx-2 white borderButton'}>View More</button>
 			</div>
 		</Fade>
 	)
