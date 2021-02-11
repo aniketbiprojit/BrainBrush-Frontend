@@ -205,3 +205,6 @@ input[type='checkbox']:checked + label:before {
 		width: 400px;
 	}
 }
+.whitetext {
+	color: white !important;
+}

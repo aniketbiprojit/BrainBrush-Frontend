@@ -22,6 +22,8 @@ module.exports = {
 				},
 				black: '#000',
 				grey: '#333',
+				red: '#DC2626',
+				safed: '#fff',
 			},
 		},
 	},
