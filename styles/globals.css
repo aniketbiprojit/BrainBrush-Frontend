@@ -106,7 +106,7 @@ a {
 .object-box {
 	position: absolute;
 	top: 120%;
-	left: 5%;
+	left: 15%;
 	z-index: 2;
 	height: 25vw;
 	width: 25vw;
@@ -126,7 +126,7 @@ a {
 .object2-box {
 	position: absolute;
 	top: 200%;
-	left: 75%;
+	left: 60%;
 	z-index: 2;
 	height: 25vw;
 	width: 25vw;
