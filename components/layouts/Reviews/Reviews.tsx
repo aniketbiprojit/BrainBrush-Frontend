@@ -1,5 +1,4 @@
 import Review from './Review.module'
-import Zoom from 'react-reveal/Zoom'
 
 /** Review Section
  * @imports Review Module
