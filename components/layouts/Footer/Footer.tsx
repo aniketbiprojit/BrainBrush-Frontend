@@ -34,7 +34,7 @@ const Footer = (props: any) => {
 		search: {
 			box: 'flex flex-col justify-start mt-5 md:w-1/3 lg:w-1/4 lg:ml-2 lg:mr-10 lg:mt-0',
 			header: 'text-xl font-semibold pt-4 md:pt-0 text-white',
-			subheader: 'py-4 text-sm font-semibold text-blue-300',
+			subheader: 'py-4 text-sm font-semibold text-primary-light',
 			terms: {
 				box: 'py-4',
 				check: 'py-5',
