@@ -1,3 +1,9 @@
+/**
+ * @desc This is the Features Section
+ * @imports Feature.module
+ * @exports Feature Section
+ */
+
 import Feature from './Feature.module'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
@@ -22,7 +28,7 @@ const Features = () => {
 			<div className='text-2xl font-semibold text-center lg:text-5xl text-primary' id='features'>
 				What is BrainBrush?
 			</div>
-			<div
+			{/* <div
 				className='object-box'
 				onMouseMove={(e) => {
 					document.querySelectorAll('.object-box').forEach(() => {
@@ -53,7 +59,7 @@ const Features = () => {
 				id='image2'
 			>
 				<img className='img2' />
-			</div>
+			</div> */}
 			<div className='grid items-center grid-cols-1 py-20 gap-y-20 lg:gap-y-28 justify-items-center'>
 				<Feature className='text-secondary fbox' pos='left' />
 				<Feature className='text-indigo-500 fbox' colored='yes' />
