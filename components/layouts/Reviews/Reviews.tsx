@@ -10,7 +10,7 @@ const Reviews = () => {
 			<div className='p-6 mb-20 text-5xl font-semibold text-center lg:p-0 text-primary header '>Here from our Customers!</div>
 			<div className='flex flex-row flex-wrap justify-center m-auto lg:gap-28 blogs'>
 				<Review
-					companyName='Miranda A.'
+					companyName='Miranda'
 					msg='Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi expedita qui perspiciatis, tenetur nostrum facilis quisquam ex aspernatur quam! Blanditiis harum eos rerum cum illo nemo dolorem illum voluptas maiores reiciendis atque, alias explicabo laboriosam aut unde iure eveniet quod iste quasi sit. Dolorem eius asperiores nemo illum placeat!'
 					color='bg-yellow-300'
 				/>
