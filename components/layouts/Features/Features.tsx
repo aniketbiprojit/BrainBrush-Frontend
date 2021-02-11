@@ -2,6 +2,7 @@
  * @desc This is the Features Section
  * @imports Feature.module
  * @exports Feature Section
+ *
  */
 
 import Feature from './Feature.module'
