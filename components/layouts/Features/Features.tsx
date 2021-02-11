@@ -1,7 +1,15 @@
+/**
+ * @desc This is the Features Section
+ * @imports Feature.module
+ * @exports Feature Section
+ *
+ */
+
 import Feature from './Feature.module'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
+import Zoom from 'react-reveal/Zoom'
 
 /**
  * Feature Section
@@ -22,21 +30,24 @@ const Features = () => {
 			<div className='text-2xl font-semibold text-center lg:text-5xl text-primary' id='features'>
 				What is BrainBrush?
 			</div>
+
 			<div
 				className='object-box'
-				onMouseMove={(e) => {
-					document.querySelectorAll('.object-box').forEach(() => {
-						let dx = 0.033
-						let dy = -0.1
-						let x = e.clientX * dx
-						let y = e.clientY * dy
+				// onMouseMove={(e) => {
+				// 	document.querySelectorAll('.object-box').forEach(() => {
+				// 		let dx = 0.033
+				// 		let dy = -0.1
+				// 		let x = e.clientX * dx
+				// 		let y = e.clientY * dy
 
-						document.getElementById('image').style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)'
-					})
-				}}
+				// 		document.getElementById('image').style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)'
+				// 	})
+				// }}
 				id='image'
 			>
-				<img className='img1' />
+				<Zoom>
+					<img src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' className='img1' alt='' />
+				</Zoom>
 			</div>
 			<div
 				className='object2-box'
@@ -52,7 +63,9 @@ const Features = () => {
 				}}
 				id='image2'
 			>
-				<img className='img2' />
+				<Zoom>
+					<img src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' className='img2' />
+				</Zoom>
 			</div>
 			<div className='grid items-center grid-cols-1 py-20 gap-y-20 lg:gap-y-28 justify-items-center'>
 				<Feature className='text-secondary fbox' pos='left' />

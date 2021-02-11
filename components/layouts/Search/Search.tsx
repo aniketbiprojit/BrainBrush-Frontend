@@ -29,7 +29,7 @@ const Search = (props: any) => {
 					search='true'
 				/>
 			</div>
-			<div id='recent' className={styles.recent + ' bg-gray-400 bg-opacity-50 p-2 rounded-full flex flex-row items-center'}>
+			<div id='recent' className={styles.recent + ' bg-gray-400 bg-opacity-70 p-2 rounded-full flex flex-row items-center'}>
 				<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
 					<FaGoogle size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-0' />
 					Google
