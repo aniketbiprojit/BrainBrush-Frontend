@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import Navbar from '../../layouts/Navbar/Navbar'
+import Navbar from '../../Home/Navbar/Navbar'
 import Banner from './Banner'
 
 const CompanyHeader: React.FC<{ company: string }> = ({ company }) => {

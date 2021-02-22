@@ -6,12 +6,12 @@
 import Head from 'next/head'
 import React from 'react'
 
-import Blogs from './layouts/Blogs/Blogs'
-import Features from './layouts/Features/Features'
-import Footer from './layouts/Footer/Footer'
-import Navbar from './layouts/Navbar/Navbar'
-import Reviews from './layouts/Reviews/Reviews'
-import Search from './layouts/Search/Search'
+import Blogs from './Blogs/Blogs'
+import Features from './Features/Features'
+import Footer from './Footer/Footer'
+import Navbar from './Navbar/Navbar'
+import Reviews from './Reviews/Reviews'
+import Search from './Search/Search'
 
 /** HOME PAGE LAYOUT CLASS
  * @class Home

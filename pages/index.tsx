@@ -2,7 +2,7 @@ import React from 'react'
 import { connect, ConnectedProps } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import Home from '../components/Home'
+import Home from '../components/Home/Home'
 import { ApplicationActions } from '../redux/states/ApplicationState/ApplicationSlice'
 import { RootState } from '../redux/types'
 
