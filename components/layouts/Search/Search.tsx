@@ -2,6 +2,7 @@ import SearchWithButton from './SearchWithButton.module'
 
 // Font Awesome Import
 import { FaGoogle, FaAirbnb, FaAdobe, FaUber } from 'react-icons/fa'
+import Link from 'next/link'
 
 /** Search Section (HERO SECTION)
  * @imports SearchWithButton (module)
@@ -30,22 +31,30 @@ const Search = () => {
 				/>
 			</div>
 			<div id='recent' className={styles.recent + ' bg-gray-400 bg-opacity-70 p-2 rounded-full flex flex-row items-center'}>
-				<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
-					<FaGoogle size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-0' />
-					Google
-				</div>
-				<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
-					<FaAirbnb size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
-					Airbnb
-				</div>
-				<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
-					<FaAdobe size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
-					Adobe
-				</div>
-				<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
-					<FaUber size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
-					Uber
-				</div>
+				<Link href={`/company/Google`}>
+					<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+						<FaGoogle size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-0' />
+						Google
+					</div>
+				</Link>
+				<Link href={`company/Airbnb`}>
+					<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+						<FaAirbnb size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
+						Airbnb
+					</div>
+				</Link>
+				<Link href={`company/Adobe`}>
+					<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+						<FaAdobe size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
+						Adobe
+					</div>
+				</Link>
+				<Link href={`company/Uber`}>
+					<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+						<FaUber size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
+						Uber
+					</div>
+				</Link>
 			</div>
 			<svg className='relative w-screen transform translate-y-2' viewBox='0 0 3108 650' fill='none'>
 				<path
