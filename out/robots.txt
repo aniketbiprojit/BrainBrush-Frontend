@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Host: http://brainbrushurl.com
+Sitemap: http://brainbrushurl.com/sitemap.xml
