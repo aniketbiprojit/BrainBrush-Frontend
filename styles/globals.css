@@ -83,14 +83,14 @@ a {
 	background: linear-gradient(to right, #1d355788, #0262bb44), url('./assets/banneralt.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 }
 
 #blog-bg {
 	background: linear-gradient(to right, #1d355788, #0262bb44), url('./assets/banneralt.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 }
 
 .red-button:hover {
