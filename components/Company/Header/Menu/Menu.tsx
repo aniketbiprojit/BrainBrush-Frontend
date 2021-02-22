@@ -6,7 +6,7 @@ import ButtonCard from './ButtonCard/ButtonCard'
 
 const Menu: React.FC<{ currentTab: string; company: string }> = ({ currentTab, company }) => {
 	const { route } = useRouter()
-	console.log(route)
+
 	return (
 		<div className='w-full py-12 bg-white md:px-18'>
 			<ul className='flex flex-wrap justify-center w-full gap-0 md:gap-8'>
