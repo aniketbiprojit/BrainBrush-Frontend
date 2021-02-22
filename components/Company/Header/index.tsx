@@ -8,7 +8,7 @@ const CompanyHeader: React.FC<{ company: string }> = ({ company }) => {
 		<div className='bg-gray-300'>
 			<Navbar navcolor='bg-gray-900'></Navbar>
 			<Banner company={company} />
-			<Menu currentTab={''} />
+			<Menu currentTab={''} company={company} />
 		</div>
 	)
 }
