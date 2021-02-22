@@ -59,7 +59,7 @@ const Related: React.FC = () => {
 		<Fragment>
 			{companies.map((company) => {
 				return (
-					<div className='flex' style={{ alignItems: 'center' }}>
+					<div key={company.name} className='flex' style={{ alignItems: 'center' }}>
 						<div
 							style={{ width: '27px', height: '27px', borderRadius: '50%', backgroundColor: `${company.color}` }}
 							className='my-4'
