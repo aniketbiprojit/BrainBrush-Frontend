@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaGoogle } from 'react-icons/fa'
-import Button from '../../lib/Button/Button'
+import Button from '../../../lib/Button/Button'
 
 function get_company_data(company: string) {
 	return {
