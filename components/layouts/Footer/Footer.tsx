@@ -4,7 +4,7 @@ import SearchCompact from '../Search/SearchCompact.module'
 /** Footer Section
  * @param props null
  */
-const Footer = (props: any) => {
+const Footer = () => {
 	const links_discover = [
 		{ href: '#', label: 'About Us' },
 		{ href: '#', label: 'Blogs' },

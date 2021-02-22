@@ -7,7 +7,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
  * @imports React-icons
  * @param props msg, shadow, button, placeholder, line1, line2
  */
-const SearchWithButton = (props) => {
+const SearchWithButton = (props: any) => {
 	const styles = {
 		box: 'grid text-center gap-3 w-full mb-48 mt-20',
 		container: 'justify-self-center relative w-full md:w-7/12 lg:w-6/12 flex-wrap items-stretch flex text-center',

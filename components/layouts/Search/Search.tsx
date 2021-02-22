@@ -8,7 +8,7 @@ import { FaGoogle, FaAirbnb, FaAdobe, FaUber } from 'react-icons/fa'
  * @imports React-icons
  * @param props null
  */
-const Search = (props: any) => {
+const Search = () => {
 	const styles = {
 		container: 'flex flex-col items-center w-screen pt-96 lg:pt-96',
 		search: 'grid w-screen px-10 lg:px-20 justify-items-center',

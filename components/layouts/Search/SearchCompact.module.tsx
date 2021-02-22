@@ -7,7 +7,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
  * @imports font-awesome icons
  * @param props msg, setAnim, expand, button
  */
-const SearchBar = (props) => {
+const SearchBar = (props: any) => {
 	var styles = {
 		container: 'flex w-full sm:w-7/12 lg:w-5/12 flex-wrap items-stretch',
 		icon:
