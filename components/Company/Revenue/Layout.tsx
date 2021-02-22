@@ -16,10 +16,10 @@ const companies = [
 const RevenueLayout = () => {
 	return (
 		<div className='flex flex-row p-0 m-0 bg-gray-300'>
-			<div className='flex flex-col flex-grow gap-20 py-32 px-52'>
-				<Box className='p-24 mr-0 mx-52' heading='Google Revenue' subheading='2012-2018'>
-					<div className=''>
-						<p className='text-lg py-2'>
+			<div className='flex flex-col flex-grow gap-20 px-12 py-32 w-400px md:px-52'>
+				<Box className='p-16 mx-auto mr-0 md:p-24' heading='Google Revenue' subheading='2012-2018'>
+					<>
+						<p className='py-2 text-lg'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, egestas ut malesuada rhoncus. Dictum accumsan aliquet enim
 							duis dolor ipsum pellentesque vitae. Amet maecenas purus nunc at. Amet, fermentum nulla adipiscing congue cursus cras. Dui
 							id et vel cursus velit orci sed ut. Lacus vestibulum, ac eget tempus nunc massa facilisi mauris. Risus sodales tristique
@@ -27,25 +27,25 @@ const RevenueLayout = () => {
 							metus, nunc augue quam dignissim. Viverra volutpat, quis varius cursus tempor mus. Eget ipsum phasellus enim viverra ut
 							placerat pulvinar.
 						</p>
-						<p className='text-lg py-2'>
+						<p className='py-2 text-lg'>
 							Venenatis sit et nunc sed molestie. Nulla turpis laoreet placerat egestas blandit egestas malesuada risus. Praesent
 							elementum blandit diam, nunc massa ut mauris. Nulla vel at eu gravida vitae consequat risus. Imperdiet vitae nisl ultrices
 							ornare duis.
 						</p>
-					</div>
+					</>
 				</Box>
-				<Box className='p-24 my-16 mr-0 mx-52' heading='Statistics'>
-					<div className=''>
-						<div className='spacer p-2'></div>
+				<Box className='p-24 mx-auto mr-0' heading='Statistics'>
+					<>
+						<div className='p-2 spacer'></div>
 						<h2 className='my-5 text-xl subhead'>Metric A</h2>
-						<Image src='/Graph_1.png' alt='Graph' width={967} height={322}></Image>
-						<div className='spacer p-2'></div>
+						<Image src='/Graph_1.png' alt='Graph' width={967 * 1.5} height={322 * 1.5}></Image>
+						<div className='p-2 spacer'></div>
 						<h2 className='my-5 text-xl subhead'>Metric B</h2>
-						<Image src='/Table_1.png' alt='Table' width={967} height={503}></Image>
-					</div>
+						<Image src='/Table_1.png' alt='Table' width={967 * 1.5} height={503 * 1.5}></Image>
+					</>
 				</Box>
 			</div>
-			<Box className='flex-grow hidden h-full max-w-lg p-24 my-32 rounded-r-none lg:block lg:max-w-2xl' heading='Related'>
+			<Box className='flex-grow hidden h-full max-w-lg p-24 my-32 rounded-r-none xl:block lg:max-w-2xl' heading='Related'>
 				<Related></Related>
 			</Box>
 		</div>
