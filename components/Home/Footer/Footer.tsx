@@ -45,7 +45,7 @@ const Footer = () => {
 
 	return (
 		<>
-			<footer className={styles.container}>
+			<footer className={styles.container + ' py-20'}>
 				<h1 className={styles.logo}>Brainbrush</h1>
 				<ul className={styles.menu.container} id='footerList'>
 					<li className={styles.menu.header}>
