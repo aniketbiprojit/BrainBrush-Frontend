@@ -36,7 +36,12 @@ const RevenueLayout = () => {
 				</Box>
 				<Box className='p-24 my-16 mr-0 mx-52' heading='Statistics'>
 					<div className=''>
-						<Image src='/Graph_1.png' alt='Picture of the author' width={967} height={322}></Image>
+						<div className='spacer p-2'></div>
+						<h2 className='my-5 text-xl subhead'>Metric A</h2>
+						<Image src='/Graph_1.png' alt='Graph' width={967} height={322}></Image>
+						<div className='spacer p-2'></div>
+						<h2 className='my-5 text-xl subhead'>Metric B</h2>
+						<Image src='/Table_1.png' alt='Table' width={967} height={503}></Image>
 					</div>
 				</Box>
 			</div>
