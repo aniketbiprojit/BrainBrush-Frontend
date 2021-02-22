@@ -34,7 +34,7 @@ const RevenueLayout = () => {
 						</p>
 					</>
 				</Box>
-				<Box className='p-24 mx-auto mr-0' heading='Statistics'>
+				<Box className='p-16 mx-auto mr-0 lg:p-24' heading='Statistics'>
 					<>
 						<div className='p-2 spacer'></div>
 						<h2 className='my-5 text-xl subhead'>Metric A</h2>
