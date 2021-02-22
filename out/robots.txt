@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Host: http://brainbrushurl.com
-Sitemap: http://brainbrushurl.com/sitemap.xml
+Host: https://brainbrush.aniketbiprojit.me
+Sitemap: https://brainbrush.aniketbiprojit.me/sitemap.xml
