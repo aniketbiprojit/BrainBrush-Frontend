@@ -29,7 +29,7 @@ const SearchBar = (props: any) => {
 	}
 
 	return (
-		<div className={styles.container} id={isAnim}>
+		<section className={styles.container} id={isAnim}>
 			<input type='text' className={styles.text} placeholder={props.msg} />
 			<div className='flex'>
 				<span className={styles.icon}>
@@ -37,7 +37,7 @@ const SearchBar = (props: any) => {
 					{props.button ? props.button : 'Search'}
 				</span>
 			</div>
-		</div>
+		</section>
 	)
 }
 

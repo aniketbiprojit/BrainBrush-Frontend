@@ -24,9 +24,9 @@ const SearchWithButton = (props: any) => {
 	}
 
 	return (
-		<div className={styles.box}>
-			<div className={styles.head + ' text-3xl md:text-4xl'}>{props.line1}</div>
-			<div className={styles.head + ' text-xl md:text-3xl text-primary-highlight'}>{props.line2}</div>
+		<section className={styles.box}>
+			<h1 className={styles.head + ' text-3xl md:text-4xl'}>{props.line1}</h1>
+			<h2 className={styles.head + ' text-xl md:text-3xl text-primary-highlight'}>{props.line2}</h2>
 			<div
 				className={styles.container}
 				style={{
@@ -39,7 +39,7 @@ const SearchWithButton = (props: any) => {
 					<div className='hidden mx-2 sm:inline-block'>{props.button}</div>
 				</a>
 			</div>
-		</div>
+		</section>
 	)
 }
 

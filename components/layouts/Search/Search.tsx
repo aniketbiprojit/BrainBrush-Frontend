@@ -19,7 +19,7 @@ const Search = () => {
 	var icon_size = 20
 
 	return (
-		<div className={styles.container} id='nav'>
+		<section className={styles.container} id='nav'>
 			<div className={styles.search}>
 				<SearchWithButton
 					line1='Get up to date with the latest happenings!'
@@ -32,28 +32,28 @@ const Search = () => {
 			</div>
 			<div id='recent' className={styles.recent + ' bg-gray-400 bg-opacity-70 p-2 rounded-full flex flex-row items-center'}>
 				<Link href={`/company/Google`}>
-					<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+					<h2 className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
 						<FaGoogle size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-0' />
 						Google
-					</div>
+					</h2>
 				</Link>
 				<Link href={`company/Airbnb`}>
-					<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+					<h2 className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
 						<FaAirbnb size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
 						Airbnb
-					</div>
+					</h2>
 				</Link>
 				<Link href={`company/Adobe`}>
-					<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+					<h2 className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
 						<FaAdobe size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
 						Adobe
-					</div>
+					</h2>
 				</Link>
 				<Link href={`company/Uber`}>
-					<div className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
+					<h2 className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
 						<FaUber size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
 						Uber
-					</div>
+					</h2>
 				</Link>
 			</div>
 			<svg className='relative w-screen transform translate-y-2' viewBox='0 0 3108 650' fill='none'>
@@ -62,7 +62,7 @@ const Search = () => {
 					fill='rgb(229, 231, 235)'
 				/>
 			</svg>
-		</div>
+		</section>
 	)
 }
 
