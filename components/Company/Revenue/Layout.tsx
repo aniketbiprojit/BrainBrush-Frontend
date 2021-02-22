@@ -2,6 +2,8 @@ import React, { Fragment } from 'react'
 
 import Box from '../../lib/Box/Box'
 
+import Image from 'next/image'
+
 const companies = [
 	{ name: 'Netflix', color: '#FF5A5A' },
 	{ name: 'Amazon', color: '#3FA7D6' },
@@ -33,7 +35,9 @@ const RevenueLayout = () => {
 					</div>
 				</Box>
 				<Box className='p-24 my-16 mr-0 mx-52' heading='Statistics'>
-					<div className=''></div>
+					<div className=''>
+						<Image src='/Graph_1.png' alt='Picture of the author' width={967} height={322}></Image>
+					</div>
 				</Box>
 			</div>
 			<Box className='flex-grow hidden h-full max-w-lg p-24 my-32 rounded-r-none lg:block lg:max-w-2xl' heading='Related'>
