@@ -22,7 +22,7 @@ const Banner: React.FC<{ company: string }> = ({ company }) => {
 					<h2>{stock_market}</h2>
 				</div>
 			</div>
-			<div className='justify-items-center flex-end'>
+			<div className='mt-2 flex-end'>
 				<Button text='Follow' />
 			</div>
 		</div>
