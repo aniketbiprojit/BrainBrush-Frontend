@@ -5,7 +5,7 @@ import ButtonCard from './ButtonCard/ButtonCard'
 const Menu: React.FC<{ currentTab: string }> = ({ currentTab }) => {
 	return (
 		<div className='w-full py-12 bg-white px-28'>
-			<ul className='flex justify-center w-full gap-10'>
+			<ul className='flex flex-wrap justify-center w-full gap-10'>
 				<ButtonCard icon={<FaSearch />} text='Overview' isSelected={false} />
 				<ButtonCard icon={<FaDollarSign />} text='Revenue' isSelected={true} />
 				<ButtonCard icon={<FaCoins />} text='Financials' isSelected={false} />
