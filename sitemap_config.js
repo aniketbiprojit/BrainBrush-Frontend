@@ -1,4 +1,4 @@
 module.exports = {
-	siteUrl: 'http://brainbrushurl.com',
+	siteUrl: 'https://thebrainbrush.com',
 	generateRobotsTxt: true,
 }
