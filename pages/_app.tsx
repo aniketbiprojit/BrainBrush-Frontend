@@ -1,13 +1,13 @@
 import type { AppProps /*, AppContext */ } from 'next/app'
-import { useEffect } from 'react'
-import { firebase_config } from '.'
-import firebase from 'firebase'
-import store from '../redux/store'
-// import withRedux from 'next-redux-wrapper'
+import '../styles/globals.css'
 
+import firebase from 'firebase'
+import { useEffect } from 'react'
+// import withRedux from 'next-redux-wrapper'
 import { Provider } from 'react-redux'
 
-import '../styles/globals.css'
+import store from '../redux/store'
+import { firebase_config } from './'
 
 export default function App({ Component, pageProps }: AppProps) {
 	useEffect(() => {

@@ -1,8 +1,8 @@
 import firebase from 'firebase'
-import { connect } from 'react-redux'
 import React, { Component, Fragment } from 'react'
-import { ConnectedProps } from 'react-redux'
+import { connect, ConnectedProps } from 'react-redux'
 import { bindActionCreators } from 'redux'
+
 import { ApplicationActions } from '../../redux/states/ApplicationState/ApplicationSlice'
 import { RootState } from '../../redux/types'
 

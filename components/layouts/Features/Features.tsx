@@ -5,11 +5,13 @@
  *
  */
 
-import Feature from './Feature.module'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import Zoom from 'react-reveal/Zoom'
+
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import Feature from './Feature.module'
 
 /**
  * Feature Section

@@ -3,15 +3,15 @@
  *
  * it imports all sections from layouts
  */
-
 import Head from 'next/head'
-import Navbar from './layouts/Navbar/Navbar'
-import Search from './layouts/Search/Search'
-import Features from './layouts/Features/Features'
-import Blogs from './layouts/Blogs/Blogs'
-import Reviews from './layouts/Reviews/Reviews'
-import Footer from './layouts/Footer/Footer'
 import React from 'react'
+
+import Blogs from './layouts/Blogs/Blogs'
+import Features from './layouts/Features/Features'
+import Footer from './layouts/Footer/Footer'
+import Navbar from './layouts/Navbar/Navbar'
+import Reviews from './layouts/Reviews/Reviews'
+import Search from './layouts/Search/Search'
 
 /** HOME PAGE LAYOUT CLASS
  * @class Home

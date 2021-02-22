@@ -1,4 +1,5 @@
 import { FaMapMarked, FaMapSigns } from 'react-icons/fa'
+
 import SearchCompact from '../Search/SearchCompact.module'
 
 /** Footer Section

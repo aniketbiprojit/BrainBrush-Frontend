@@ -1,7 +1,7 @@
 import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
-import React from 'react'
-import { Fragment } from 'react'
+import React, { Fragment } from 'react'
+
 import CompanyHeader from '../../../../components/Company/Header'
 
 const Revenue: React.FC<{ company: string }> = ({ company }) => {

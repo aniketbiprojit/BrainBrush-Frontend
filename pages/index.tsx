@@ -1,10 +1,10 @@
 import React from 'react'
-import { RootState } from '../redux/types'
 import { connect, ConnectedProps } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { ApplicationActions } from '../redux/states/ApplicationState/ApplicationSlice'
 
 import Home from '../components/Home'
+import { ApplicationActions } from '../redux/states/ApplicationState/ApplicationSlice'
+import { RootState } from '../redux/types'
 
 export const firebase_config = {
 	apiKey: 'AIzaSyBh2o3MomQpCFYdxLX_cOILJRsrh82HPrk',
