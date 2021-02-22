@@ -1,7 +1,7 @@
-// React
-import React from 'react'
 // NextJs Link
 import Link from 'next/link'
+// React
+import React from 'react'
 
 import SearchCompact from '../Search/SearchCompact.module'
 
@@ -10,7 +10,7 @@ import SearchCompact from '../Search/SearchCompact.module'
  * @imports Link (nextjs)
  * @imports Search Compact (module)
  */
-const Navbar = () => {
+const Navbar = ({ navcolor = 'bg-transparent', pad = true }) => {
 	const links = [
 		{ href: '#', label: 'Home' },
 		{ href: '#', label: 'Companies' },
@@ -18,7 +18,7 @@ const Navbar = () => {
 	]
 
 	const styles = {
-		container: 'bg-transparent duration-300 fixed z-10 w-screen object-top flex items-center justify-between p-8 h-28',
+		container: `${navcolor} duration-300 fixed z-10 w-screen object-top flex items-center justify-between p-8 h-28`,
 		logo: 'text-white font-semibold flex-wrap no-underline pr-4 ml-0 pl-0 md:ml-10 md:text-2xl',
 		button: {
 			container: 'flex items-center justify-between space-x-5',
@@ -28,34 +28,37 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav>
-			<ul className={styles.container} id='nav-container'>
-				<li>
-					<Link href='/'>
-						<a className={styles.logo}>Brainbrush</a>
-					</Link>
-				</li>
-				<div className='flex justify-center w-full'>
-					<SearchCompact msg='Search for companies, listing ...' setAnim='true' />
-				</div>
+		<>
+			<nav>
+				<ul className={styles.container} id='nav-container'>
+					<li>
+						<Link href='/'>
+							<a className={styles.logo}>Brainbrush</a>
+						</Link>
+					</li>
+					<div className='flex justify-center w-full'>
+						<SearchCompact msg='Search for companies, listing ...' setAnim='true' />
+					</div>
 
-				<ul className={styles.button.container}>
-					{links.map(({ href, label }) => (
-						<li key={`${href}${label}`}>
-							<a href={href} className={styles.button.text}>
-								{label}
+					<ul className={styles.button.container}>
+						{links.map(({ href, label }) => (
+							<li key={`${href}${label}`}>
+								<a href={href} className={styles.button.text}>
+									{label}
+								</a>
+							</li>
+						))}
+
+						<li>
+							<a href='#' className={styles.button.button}>
+								Login
 							</a>
 						</li>
-					))}
-
-					<li>
-						<a href='#' className={styles.button.button}>
-							Login
-						</a>
-					</li>
+					</ul>
 				</ul>
-			</ul>
-		</nav>
+			</nav>
+			<div className={pad ? 'py-14' : ''}></div>
+		</>
 	)
 }
 

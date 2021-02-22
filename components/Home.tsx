@@ -54,7 +54,7 @@ class Home extends React.Component {
 					<meta name='viewport' content='width=device-width, initial-scale=0.70, maximum-scale=0.70'></meta>
 				</Head>
 				{/* return top navbar */}
-				<Navbar />
+				<Navbar pad={false} />
 				{/* Returns Main Search Box */}
 				<div id='search'>
 					<Search />
