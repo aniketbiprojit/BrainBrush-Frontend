@@ -19,7 +19,7 @@ import Zoom from 'react-reveal/Zoom'
  */
 const Features = () => {
 	return (
-		<div className='bg-gray-200 lg:mb-10'>
+		<section className='bg-gray-200 lg:mb-10'>
 			<div className='grid text-6xl text-white justify-items-center grid-col-1 '>
 				<FontAwesomeIcon
 					icon={faArrowDown}
@@ -27,9 +27,9 @@ const Features = () => {
 					onClick={() => document.getElementById('features').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })}
 				/>
 			</div>
-			<div className='text-2xl font-semibold text-center lg:text-5xl text-primary' id='features'>
+			<h1 className='text-2xl font-semibold text-center lg:text-5xl text-primary' id='features'>
 				What is BrainBrush?
-			</div>
+			</h1>
 
 			<div
 				className='object-box'
@@ -72,7 +72,7 @@ const Features = () => {
 				<Feature className='text-indigo-500 fbox' colored='yes' />
 				<Feature className='text-secondary-light fbox' pos='left' />
 			</div>
-		</div>
+		</section>
 	)
 }
 
