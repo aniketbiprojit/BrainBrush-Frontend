@@ -43,15 +43,15 @@ const Footer = () => {
 	}
 
 	return (
-		<div>
-			<div className={styles.container}>
-				<div className={styles.logo}>Brainbrush</div>
+		<>
+			<footer className={styles.container}>
+				<h1 className={styles.logo}>Brainbrush</h1>
 				<ul className={styles.menu.container} id='footerList'>
 					<li className={styles.menu.header}>
 						<div className={styles.menu.icon}>
 							<FaMapMarked />
 						</div>
-						Discover
+						<h2>Discover</h2>
 					</li>
 					{links_discover.map(({ href, label }) => (
 						<li key={`${href}${label}`}>
@@ -66,7 +66,7 @@ const Footer = () => {
 						<div className={styles.menu.icon}>
 							<FaMapSigns />
 						</div>
-						Company
+						<h2>Company</h2>
 					</li>
 					{links_company.map(({ href, label }) => (
 						<li key={`${href}${label}`}>
@@ -77,8 +77,8 @@ const Footer = () => {
 					))}
 				</ul>
 				<div className={styles.search.box}>
-					<div className={styles.search.header}>Subscribe to our newsletter!</div>
-					<div className={styles.search.subheader}>Don't worry, we won't spam you.</div>
+					<h2 className={styles.search.header}>Subscribe to our newsletter!</h2>
+					<h3 className={styles.search.subheader}>Don't worry, we won't spam you.</h3>
 					<SearchCompact msg='Your Email ...' expand='true' button='Subscribe' />
 					<div className={styles.search.terms.check}>
 						<input type='checkbox' id='box-1' />
@@ -87,11 +87,11 @@ const Footer = () => {
 						</label>
 					</div>
 				</div>
-			</div>
+			</footer>
 			<div className={styles.copyContainer}>
 				<div className={styles.copy}>© BrainBrush 2020. All rights reserved.</div>
 			</div>
-		</div>
+		</>
 	)
 }
 
