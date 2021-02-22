@@ -25,27 +25,6 @@ import Search from './Search/Search'
  * @imports Footer Section
  */
 class Home extends React.Component {
-	componentDidMount() {
-		/** Controls navbar scroll anim
-		 * @listens scroll
-		 * @todo improve scroll timings
-		 */
-		window.addEventListener('scroll', (_) => {
-			if (window.pageYOffset >= document.getElementById('features').offsetTop - window.innerHeight / 2) {
-				document.getElementById('nav-container').classList.add('bg-gray-900')
-				document.getElementById('nav-container').classList.add('shadow-xl')
-				document.getElementById('nav-container').classList.remove('bg-transparent')
-				document.getElementById('searchbar').classList.add('sm:flex')
-			} else {
-				document.getElementById('nav-container').classList.add('bg-transparent')
-				document.getElementById('nav-container').classList.remove('bg-gray-900')
-				document.getElementById('nav-container').classList.remove('shadow-xl')
-				document.getElementById('searchbar').classList.add('hidden')
-				document.getElementById('searchbar').classList.remove('sm:flex')
-			}
-		})
-	}
-
 	render() {
 		return (
 			<div className='bg-gray-200'>
