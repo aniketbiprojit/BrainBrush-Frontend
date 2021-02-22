@@ -15,7 +15,7 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 				</Fragment>
 			)}
 			<Fragment>
-				Relative Page Link to Absolute
+				Relative Page Link to Absolute {company}
 				<Link href={`/company/${company}/revenue`}>
 					<p>Page</p>
 				</Link>
