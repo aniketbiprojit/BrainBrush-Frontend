@@ -36,10 +36,10 @@ const RevenueLayout = () => {
 				</Box>
 				<Box className='p-10 mx-auto mr-0 lg:p-24' heading='Statistics'>
 					<>
-						<div className='p-2 spacer'></div>
+						<div className='spacer p-2'></div>
 						<h2 className='my-5 text-xl subhead'>Metric A</h2>
 						<Image src='/Graph_1.png' alt='Graph' width={967 * 1.5} height={322 * 1.5}></Image>
-						<div className='p-2 spacer'></div>
+						<div className='spacer p-2'></div>
 						<h2 className='my-5 text-xl subhead'>Metric B</h2>
 						<Image src='/Table_1.png' alt='Table' width={967 * 1.5} height={503 * 1.5}></Image>
 					</>
