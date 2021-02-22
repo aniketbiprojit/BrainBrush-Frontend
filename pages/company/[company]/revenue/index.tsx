@@ -5,8 +5,11 @@ import React, { Fragment } from 'react'
 import CompanyHeader from '../../../../components/Company/Header'
 
 const Revenue: React.FC<{ company: string }> = ({ company }) => {
-	const { route } = useRouter()
+	const { route, query } = useRouter()
 	const isAbsolute = route === '/company/[company]/revenue'
+	if (isAbsolute) {
+		company = query.company as string
+	}
 	return (
 		<Fragment>
 			{isAbsolute && (
