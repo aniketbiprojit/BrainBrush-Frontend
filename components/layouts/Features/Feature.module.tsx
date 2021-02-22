@@ -26,9 +26,9 @@ const Feature = (props: any) => {
 					animi rem quo perferendis officiis vitae corrupti perspiciatis consequuntur, quibusdam nemo itaque quia vel accusamus.
 				</p>
 			</div>
-			<image id='image' className={image}>
+			<div id='image' className={image}>
 				{props.img}
-			</image>
+			</div>
 		</section>
 	)
 }

@@ -16,9 +16,9 @@ const Review = (props: any) => {
 					id='blog-card'
 				>
 					<h1 className='text-3xl font-semibold justify-self-start text-800'>{props.companyName}</h1>
-					<p className='col-span-2 row-span-4 m-auto text-xl text-justify justify-self-start text-700'>
+					<div className='col-span-2 row-span-4 m-auto text-xl text-justify justify-self-start text-700'>
 						<p>{props.msg}</p>
-					</p>
+					</div>
 				</div>
 			</>
 		</Zoom>
