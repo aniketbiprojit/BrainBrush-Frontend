@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps = async (
 			company_data: {
 				ticker: 'GOOG',
 				stock_market: 'NASDAQ',
-				company: ctx.query.company,
+				company: ctx.query.company as string,
 			},
 			// icon: <FaGoogle className='mr-10 text-8xl center' />,
 		},
