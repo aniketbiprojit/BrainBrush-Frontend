@@ -17,9 +17,9 @@ const RevenueLayout = () => {
 	return (
 		<div className='flex flex-row p-0 m-0 bg-gray-300'>
 			<div className='flex flex-col flex-grow gap-20 px-12 py-32 w-400px md:px-52'>
-				<Box className='p-16 mx-auto mr-0 md:p-24' heading='Google Revenue' subheading='2012-2018'>
+				<Box className='p-10 mx-auto mr-0 md:p-24' heading='Google Revenue' subheading='2012-2018'>
 					<>
-						<p className='py-2 text-lg'>
+						<p className='py-2 text-sm md:text-lg'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, egestas ut malesuada rhoncus. Dictum accumsan aliquet enim
 							duis dolor ipsum pellentesque vitae. Amet maecenas purus nunc at. Amet, fermentum nulla adipiscing congue cursus cras. Dui
 							id et vel cursus velit orci sed ut. Lacus vestibulum, ac eget tempus nunc massa facilisi mauris. Risus sodales tristique
@@ -27,14 +27,14 @@ const RevenueLayout = () => {
 							metus, nunc augue quam dignissim. Viverra volutpat, quis varius cursus tempor mus. Eget ipsum phasellus enim viverra ut
 							placerat pulvinar.
 						</p>
-						<p className='py-2 text-lg'>
+						<p className='py-2 text-sm md:text-lg'>
 							Venenatis sit et nunc sed molestie. Nulla turpis laoreet placerat egestas blandit egestas malesuada risus. Praesent
 							elementum blandit diam, nunc massa ut mauris. Nulla vel at eu gravida vitae consequat risus. Imperdiet vitae nisl ultrices
 							ornare duis.
 						</p>
 					</>
 				</Box>
-				<Box className='p-16 mx-auto mr-0 lg:p-24' heading='Statistics'>
+				<Box className='p-10 mx-auto mr-0 lg:p-24' heading='Statistics'>
 					<>
 						<div className='p-2 spacer'></div>
 						<h2 className='my-5 text-xl subhead'>Metric A</h2>
