@@ -10,7 +10,6 @@ const Company: React.FC = () => {
 	return (
 		<Fragment>
 			<CompanyHeader company={company} />
-			<p>{company}</p>
 			<Revenue company={company}></Revenue>
 		</Fragment>
 	)
