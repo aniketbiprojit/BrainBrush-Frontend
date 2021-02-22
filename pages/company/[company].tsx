@@ -1,5 +1,6 @@
 import { useRouter } from 'next/dist/client/router'
 import React, { Fragment } from 'react'
+import Revenue from './revenue'
 
 const Company: React.FC = () => {
 	const router = useRouter()
@@ -7,6 +8,7 @@ const Company: React.FC = () => {
 	return (
 		<Fragment>
 			<p>{company}</p>
+			<Revenue company={company as string}></Revenue>
 		</Fragment>
 	)
 }
