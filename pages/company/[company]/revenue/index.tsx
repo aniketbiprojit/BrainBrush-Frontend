@@ -1,13 +1,22 @@
+import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import React from 'react'
 import { Fragment } from 'react'
 
 const Revenue: React.FC<{ company: string }> = ({ company }) => {
+	const { route } = useRouter()
 	return (
 		<Fragment>
-			<Link href={`/company/${company}/revenue`}>
-				<p>Revenue</p>
-			</Link>
+			{route === '/company/[company]/revenue' ? (
+				<Fragment>Absolute Page {route}</Fragment>
+			) : (
+				<Fragment>
+					Relative Page Link to Absolute
+					<Link href={`/company/${company}/revenue`}>
+						<p>Page</p>
+					</Link>
+				</Fragment>
+			)}
 		</Fragment>
 	)
 }
