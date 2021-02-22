@@ -1,14 +1,16 @@
 import { useRouter } from 'next/dist/client/router'
 import React, { Fragment } from 'react'
+import CompanyHeader from '../../../components/Company/Header'
 import Revenue from './revenue'
 
 const Company: React.FC = () => {
 	const router = useRouter()
-	const { company } = router.query
+	const company = router.query.company as string
 	return (
 		<Fragment>
+			<CompanyHeader company={company} />
 			<p>{company}</p>
-			<Revenue company={company as string}></Revenue>
+			<Revenue company={company}></Revenue>
 		</Fragment>
 	)
 }
