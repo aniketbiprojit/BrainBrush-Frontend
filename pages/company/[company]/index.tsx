@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { GetServerSideProps } from 'next'
-import { InferGetServerSidePropsType } from 'next'
 
 import CompanyHeader from '../../../components/Company/Header'
 import Revenue from './revenue'
