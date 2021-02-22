@@ -80,7 +80,7 @@ const Footer = () => {
 				<div className={styles.search.box}>
 					<h2 className={styles.search.header}>Subscribe to our newsletter!</h2>
 					<h3 className={styles.search.subheader}>Don't worry, we won't spam you.</h3>
-					] <SearchCompact msg='Your Name ...' expand='true' button='>' />
+					<SearchCompact msg='Your Name ...' expand='true' button='>' />
 					<br />
 					<SearchCompact msg='Your Email ...' expand='true' button='Subscribe' />
 					<div className={styles.search.terms.check}>
