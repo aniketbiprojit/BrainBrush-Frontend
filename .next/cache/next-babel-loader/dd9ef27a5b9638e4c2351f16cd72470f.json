@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { combineReducers } from '@reduxjs/toolkit';\nimport { ApplicationReducer } from './states/ApplicationState/ApplicationSlice';\nvar rootReducer = combineReducers({\n  ApplicationState: ApplicationReducer\n});\nexport default rootReducer;","map":null,"metadata":{},"sourceType":"module"}
