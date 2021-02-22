@@ -5,9 +5,10 @@ import { Fragment } from 'react'
 
 const Revenue: React.FC<{ company: string }> = ({ company }) => {
 	const { route } = useRouter()
+	const isAbsolute = route === '/company/[company]/revenue'
 	return (
 		<Fragment>
-			{route === '/company/[company]/revenue' && <Fragment>Header, Navbar, etc. {route}</Fragment>}
+			{isAbsolute && <Fragment>Header, Navbar, etc. {route}</Fragment>}
 			<Fragment>
 				Relative Page Link to Absolute
 				<Link href={`/company/${company}/revenue`}>
