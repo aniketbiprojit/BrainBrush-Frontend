@@ -30,7 +30,7 @@ class Home extends React.Component {
 		 * @listens scroll
 		 * @todo improve scroll timings
 		 */
-		window.addEventListener('scroll', (e) => {
+		window.addEventListener('scroll', (_) => {
 			if (window.pageYOffset >= document.getElementById('features').offsetTop - window.innerHeight / 2) {
 				document.getElementById('nav-container').classList.add('bg-gray-900')
 				document.getElementById('nav-container').classList.add('shadow-xl')
