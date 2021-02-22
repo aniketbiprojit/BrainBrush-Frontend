@@ -36,7 +36,6 @@ const Company: React.FC<{ company_data: CompanyData }> = ({ company_data }) => {
 	return (
 		<Fragment>
 			<CompanyHeader company={company} />
-			<Revenue company={company}></Revenue>
 		</Fragment>
 	)
 }
