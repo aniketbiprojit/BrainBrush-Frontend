@@ -6,7 +6,7 @@ const RevenueLayout = () => {
 	return (
 		<>
 			<div className='bg-gray-300'>
-				<Box heading='Google Revenue'>
+				<Box heading='Google Revenue' subheading='2012-2018'>
 					<div className=''></div>
 				</Box>
 				<Box heading='Statistics'>
