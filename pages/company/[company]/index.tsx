@@ -5,7 +5,19 @@ import { InferGetServerSidePropsType } from 'next'
 import CompanyHeader from '../../../components/Company/Header'
 import Revenue from './revenue'
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+interface CompanyData {
+	ticker: string
+	stock_market: string
+	company: string
+}
+
+export const getServerSideProps: GetServerSideProps = async (
+	ctx
+): Promise<{
+	props: {
+		company_data: CompanyData
+	}
+}> => {
 	// console.log(ctx.query?.company)
 	return {
 		props: {
@@ -19,7 +31,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 	}
 }
 
-const Company: React.FC<{ company_data: InferGetServerSidePropsType<typeof getServerSideProps> }> = ({ company_data }) => {
+const Company: React.FC<{ company_data: CompanyData }> = ({ company_data }) => {
 	const company = company_data.company
 
 	return (
