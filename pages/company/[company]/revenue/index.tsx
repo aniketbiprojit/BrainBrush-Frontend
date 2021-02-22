@@ -3,6 +3,7 @@ import { useRouter } from 'next/dist/client/router'
 import React from 'react'
 
 import CompanyHeader from '../../../../components/Company/Header'
+import RevenueLayout from '../../../../components/Company/Revenue/Layout'
 
 const Revenue: React.FC<{ company: string }> = ({ company }) => {
 	const { route, query } = useRouter()
@@ -17,10 +18,9 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 					<CompanyHeader company={company} />
 				</>
 			)}
-			<>{/* Relative Page Link to Absolute {company}
-				<Link href={`/company/${company}/revenue`}>
-					<p>Page</p>
-				</Link> */}</>
+			<>
+				<RevenueLayout />
+			</>
 		</>
 	)
 }
