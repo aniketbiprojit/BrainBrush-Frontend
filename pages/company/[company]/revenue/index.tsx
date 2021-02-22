@@ -1,4 +1,5 @@
 import { useRouter } from 'next/dist/client/router'
+import Head from 'next/head'
 // import Link from 'next/link'
 import React from 'react'
 
@@ -15,6 +16,9 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 		<>
 			{isAbsolute && (
 				<>
+					<Head>
+						<title>{company} Revenue | Brainbrush</title>
+					</Head>
 					<CompanyHeader company={company} />
 				</>
 			)}

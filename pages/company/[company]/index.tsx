@@ -4,6 +4,7 @@ import { GetServerSideProps } from 'next'
 import CompanyHeader from '../../../components/Company/Header'
 import Revenue from './revenue'
 import Footer from '../../../components/Home/Footer/Footer'
+import Head from 'next/head'
 
 interface CompanyData {
 	ticker: string
@@ -40,6 +41,9 @@ const Company: React.FC<{ company_data: CompanyData }> = ({ company_data }) => {
 
 	return (
 		<Fragment>
+			<Head>
+				<title>{company} | Brainbrush</title>
+			</Head>
 			<CompanyHeader company={company} />
 			<Overview />
 			<Revenue company={company} />
