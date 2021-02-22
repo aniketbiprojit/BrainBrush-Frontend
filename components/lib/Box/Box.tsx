@@ -7,7 +7,7 @@ const Box: React.FC<{ className?: string; heading: string; subheading?: string; 
 	children = <Fragment></Fragment>,
 }) => {
 	return (
-		<div className={`${className} p-24 my-16 mx-52 bg-white rounded-3xl`}>
+		<div className={`${className} bg-white rounded-3xl`}>
 			<h1 className='text-6xl font-semibold head'>{heading}</h1>
 			<h2 className='my-5 text-xl subhead'>{subheading}</h2>
 			{children}

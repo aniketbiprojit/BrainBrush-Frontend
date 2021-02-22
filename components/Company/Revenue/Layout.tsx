@@ -13,19 +13,19 @@ const companies = [
 
 const RevenueLayout = () => {
 	return (
-		<>
-			<div className='bg-gray-300'>
-				<Box heading='Google Revenue' subheading='2012-2018'>
+		<div className='flex flex-row p-0 m-0 bg-gray-300'>
+			<div className='flex flex-col flex-grow gap-20 py-32 px-52'>
+				<Box className='p-24 mr-0 mx-52' heading='Google Revenue' subheading='2012-2018'>
 					<div className=''></div>
 				</Box>
-				<Box heading='Statistics'>
+				<Box className='p-24 my-16 mr-0 mx-52' heading='Statistics'>
 					<div className=''></div>
-				</Box>
-				<Box heading='Related'>
-					<Related></Related>
 				</Box>
 			</div>
-		</>
+			<Box className='flex-grow hidden h-full max-w-lg p-24 my-32 rounded-r-none lg:block lg:max-w-2xl' heading='Related'>
+				<Related></Related>
+			</Box>
+		</div>
 	)
 }
 
