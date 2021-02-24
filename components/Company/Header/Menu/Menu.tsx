@@ -8,7 +8,7 @@ const Menu: React.FC<{ currentTab: string; company: string }> = ({ currentTab, c
 	const { route } = useRouter()
 
 	return (
-		<div className='w-full py-20 bg-white md:px-12'>
+		<div className='w-full py-10 bg-white md:px-12'>
 			<ul className='flex flex-wrap justify-center w-full gap-0 md:gap-8'>
 				<Link href={`/company/${company}/`}>
 					<div>
