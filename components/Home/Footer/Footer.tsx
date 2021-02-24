@@ -84,6 +84,7 @@ const Footer = () => {
 					<br />
 					<SearchCompact msg='Your Email ...' expand={true} button='Subscribe' />
 					<div className={styles.search.terms.check}>
+						<input type='checkbox' id='box-1' />
 						<label htmlFor='box-1'>
 							I agree to the <span className='text-secondary-light hover:text-gray-300'>Terms and Conditions</span>
 						</label>
