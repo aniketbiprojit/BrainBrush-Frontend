@@ -14,8 +14,8 @@ const companies = [
 const RevenueLayout = () => {
 	return (
 		<div className='flex flex-row p-0 m-0 bg-gray-300'>
-			<div className='flex flex-col flex-grow gap-20 px-12 py-32 w-400px md:px-52'>
-				<Box className='p-10 mx-auto mr-0 md:p-24' heading='Google Revenue' subheading='2012-2018'>
+			<div className='flex flex-col flex-grow gap-20 px-12 py-32 w-400px md:px-32'>
+				<Box className='p-6 mx-auto mr-0 md:p-24' heading='Google Revenue' subheading='2012-2018'>
 					<>
 						<p className='py-2 text-sm md:text-lg'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, egestas ut malesuada rhoncus. Dictum accumsan aliquet enim
@@ -32,7 +32,7 @@ const RevenueLayout = () => {
 						</p>
 					</>
 				</Box>
-				<Box className='p-10 mx-auto mr-0 lg:p-24' heading='Statistics'>
+				<Box className='p-6 mx-auto mr-0 lg:p-24' heading='Statistics'>
 					<>
 						<div className='spacer p-2'></div>
 						<h2 className='my-5 text-xl subhead'>Metric A</h2>
