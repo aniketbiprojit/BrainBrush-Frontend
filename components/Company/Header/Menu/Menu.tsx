@@ -60,7 +60,12 @@ const Menu: React.FC<{ currentTab: string; company: string; minimize: boolean }>
 						<Fragment>
 							<Link href={field.href}>
 								<div className=''>
-									<ButtonCard icon={field.icon} text={field.text} isSelected={route === field.route}></ButtonCard>
+									<ButtonCard
+										minimize={minimize}
+										icon={field.icon}
+										text={field.text}
+										isSelected={route === field.route}
+									></ButtonCard>
 								</div>
 							</Link>
 						</Fragment>

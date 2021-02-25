@@ -1,5 +1,5 @@
 import React from 'react'
-const ButtonCard: React.FC<{ icon: any; text: string; isSelected: boolean }> = ({ icon, text, isSelected }) => {
+const ButtonCard: React.FC<{ icon: any; text: string; isSelected: boolean; minimize?: boolean }> = ({ icon, text, isSelected, minimize = false }) => {
 	return (
 		<div
 			style={{ cursor: 'pointer', padding: '1.5vw' }}
