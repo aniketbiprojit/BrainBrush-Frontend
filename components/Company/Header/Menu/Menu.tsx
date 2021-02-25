@@ -59,7 +59,7 @@ const Menu: React.FC<{ currentTab: string; company: string; minimize: boolean }>
 					return (
 						<Fragment>
 							<Link href={field.href}>
-								<div className=''>
+								<div key={field.text} className=''>
 									<ButtonCard
 										minimize={minimize}
 										icon={field.icon}
