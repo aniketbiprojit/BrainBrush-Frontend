@@ -14,7 +14,6 @@ const Banner: React.FC<{ company: string; minimize: boolean }> = ({ company, min
 
 	return (
 		<>
-			{/* <div className='relative h-6'> */}
 			<div
 				className={
 					minimize
@@ -34,7 +33,6 @@ const Banner: React.FC<{ company: string; minimize: boolean }> = ({ company, min
 					<Button text='Follow' />
 				</div>
 			</div>
-			{/* </div> */}
 		</>
 	)
 }
