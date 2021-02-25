@@ -30,6 +30,7 @@ const CompanyHeader: React.FC<{ company: string }> = ({ company }) => {
 				<Banner minimize={minimize} company={company} />
 				<Menu minimize={minimize} currentTab={''} company={company} />
 			</div>
+			{minimize && <div style={{ height: '40vh' }} />}
 		</div>
 	)
 }
