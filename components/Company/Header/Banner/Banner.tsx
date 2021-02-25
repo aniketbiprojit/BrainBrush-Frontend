@@ -13,7 +13,7 @@ const Banner: React.FC<{ company: string; minimize: boolean }> = ({ company, min
 	const { ticker, stock_market, icon } = get_company_data(company)
 
 	return (
-		<div className={minimize ? 'fixed h-6 left-0 right-0' : ''}>
+		<>
 			{/* <div className='relative h-6'> */}
 			<div
 				className={
@@ -35,7 +35,7 @@ const Banner: React.FC<{ company: string; minimize: boolean }> = ({ company, min
 				</div>
 			</div>
 			{/* </div> */}
-		</div>
+		</>
 	)
 }
 

@@ -26,8 +26,10 @@ const CompanyHeader: React.FC<{ company: string }> = ({ company }) => {
 	return (
 		<div className='bg-gray-300'>
 			<Navbar minimize={minimize} navcolor='bg-gray-900'></Navbar>
-			<Banner minimize={minimize} company={company} />
-			<Menu minimize={minimize} currentTab={''} company={company} />
+			<div className={minimize ? 'fixed h-6 left-0 right-0' : ''}>
+				<Banner minimize={minimize} company={company} />
+				<Menu minimize={minimize} currentTab={''} company={company} />
+			</div>
 		</div>
 	)
 }
