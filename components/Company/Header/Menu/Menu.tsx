@@ -2,7 +2,7 @@ import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import React from 'react'
 import { FaCoins, FaDollarSign, FaMapMarkedAlt, FaPiggyBank, FaSearch } from 'react-icons/fa'
-import { AiOutlineTeam } from 'react-icons/ai'
+import { IoPeople } from 'react-icons/io5'
 import { GoGraph } from 'react-icons/go'
 import ButtonCard from './ButtonCard/ButtonCard'
 
@@ -23,7 +23,7 @@ const Menu: React.FC<{ currentTab: string; company: string; minimize: boolean }>
 					</div>
 				</Link>
 				<ButtonCard icon={<FaCoins />} text='Financials' isSelected={false} />
-				<ButtonCard icon={<AiOutlineTeam />} text='Teams' isSelected={false} />
+				<ButtonCard icon={<IoPeople />} text='Teams' isSelected={false} />
 				<ButtonCard icon={<FaPiggyBank />} text='Investors' isSelected={false} />
 				<ButtonCard icon={<FaMapMarkedAlt />} text='Locations' isSelected={false} />
 				<ButtonCard icon={<GoGraph />} text='Others' isSelected={false} />
