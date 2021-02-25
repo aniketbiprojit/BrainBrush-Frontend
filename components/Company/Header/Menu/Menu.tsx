@@ -53,7 +53,7 @@ const Menu: React.FC<{ currentTab: string; company: string; minimize: boolean }>
 		},
 	]
 	return (
-		<div className={minimize ? 'w-full shadow-xl py-5 bg-white md:px-12' : 'w-full py-10 bg-white md:px-12'}>
+		<div className={minimize ? 'w-full lg:shadow-xl py-5 bg-white md:px-12' : 'w-full py-10 bg-white md:px-12'}>
 			<ul className='flex flex-wrap justify-center w-full gap-0 md:gap-5'>
 				{fields.map((field) => {
 					return (
