@@ -37,7 +37,7 @@ const Navbar = ({ navcolor = 'bg-transparent', pad = true, minimize = false }) =
 						</Link>
 					</li>
 					<div className='flex justify-center w-full'>
-						<SearchCompact msg='Search for companies, listing ...' setAnim='true' />
+						<SearchCompact msg='Search for companies, listing ...' setAnim={true} />
 					</div>
 
 					<ul className={styles.button.container}>
