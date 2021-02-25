@@ -9,7 +9,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
  */
 const SearchBar = (props: { expand?: boolean; setAnim?: boolean; button?: string; msg?: string }) => {
 	var styles = {
-		container: 'flex w-full sm:w-7/12 lg:w-5/12 flex-wrap items-stretch',
+		container: 'w-full sm:w-7/12 lg:w-5/12 flex-wrap hidden lg:flex items-stretch',
 		icon:
 			'font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-black rounded-md text-sm bg-primary-highlight items-center rounded-l-none pr-3 pl-3 py-2 text-black items-center placeholder-primary red-button',
 		text: `${
