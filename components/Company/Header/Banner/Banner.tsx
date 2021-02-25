@@ -9,7 +9,7 @@ function get_company_data(company: string) {
 		icon: <FaGoogle className='md:mr-10 text-8xl' />,
 	}
 }
-const Banner: React.FC<{ company: string }> = ({ company }) => {
+const Banner: React.FC<{ company: string; minimize: boolean }> = ({ company, minimize = false }) => {
 	const { ticker, stock_market, icon } = get_company_data(company)
 
 	return (

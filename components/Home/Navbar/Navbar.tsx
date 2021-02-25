@@ -10,7 +10,7 @@ import SearchCompact from '../Search/SearchCompact.module'
  * @imports Link (nextjs)
  * @imports Search Compact (module)
  */
-const Navbar = ({ navcolor = 'bg-transparent', pad = true }) => {
+const Navbar = ({ navcolor = 'bg-transparent', pad = true, minimize = false }) => {
 	const links = [
 		{ href: '#', label: 'Home' },
 		{ href: '#', label: 'Companies' },

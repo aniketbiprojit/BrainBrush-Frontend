@@ -4,7 +4,7 @@ import React from 'react'
 import { FaCoins, FaDollarSign, FaSearch } from 'react-icons/fa'
 import ButtonCard from './ButtonCard/ButtonCard'
 
-const Menu: React.FC<{ currentTab: string; company: string }> = ({ currentTab, company }) => {
+const Menu: React.FC<{ currentTab: string; company: string; minimize: boolean }> = ({ currentTab, company, minimize }) => {
 	const { route } = useRouter()
 
 	return (

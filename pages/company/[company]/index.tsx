@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 import CompanyHeader from '../../../components/Company/Header'
-import Revenue from './revenue'
+// import Revenue from './revenue'
 import Footer from '../../../components/Home/Footer/Footer'
 import Head from 'next/head'
 
@@ -25,7 +25,7 @@ const Company: React.FC<{ company_data: CompanyData }> = ({ company_data }) => {
 			</Head>
 			<CompanyHeader company={company} />
 			<Overview />
-			<Revenue company={company} />
+			{/* <Revenue company={company} /> */}
 			<Footer></Footer>
 		</Fragment>
 	)
