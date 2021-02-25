@@ -16,11 +16,9 @@ const Banner: React.FC<{ company: string; minimize: boolean }> = ({ company, min
 	return (
 		<>
 			<div
-				className={
-					minimize
-						? 'flex flex-col items-center gap-20 px-12 lg:gap-0 lg:items-start lg:flex-row h-26 pt-5 pb-5 bg-gray-300'
-						: 'flex flex-col items-center gap-20 px-56 lg:gap-0 lg:items-start lg:flex-row py-28'
-				}
+				className={`flex flex-col items-center gap-20  px-56 lg:gap-0 lg:items-start lg:flex-row ${
+					minimize ? 'h-26 pt-5 pb-5 bg-gray-300' : 'flex flex-col items-center gap-20 lg:gap-0 lg:items-start lg:flex-row py-28'
+				}`}
 			>
 				{icon}
 				<div className='flex flex-col items-center lg:items-start lg:w-full'>
