@@ -5,7 +5,7 @@ const ButtonCard: React.FC<{ icon: any; text: string; isSelected: boolean; minim
 			style={{ cursor: 'pointer', padding: '1vw', minWidth: '10vw' }}
 			className={`${isSelected ? 'bg-secondary' : 'hover:bg-gray-300'} rounded md:rounded-xl`}
 		>
-			<div className={`icon grid justify-items-center ${isSelected ? 'text-white' : ''}`} style={{ fontSize: '3vw' }}>
+			<div className={`icon grid justify-items-center ${isSelected ? 'text-white' : ''}`} style={{ fontSize: 'max(3vw,3vh)' }}>
 				{icon}
 			</div>
 			{!minimize && (
