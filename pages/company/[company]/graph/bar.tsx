@@ -4,7 +4,7 @@ import { ResponsiveBar } from '@nivo/bar'
 
 const BarChart = ({ data }) => {
 	console.log('bar')
-	console.log(data)
+	// console.log(data)
 	return (
 		<div className=''>
 			<ResponsiveBar
