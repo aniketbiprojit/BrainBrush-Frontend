@@ -1,0 +1,32 @@
+[
+	{
+		"year": "2015",
+		"value": 65,
+		"color": "#0396ff"
+	},
+	{
+		"year": "2016",
+		"value": 108,
+		"color": "#d9d9d9"
+	},
+	{
+		"year": "2017",
+		"value": 156,
+		"color": "#457b9d"
+	},
+	{
+		"year": "2018",
+		"value": 170,
+		"color": "#3fa7d7"
+	},
+	{
+		"year": "2019",
+		"value": 260,
+		"color": "#a8dadc"
+	},
+	{
+		"year": "2020",
+		"value": 272,
+		"color": "#a8dadc"
+	}
+]

@@ -11,7 +11,7 @@ const companies = [
 	{ name: 'Microsoft', color: '#C4C4C4' },
 ]
 
-const RevenueLayout = () => {
+const RevenueLayout = ({ Chart }: { Chart: React.ComponentType }) => {
 	return (
 		<div className='flex flex-row p-0 m-0 bg-gray-300'>
 			<div className='flex flex-col flex-grow gap-20 px-12 py-32 w-400px md:px-32'>
@@ -36,10 +36,15 @@ const RevenueLayout = () => {
 					<>
 						<div className='spacer p-2'></div>
 						<h2 className='my-5 text-xl subhead'>Metric A</h2>
-						<img src='/Graph_1.png' alt='Graph' width={967 * 1.5} height={322 * 1.5}></img>
+						<div className='' style={{ width: `${967 * 1.5}px`, height: `${503 * 1.5}px` }}>
+							<Chart />
+						</div>
 						<div className='spacer p-2'></div>
 						<h2 className='my-5 text-xl subhead'>Metric B</h2>
-						<img src='/Table_1.png' alt='Table' width={967 * 1.5} height={503 * 1.5}></img>
+						<div className='' style={{ width: `${967 * 1.5}px`, height: `${503 * 1.5}px` }}>
+							<Chart />
+						</div>
+						{/* <img src='/Table_1.png' alt='Table' width={967 * 1.5} height={503 * 1.5}></img> */}
 					</>
 				</Box>
 			</div>

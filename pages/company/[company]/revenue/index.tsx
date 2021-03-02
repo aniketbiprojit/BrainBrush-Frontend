@@ -6,6 +6,9 @@ import React from 'react'
 import CompanyHeader from '../../../../components/Company/Header'
 import RevenueLayout from '../../../../components/Company/Revenue/Layout'
 import Footer from '../../../../components/Home/Footer/Footer'
+import BarChart from '../graph/bar'
+
+import data from '../data.json'
 
 const Revenue: React.FC<{ company: string }> = ({ company }) => {
 	const { route, query } = useRouter()
@@ -24,7 +27,8 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 				</>
 			)}
 			<>
-				<RevenueLayout />
+				<RevenueLayout Chart={() => <BarChart data={data} />} />
+				{/* <BarChart /> */}
 			</>
 			{isAbsolute && (
 				<>
