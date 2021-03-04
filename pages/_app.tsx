@@ -8,6 +8,7 @@ import { Provider } from 'react-redux'
 
 import store from '../redux/store'
 import { firebase_config } from './'
+import Head from 'next/head'
 
 export default function App({ Component, pageProps }: AppProps) {
 	useEffect(() => {
@@ -18,6 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	return (
 		<Provider store={store}>
+			<Head>
+				<meta name='viewport' content='initial-scale=0.75, maximum-scale=0.75, width=device-width'></meta>
+			</Head>
 			<Component {...pageProps} />
 		</Provider>
 	)

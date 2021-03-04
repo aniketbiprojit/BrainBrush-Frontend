@@ -24,7 +24,7 @@ const CompanyHeader: React.FC<{ company: string }> = ({ company }) => {
 		return () => window.removeEventListener('scroll', handleScroll)
 	})
 	return (
-		<div className='bg-gray-300'>
+		<div className='bg-gray-300 z-50'>
 			<Navbar minimize={minimize} navcolor='bg-gray-900'></Navbar>
 			<div className={minimize ? 'lg:fixed lg:h-6 lg:left-0 lg:right-0' : ''}>
 				<Banner minimize={minimize} company={company} />
