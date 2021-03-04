@@ -59,10 +59,6 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 			)}
 			<>
 				<RevenueLayout Chart={() => <BarChart data={data} />} />
-				{/* <BarChart /> */}
-				<div className='h-96 w-96'>
-					<BarChart data={data} />
-				</div>
 			</>
 			{isAbsolute && (
 				<>

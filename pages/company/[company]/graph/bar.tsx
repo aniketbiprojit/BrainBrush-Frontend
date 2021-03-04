@@ -1,12 +1,13 @@
 import React from 'react'
 
 import { ResponsiveBar } from '@nivo/bar'
+import { Fragment } from 'react'
 
 const BarChart = ({ data }) => {
-	console.log('bar')
 	// console.log(data)
+
 	return (
-		<div className=''>
+		<Fragment>
 			<ResponsiveBar
 				theme={{
 					fontSize: 16,
@@ -61,7 +62,7 @@ const BarChart = ({ data }) => {
 				motionStiffness={90}
 				motionDamping={15}
 			/>
-		</div>
+		</Fragment>
 	)
 }
 
