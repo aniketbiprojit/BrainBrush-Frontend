@@ -10,7 +10,7 @@ const Review = (props: any) => {
 			<>
 				<div
 					className={
-						'  review  grid grid-cols-2 grid-rows-7 gap-5 p-10 mx-2 mb-10 text-center duration-300   border-2 border-grey-600 hover:shadow-xl w-400px lg:mb-0 align-items-center rounded-2xl ' +
+						'  review  grid grid-cols-2 grid-rows-7 gap-5 p-10 mx-2 mb-10 text-center duration-300   border-2 border-grey-600 hover:shadow-xl w-400px lg:mb-0 align-items-center rounded-2xl pb-28 ' +
 						props.center
 					}
 					id='blog-card'
@@ -20,14 +20,13 @@ const Review = (props: any) => {
 						<p>{props.msg}</p>
 					</div>
 				</div>
-				<div className='image'>
-					<div className='img'>
-						<img
-							className='imagetestimonials'
-							src='https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80'
-							alt=''
-						/>
-					</div>
+				<div className='float-right'>
+					<img
+						className='rounded-full mr-8'
+						src='https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=100'
+						alt=''
+						style={{ backgroundSize: 'cover', width: '80px', height: '80px' }}
+					/>
 				</div>
 			</>
 		</Zoom>
