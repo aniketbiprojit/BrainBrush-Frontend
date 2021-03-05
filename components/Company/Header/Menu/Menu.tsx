@@ -12,7 +12,7 @@ const Menu: React.FC<{ currentTab: string; company: string; minimize: boolean }>
 			<ul className='flex flex-wrap justify-center w-full gap-0 md:gap-5'>
 				{fields.map((field) => {
 					return (
-						<Fragment key={field.href}>
+						<Fragment>
 							<Link href={field.href}>
 								<div key={field.text} className=''>
 									<ButtonCard
