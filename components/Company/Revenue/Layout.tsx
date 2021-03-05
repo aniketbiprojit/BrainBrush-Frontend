@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import Box from '../../lib/Box/Box'
+import { Related } from './Related'
 
-const companies = [
+export const companies = [
 	{ name: 'Netflix', color: '#FF5A5A' },
 	{ name: 'Amazon', color: '#3FA7D6' },
 	{ name: 'Google', color: '#A8DADC' },
@@ -56,21 +57,3 @@ const RevenueLayout = ({ Chart }: { Chart: React.ComponentType }) => {
 }
 
 export default RevenueLayout
-
-const Related: React.FC = () => {
-	return (
-		<Fragment>
-			{companies.map((company) => {
-				return (
-					<div key={company.name} className='flex' style={{ alignItems: 'center' }}>
-						<div
-							style={{ width: '27px', height: '27px', borderRadius: '50%', backgroundColor: `${company.color}` }}
-							className='my-4'
-						></div>
-						<div className='m-2 text-2xl'>{company.name}</div>
-					</div>
-				)
-			})}
-		</Fragment>
-	)
-}

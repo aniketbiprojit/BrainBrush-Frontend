@@ -8,13 +8,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
  * @param props msg, setAnim, expand, button
  */
 const SearchBar = (props: { expand?: boolean; setAnim?: boolean; button?: string; msg?: string }) => {
-	var styles = {
-		container: 'w-full sm:w-7/12 lg:w-5/12 flex-wrap hidden lg:flex items-stretch',
-		icon:
-			'font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-black rounded-md text-sm bg-primary-highlight items-center rounded-l-none pr-3 pl-3 py-2 text-black items-center placeholder-primary red-button',
-		text: `${
-			props.button === '' ? '' : 'rounded-r-none'
-		} px-3 py-3 h-10 border border-solid border-black rounded-md text-sm leading-snug text-black bg-white shadow-none outline-none focus:outline-none w-full font-normal flex-1 border-r-0 placeholder-primary `,
+	if (props.button !== '') {
+		styles.text += ' rounded-r-none'
 	}
 
 	if (props.expand === true) {
@@ -42,6 +37,13 @@ const SearchBar = (props: { expand?: boolean; setAnim?: boolean; button?: string
 			</div>
 		</section>
 	)
+}
+
+let styles = {
+	container: 'w-full sm:w-7/12 lg:w-5/12 flex-wrap hidden lg:flex items-stretch',
+	icon:
+		'font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-black rounded-md text-sm bg-primary-highlight items-center rounded-l-none pr-3 pl-3 py-2 text-black items-center placeholder-primary red-button',
+	text: ` px-3 py-3 h-10 border border-solid border-black rounded-md text-sm leading-snug text-black bg-white shadow-none outline-none focus:outline-none w-full font-normal flex-1 border-r-0 placeholder-primary `,
 }
 
 export default SearchBar

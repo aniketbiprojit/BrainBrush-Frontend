@@ -11,26 +11,10 @@ import SearchCompact from '../Search/SearchCompact.module'
  * @imports Search Compact (module)
  */
 const Navbar = ({ navcolor = 'bg-transparent', pad = true, minimize = false }) => {
-	const links = [
-		{ href: '#', label: 'Home' },
-		{ href: '#', label: 'Companies' },
-		{ href: '#', label: 'Register' },
-	]
-
-	const styles = {
-		container: `${navcolor} duration-300 fixed z-10 w-screen object-top flex items-center justify-between p-8 h-28`,
-		logo: 'text-white font-semibold flex-wrap no-underline pr-4 ml-0 pl-0 md:ml-10 md:text-2xl',
-		button: {
-			container: 'flex items-center justify-between space-x-5',
-			text: 'text-white no-underline hover:text-yellow-300 font-bold',
-			button: 'text-gray-600 font-semibold bg-primary-highlight py-2 px-4 mr-0 md:mr-10 rounded red-button',
-		},
-	}
-
 	return (
 		<>
 			<nav>
-				<ul className={styles.container} id='nav-container'>
+				<ul className={navcolor + styles.container} id='nav-container'>
 					<li>
 						<Link href='/'>
 							<a className={styles.logo}>Brainbrush</a>
@@ -60,6 +44,22 @@ const Navbar = ({ navcolor = 'bg-transparent', pad = true, minimize = false }) =
 			<div className={pad ? 'py-14' : ''}></div>
 		</>
 	)
+}
+
+const links = [
+	{ href: '#', label: 'Home' },
+	{ href: '#', label: 'Companies' },
+	{ href: '#', label: 'Register' },
+]
+
+const styles = {
+	container: ` duration-300 fixed z-10 w-screen object-top flex items-center justify-between p-8 h-28`,
+	logo: 'text-white font-semibold flex-wrap no-underline pr-4 ml-0 pl-0 md:ml-10 md:text-2xl',
+	button: {
+		container: 'flex items-center justify-between space-x-5',
+		text: 'text-white no-underline hover:text-yellow-300 font-bold',
+		button: 'text-gray-600 font-semibold bg-primary-highlight py-2 px-4 mr-0 md:mr-10 rounded red-button',
+	},
 }
 
 export default Navbar
