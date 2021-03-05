@@ -1,4 +1,5 @@
 import { FaMapMarked, FaMapSigns } from 'react-icons/fa'
+import { FooterList } from './FooterList'
 
 import SearchCompact from '../Search/SearchCompact.module'
 
@@ -47,36 +48,8 @@ const Footer = () => {
 		<>
 			<footer className={styles.container}>
 				<h1 className={styles.logo}>Brainbrush</h1>
-				<ul className={styles.menu.container} id='footerList'>
-					<li className={styles.menu.header}>
-						<div className={styles.menu.icon}>
-							<FaMapMarked />
-						</div>
-						<h2>Discover</h2>
-					</li>
-					{links_discover.map(({ href, label }) => (
-						<li key={`${href}${label}`}>
-							<a href={href} className={styles.menu.text}>
-								{label}
-							</a>
-						</li>
-					))}
-				</ul>
-				<ul className={styles.menu.container}>
-					<li className={styles.menu.header}>
-						<div className={styles.menu.icon}>
-							<FaMapSigns />
-						</div>
-						<h2>Company</h2>
-					</li>
-					{links_company.map(({ href, label }) => (
-						<li key={`${href}${label}`}>
-							<a href={href} className={styles.menu.text}>
-								{label}
-							</a>
-						</li>
-					))}
-				</ul>
+				<FooterList styles={styles} links_discover={links_discover} icon={<FaMapMarked />} />
+				<FooterList styles={styles} links_discover={links_company} icon={<FaMapSigns />} />
 				<div className={styles.search.box}>
 					<h2 className={styles.search.header}>Subscribe to our newsletter!</h2>
 					<h3 className={styles.search.subheader}>Don't worry, we won't spam you.</h3>
