@@ -231,4 +231,7 @@ input[type='checkbox']:checked + label:before {
 	.w-400px {
 		width: 400px;
 	}
+	.w-75vw {
+		width: 75vw;
+	}
 }

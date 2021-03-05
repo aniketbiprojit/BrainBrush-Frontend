@@ -37,12 +37,12 @@ const RevenueLayout = ({ Chart }: { Chart: React.ComponentType }) => {
 					<>
 						<div className='spacer p-2'></div>
 						<h2 className='my-5 text-xl subhead'>Metric A</h2>
-						<div className='' style={{ width: `${967 * 1.5}px`, height: `${503 * 1.5}px` }}>
+						<div className='w-75vw h-1/2 max-h-96'>
 							<Chart />
 						</div>
 						<div className='spacer p-2'></div>
 						<h2 className='my-5 text-xl subhead'>Metric B</h2>
-						<div className='' style={{ width: `${967 * 1.5}px`, height: `${503 * 1.5}px` }}>
+						<div className='w-75vw h-1/2 max-h-96'>
 							<Chart />
 						</div>
 						{/* <img src='/Table_1.png' alt='Table' width={967 * 1.5} height={503 * 1.5}></img> */}
