@@ -20,7 +20,7 @@ const Navbar = ({ navcolor = 'bg-transparent', pad = true, minimize = false }) =
 							<a className={styles.logo}>Brainbrush</a>
 						</Link>
 					</li>
-					<div className='flex justify-center w-full'>
+					<div className='flex justify-center w-full lg:w-1/3'>
 						<SearchCompact msg='Search for companies, listing ...' setAnim={true} />
 					</div>
 
