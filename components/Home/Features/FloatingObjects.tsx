@@ -4,7 +4,7 @@ import Zoom from 'react-reveal/Zoom'
 export const FloatingObjects = ({ name, id, imgId }) => {
 	return (
 		<div
-			className={name}
+			className={name + ' hover:opacity-10 transform duration-300'}
 			onMouseMove={(e) => {
 				document.querySelectorAll(name).forEach(() => {
 					let dx = 0.033
