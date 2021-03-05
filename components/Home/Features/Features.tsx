@@ -4,7 +4,6 @@
  * @exports Feature Section
  *
  */
-
 import React from 'react'
 
 import Feature from './Feature.module'
