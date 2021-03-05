@@ -111,7 +111,7 @@ a {
 	height: 25vw;
 	width: 25vw;
 	border: 0 solid #000;
-	@apply hidden lg:block;
+	@apply hidden xl:block;
 }
 
 .object-box-1 .img1 {
@@ -132,7 +132,7 @@ a {
 	height: 25vw;
 	width: 25vw;
 	border: 0 solid #000;
-	@apply hidden lg:block;
+	@apply hidden xl:block;
 }
 
 .object-box-2 .img2 {
@@ -147,13 +147,13 @@ a {
 
 .object-box-3 {
 	position: absolute;
-	top: 350%;
+	top: 285%;
 	left: 15%;
 	z-index: 3;
 	height: 25vw;
 	width: 25vw;
 	border: 0 solid #000;
-	@apply hidden lg:block;
+	@apply hidden xl:block;
 }
 
 .object-box-3 .img3 {

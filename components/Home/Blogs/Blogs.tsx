@@ -14,6 +14,7 @@ const Blogs = () => {
 				{companies.map((company) => {
 					return (
 						<Blog
+							key={company.name}
 							companyName={company.name}
 							msg='Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel consequuntur omnis vero, id corporis repellat mollitia quisquam architecto? Sit amet consectetur consequuntur omnis vero.'
 							color='bg-yellow-300'

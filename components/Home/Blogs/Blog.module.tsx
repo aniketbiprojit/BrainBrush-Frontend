@@ -15,7 +15,7 @@ const Blog = (props: any) => {
 			>
 				<div
 					className='p-20 duration-300 bg-gray-600 hover:shadow-xl w-96 align-items-center rounded-2xl absolute'
-					style={{ background: 'url(https://picsum.photos/seed/picsum/400/300) cover no-repeat no-repeat' }}
+					style={{ background: 'url(https://picsum.photos/seed/picsum/400/300)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
 				/>
 
 				<h1 className='text-4xl font-semibold text-primary justify-self-start'>{props.companyName}</h1>
