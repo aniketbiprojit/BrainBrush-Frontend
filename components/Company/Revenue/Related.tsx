@@ -5,7 +5,7 @@ import { companies } from './Layout'
 export const Related: React.FC = () => {
 	return (
 		<Fragment>
-			<Box className={`flex-grow mx-12 lg:mx-0 h-full max-w-lg px-10 py-20 lg:my-28 rounded-r-none xl:block lg:max-w-1`} heading='Related'>
+			<Box className={`flex-grow mx-12 lg:mx-0 max-w-lg px-10 py-20 lg:my-28 rounded-r-none xl:block lg:max-w-1`} heading='Related'>
 				{companies.map((company) => {
 					return (
 						<div key={company.name} className='flex' style={{ alignItems: 'center' }}>
