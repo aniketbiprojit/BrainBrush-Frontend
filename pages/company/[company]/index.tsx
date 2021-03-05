@@ -4,6 +4,7 @@ import CompanyHeader from '../../../components/Company/Header'
 // import Revenue from './revenue'
 import Footer from '../../../components/Home/Footer/Footer'
 import Head from 'next/head'
+import { useRouter } from 'next/dist/client/router'
 
 interface CompanyData {
 	ticker: string
@@ -16,7 +17,8 @@ const Overview: React.FC = () => {
 }
 
 const Company: React.FC<{ company_data: CompanyData }> = ({ company_data }) => {
-	const company = 'Google'
+	const { query } = useRouter()
+	const company = query?.company as string
 
 	return (
 		<Fragment>
