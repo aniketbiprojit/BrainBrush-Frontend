@@ -80,17 +80,17 @@ a {
 /* CUSTOMS */
 
 #nav {
-	background: linear-gradient(to right, #1d355788, #0262bb44), url('./assets/banneralt.jpg');
-	background-size: cover;
+	background: linear-gradient(to right, #1d355788, #0262bb44), url('./assets/banner1.jpg');
+	/* background-size: cover; */
 	background-repeat: no-repeat;
-	/* background-attachment: fixed; */
+	background-attachment: fixed;
 }
 
 #blog-bg {
-	background: linear-gradient(to right, #1d355788, #0262bb44), url('./assets/banneralt.jpg');
-	background-size: cover;
+	background: linear-gradient(to right, #1d355788, #0262bb44), url('./assets/banner1.jpg');
+	/* background-size: cover; */
 	background-repeat: no-repeat;
-	/* background-attachment: fixed; */
+	background-attachment: fixed;
 }
 
 .red-button:hover {
@@ -111,6 +111,7 @@ a {
 	height: 25vw;
 	width: 25vw;
 	border: 0 solid #000;
+	@apply hidden lg:block;
 }
 
 .object-box .img1 {
@@ -131,9 +132,31 @@ a {
 	height: 25vw;
 	width: 25vw;
 	border: 0 solid #000;
+	@apply hidden lg:block;
 }
 
 .object2-box .img2 {
+	height: 100%;
+	width: 100%;
+	background: url('./assets/f1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	filter: drop-shadow(50px -15px 25px rgba(0, 0, 0, 0.3));
+	border-style: none;
+}
+
+.object-box3 {
+	position: absolute;
+	top: 350%;
+	right: 25%;
+	z-index: 3;
+	height: 25vw;
+	width: 25vw;
+	border: 0 solid #000;
+	@apply hidden lg:block;
+}
+
+.object-box3 .img3 {
 	height: 100%;
 	width: 100%;
 	background: url('./assets/f1.png');

@@ -35,16 +35,16 @@ const Features = () => {
 
 			<div
 				className='object-box'
-				// onMouseMove={(e) => {
-				// 	document.querySelectorAll('.object-box').forEach(() => {
-				// 		let dx = 0.033
-				// 		let dy = -0.1
-				// 		let x = e.clientX * dx
-				// 		let y = e.clientY * dy
+				onMouseMove={(e) => {
+					document.querySelectorAll('.object-box').forEach(() => {
+						let dx = 0.033
+						let dy = -0.1
+						let x = e.clientX * dx
+						let y = e.clientY * dy
 
-				// 		document.getElementById('image').style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)'
-				// 	})
-				// }}
+						document.getElementById('image').style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)'
+					})
+				}}
 				id='image'
 			>
 				<Zoom>
@@ -67,6 +67,24 @@ const Features = () => {
 			>
 				<Zoom>
 					<img src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' className='img2' />
+				</Zoom>
+			</div>
+			<div
+				className='object-box3'
+				onMouseMove={(e) => {
+					document.querySelectorAll('.object-box3').forEach(() => {
+						let dx = 0.033
+						let dy = -0.1
+						let x = e.clientX * dx
+						let y = e.clientY * dy
+
+						document.getElementById('image3').style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)'
+					})
+				}}
+				id='image3'
+			>
+				<Zoom>
+					<img src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' className='img3' />
 				</Zoom>
 			</div>
 			<div className='grid items-center grid-cols-1 py-20 gap-y-20 lg:gap-y-28 justify-items-center'>
