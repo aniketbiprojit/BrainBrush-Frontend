@@ -1,8 +1,7 @@
 import SearchWithButton from './SearchWithButton.module'
 
 // Font Awesome Import
-import { FaGoogle, FaAirbnb, FaAdobe, FaUber } from 'react-icons/fa'
-import Link from 'next/link'
+import { Links } from './Links'
 
 /** Search Section (HERO SECTION)
  * @imports SearchWithButton (module)
@@ -16,8 +15,6 @@ const Search = () => {
 		recent: 'mb-64 mt-10 lg:mb-0',
 	}
 
-	var icon_size = 20
-
 	return (
 		<section className={styles.container} id='nav'>
 			<div className={styles.search}>
@@ -30,32 +27,8 @@ const Search = () => {
 					search='true'
 				/>
 			</div>
-			<div id='recent' className={styles.recent + ' bg-gray-400 bg-opacity-70 p-2 rounded-full flex flex-row items-center'}>
-				<Link href={`/company/Google`}>
-					<h2 className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
-						<FaGoogle size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-0' />
-						Google
-					</h2>
-				</Link>
-				<Link href={`company/Airbnb`}>
-					<h2 className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
-						<FaAirbnb size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
-						Airbnb
-					</h2>
-				</Link>
-				<Link href={`company/Adobe`}>
-					<h2 className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
-						<FaAdobe size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
-						Adobe
-					</h2>
-				</Link>
-				<Link href={`company/Uber`}>
-					<h2 className='flex flex-row p-2 px-4 text-lg font-medium duration-100 rounded-full hover:bg-gray-400'>
-						<FaUber size={icon_size} className='self-center ml-1 mr-1 lg:mr-2 lg:ml-2' />
-						Uber
-					</h2>
-				</Link>
-			</div>
+			<Links recent='mb-64 mt-10 lg:mb-0' icon_size={20} />
+			{/* wave svg below */}
 			<svg className='relative w-screen transform translate-y-2' viewBox='0 0 3108 650' fill='none'>
 				<path
 					d='M554 193.5C386.5 86 135 19 0.5 0.5V1159H3108V480.12C2948.57 344.348 2661.49 288.314 2266.5 391C1953 472.5 1850 537 1434 537C1018 537 725.25 303.407 554 193.5Z'
