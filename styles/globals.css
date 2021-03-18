@@ -3,6 +3,8 @@
  * Only add custom text for specific features
  */
 
+@import './main.css';
+@import './Tabs.css';
 @import './Header.css';
 @import './Navbar.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
