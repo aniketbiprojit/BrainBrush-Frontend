@@ -3,7 +3,8 @@ import Head from 'next/head'
 // import Link from 'next/link'
 import React from 'react'
 
-import CompanyHeader from '../../../../components/Company/Header'
+// import CompanyHeader from '../../../../components/Company/Header'
+import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
 import RevenueLayout from '../../../../components/Company/Revenue/Layout'
 import Footer from '../../../../components/Home/Footer/Footer'
 import BarChart from '../graph/bar'
@@ -54,7 +55,7 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 					<Head>
 						<title>{company} Revenue | Brainbrush</title>
 					</Head>
-					<CompanyHeader company={company} />
+					<CompanyHeaderPorted />
 				</>
 			)}
 			<>

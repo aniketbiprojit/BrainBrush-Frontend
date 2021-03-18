@@ -1,0 +1,63 @@
+.header {
+	background-color: #fff;
+	color: #1f3656;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	height: auto;
+	padding: 15px 30px;
+	box-sizing: border-box;
+	position: sticky;
+}
+
+.header .brand {
+	display: flex;
+}
+
+.header .brand-image img {
+	width: 50px;
+}
+
+.header .brand-name {
+	font-size: 30px;
+	margin-left: 25px;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-weight: 500;
+}
+
+.header .links {
+	margin-left: auto;
+	font-weight: 500;
+}
+
+.header .links a {
+	text-decoration: none;
+	color: white;
+	margin-left: 20px;
+}
+
+.header .links .follow {
+	font-size: 22px;
+	background-color: #add9db;
+	color: white;
+	padding: 7px 30px;
+	border-radius: 5px;
+	color: #1f3656;
+}
+
+.scrolled .brand-name {
+	display: none;
+	transition: ease-out 3.5s;
+}
+
+.scrolled img {
+	width: 30px !important;
+	transition: ease-out 1s;
+}
+
+.scrolled .follow {
+	font-size: 20px !important;
+	padding: 5px 20px !important;
+	transition: ease-out 1s;
+}
