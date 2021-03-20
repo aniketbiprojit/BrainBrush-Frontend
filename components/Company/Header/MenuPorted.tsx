@@ -5,24 +5,27 @@ import Tab from '@material-ui/core/Tab'
 import { FaCoins, FaDollarSign, FaMapMarkedAlt, FaPiggyBank, FaSearch } from 'react-icons/fa'
 import { BsPeopleFill, BsFillBarChartFill } from 'react-icons/bs'
 import { GiTrophyCup } from 'react-icons/gi'
-import Typography from '@material-ui/core/Typography'
-import Box from '@material-ui/core/Box'
+import Link from 'next/link'
 
-function TabPanel(props) {
-	const { children, value, index, ...other } = props
+// import Typography from '@material-ui/core/Typography'
+// import Box from '@material-ui/core/Box'
+// import { useRouter } from 'next/dist/client/router'
 
-	return (
-		<div role='tabpanel' hidden={value !== index} id={`simple-tabpanel-${index}`} aria-labelledby={`simple-tab-${index}`} {...other}>
-			{value === index && (
-				<Box p={3}>
-					<Typography>{children}</Typography>
-				</Box>
-			)}
-		</div>
-	)
-}
+// function TabPanel(props) {
+// 	const { children, value, index, ...other } = props
 
-const MenuPorted = () => {
+// 	return (
+// 		<div role='tabpanel' hidden={value !== index} id={`simple-tabpanel-${index}`} aria-labelledby={`simple-tab-${index}`} {...other}>
+// 			{value === index && (
+// 				<Box p={3}>
+// 					<Typography>{children}</Typography>
+// 				</Box>
+// 			)}
+// 		</div>
+// 	)
+// }
+
+const MenuPorted = ({ company }) => {
 	const [value, setValue] = React.useState(0)
 
 	const handleChange = (event, newValue) => {
@@ -32,20 +35,18 @@ const MenuPorted = () => {
 		<div className='tabs'>
 			<Tabs value={value} onChange={handleChange} indicatorColor='primary' textColor='primary' centered>
 				<Tab icon={<FaSearch />} label='Overview' />
-				<Tab icon={<FaDollarSign />} label='Revenue' />
+				<Link href={`/company/${company}/revenue`}>
+					<Tab icon={<FaDollarSign />} label='Revenue' />
+				</Link>
 				<Tab icon={<FaCoins />} label='Financials' />
-				<Tab icon={<BsPeopleFill />} label='Teams' />
+				<Link href={`/company/${company}/employees`}>
+					<Tab icon={<BsPeopleFill />} label='Teams' />
+				</Link>
 				<Tab icon={<FaPiggyBank />} label='Investors' />
 				<Tab icon={<GiTrophyCup />} label='Competitors' />
 				<Tab icon={<FaMapMarkedAlt />} label='Location' />
 				<Tab icon={<BsFillBarChartFill />} label='Other' />
 			</Tabs>
-			<TabPanel value={value} index={0}>
-				{/* Item One */}
-			</TabPanel>
-			<TabPanel value={value} index={1}>
-				{/* <Revenue /> */}
-			</TabPanel>
 		</div>
 	)
 }

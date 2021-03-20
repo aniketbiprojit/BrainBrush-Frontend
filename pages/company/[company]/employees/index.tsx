@@ -7,7 +7,7 @@ import React from 'react'
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
 import MenuPorted from '../../../../components/Company/Header/MenuPorted'
 // import RevenueLayout from '../../../../components/Company/Revenue/Layout'
-import RevenuePorted from '../../../../components/Company/Revenue/Ported/Revenue/Revenue'
+// import RevenuePorted from '../../../../components/Company/Revenue/Ported/Revenue/Revenue'
 import Footer from '../../../../components/Home/Footer/Footer'
 // import BarChart from '../graph/bar'
 
@@ -46,7 +46,7 @@ import Footer from '../../../../components/Home/Footer/Footer'
 
 const Revenue: React.FC<{ company: string }> = ({ company }) => {
 	const { route, query } = useRouter()
-	const isAbsolute = route === '/company/[company]/revenue'
+	const isAbsolute = route === '/company/[company]/employees'
 	if (isAbsolute) {
 		company = query.company as string
 	}
@@ -61,9 +61,7 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 					<MenuPorted company={company} />
 				</>
 			)}
-			<>
-				<RevenuePorted company={company}></RevenuePorted>
-			</>
+			<>Employees</>
 			{isAbsolute && (
 				<>
 					<Footer></Footer>

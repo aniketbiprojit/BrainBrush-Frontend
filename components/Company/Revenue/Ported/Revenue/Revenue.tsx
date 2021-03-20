@@ -23,26 +23,38 @@ const useStyles = makeStyles({
 	},
 })
 
-const RevenuePorted: React.FC<{ company: string }> = () => {
+const getData = (company: string) => {
+	return {
+		annualData,
+		quarterlyData,
+	}
+}
+
+const RevenuePorted: React.FC<{ company: string }> = ({ company }) => {
 	const classes = useStyles()
+	const { annualData, quarterlyData } = getData(company)
 	return (
 		<div className={classes.root}>
 			<Grid container spacing={3}>
 				<Grid item xs={9}>
 					<Grid item xs={12}>
-						<Intro data={introdata} header={'Apple Revenue (2015 – 2020)'} />
+						<Intro data={introdata} header={`${company} Revenue (2015 – 2020)`} />
 					</Grid>
 					<Grid item xs={12}>
-						<BarChartRevenue annual={annualData} quarterly={quarterlyData} header={'Apple Revenue'} />
+						<BarChartRevenue annual={annualData} quarterly={quarterlyData} header={`${company} Revenue`} />
 					</Grid>
 					<Grid item xs={12}>
-						<Content header={'Apple Revenue Year over Year (Y/Y) Growth'} />
+						<Content header={`${company} Revenue Year over Year (Y/Y) Growth`} />
 					</Grid>
 					<Grid item xs={12}>
-						<PieChartRevenue annual={pieannualData} quarterly={piequarterlyData} header={'Apple Revenue Year over Year (Y/Y) Growth'} />
+						<PieChartRevenue
+							annual={pieannualData}
+							quarterly={piequarterlyData}
+							header={`${company} Revenue Year over Year (Y/Y) Growth`}
+						/>
 					</Grid>
 					<Grid item xs={12}>
-						<Table annual={annualtabledata} quarterly={quarterlytabledata} header={'Apple Revenue (Tabular)'} />
+						<Table annual={annualtabledata} quarterly={quarterlytabledata} header={`${company} Revenue (Tabular)`} />
 					</Grid>
 				</Grid>
 				<Grid item xs={3}>
