@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 	},
 })
 
-const RevenuePorted: React.FC = () => {
+const RevenuePorted: React.FC<{ company: string }> = () => {
 	const classes = useStyles()
 	return (
 		<div className={classes.root}>

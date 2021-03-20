@@ -57,12 +57,12 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 					<Head>
 						<title>{company} Revenue | Brainbrush</title>
 					</Head>
-					<CompanyHeaderPorted />
+					<CompanyHeaderPorted company={company} />
 					<MenuPorted />
 				</>
 			)}
 			<>
-				<RevenuePorted></RevenuePorted>
+				<RevenuePorted company={company}></RevenuePorted>
 			</>
 			{isAbsolute && (
 				<>

@@ -22,7 +22,7 @@ const Navbar = () => {
 	)
 }
 
-class Header extends React.Component {
+class Header extends React.Component<{ company: string }> {
 	state = { header: false }
 
 	componentDidMount() {
@@ -48,7 +48,7 @@ class Header extends React.Component {
 					<div className='brand-image'>
 						<img alt='' src='/apple.svg'></img>
 					</div>
-					<div className='brand-name'>Apple</div>
+					<div className='brand-name'>{this.props.company}</div>
 				</div>
 				<div className='links'>
 					<a href='#0' className='follow'>
@@ -60,12 +60,12 @@ class Header extends React.Component {
 	}
 }
 
-export const CompanyHeaderPorted = () => {
+export const CompanyHeaderPorted = ({ company }) => {
 	return (
 		<div>
 			<div className='sticky'>
 				<Navbar />
-				<Header />
+				<Header company={company} />
 			</div>
 		</div>
 	)
