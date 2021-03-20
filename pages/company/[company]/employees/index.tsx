@@ -2,6 +2,7 @@ import { useRouter } from 'next/dist/client/router'
 import Head from 'next/head'
 // import Link from 'next/link'
 import React from 'react'
+import { EmployeesLayout } from '../../../../components/Company/Employees/EmployeesLayout'
 
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
 import MenuPorted from '../../../../components/Company/Header/MenuPorted'
@@ -24,7 +25,7 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 					<MenuPorted company={company} />
 				</>
 			)}
-			<>Employees</>
+			<EmployeesLayout company={company}></EmployeesLayout>
 			{isAbsolute && (
 				<>
 					<Footer></Footer>
