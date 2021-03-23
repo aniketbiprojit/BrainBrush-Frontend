@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -6,6 +6,7 @@ import { FaCoins, FaDollarSign, FaMapMarkedAlt, FaPiggyBank, FaSearch } from 're
 import { BsPeopleFill, BsFillBarChartFill } from 'react-icons/bs'
 import { GiTrophyCup } from 'react-icons/gi'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 // import Typography from '@material-ui/core/Typography'
 // import Box from '@material-ui/core/Box'
@@ -25,23 +26,33 @@ import Link from 'next/link'
 // 	)
 // }
 
-const MenuPorted = ({ company }) => {
-	const [value, setValue] = React.useState(0)
+const MenuPorted = ({ company, tabValue }) => {
+	// const [value, setValue] = React.useState(0)
 
-	const handleChange = (event, newValue) => {
-		setValue(newValue)
-	}
+	// const handleChange = (event, newValue) => {
+	// 	setValue(newValue)
+	// }
+	const router = useRouter()
+
+	// useEffect(() => {
+	// 	console.log(router)
+	// }, [])
+
 	return (
 		<div className='tabs'>
-			<Tabs value={value} onChange={handleChange} indicatorColor='primary' textColor='primary' centered>
+			<Tabs value={tabValue} indicatorColor='primary' textColor='primary' centered>
 				<Tab icon={<FaSearch />} label='Overview' />
-				<Link href={`/company/${company}/revenue`}>
-					<Tab icon={<FaDollarSign />} label='Revenue' />
-				</Link>
+				<li className={router.pathname == '/company/[company]/revenue' ? 'active' : null}>
+					<Link href={`/company/${company}/revenue`}>
+						<Tab icon={<FaDollarSign />} label='Revenue' />
+					</Link>
+				</li>
 				<Tab icon={<FaCoins />} label='Financials' />
-				<Link href={`/company/${company}/employees`}>
-					<Tab icon={<BsPeopleFill />} label='Teams' />
-				</Link>
+				<li className={router.pathname == '/company/[company]/employees' ? 'active' : null}>
+					<Link href={`/company/${company}/employees`}>
+						<Tab icon={<BsPeopleFill />} label='Employees' />
+					</Link>
+				</li>
 				<Tab icon={<FaPiggyBank />} label='Investors' />
 				<Tab icon={<GiTrophyCup />} label='Competitors' />
 				<Tab icon={<FaMapMarkedAlt />} label='Location' />

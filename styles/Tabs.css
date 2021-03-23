@@ -21,3 +21,11 @@
 .tabs .PrivateTabIndicator-colorPrimary-2 {
 	background-color: #0396ff !important;
 }
+
+.tabs .active {
+	color: #0396ff;
+}
+
+.tabs .MuiTabs-indicator {
+	background-color: #0396ff;
+}

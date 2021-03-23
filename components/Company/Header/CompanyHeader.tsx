@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Search } from 'react-feather'
+import MenuPorted from './MenuPorted'
 
 const Navbar = () => {
 	return (
@@ -60,12 +61,13 @@ class Header extends React.Component<{ company: string }> {
 	}
 }
 
-export const CompanyHeaderPorted = ({ company }) => {
+export const CompanyHeaderPorted = ({ company, tabValue }) => {
 	return (
 		<div>
 			<div className='sticky'>
 				<Navbar />
 				<Header company={company} />
+				<MenuPorted tabValue={tabValue} company={company} />
 			</div>
 		</div>
 	)

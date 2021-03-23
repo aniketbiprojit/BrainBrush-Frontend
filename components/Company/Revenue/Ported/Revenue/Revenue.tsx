@@ -14,6 +14,7 @@ import { Intro } from './Intro'
 
 const useStyles = makeStyles({
 	root: {
+		marginTop: '250px',
 		padding: '20px',
 		backgroundColor: '#F2F2F2',
 	},

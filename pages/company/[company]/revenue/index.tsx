@@ -57,8 +57,8 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 					<Head>
 						<title>{company} Revenue | Brainbrush</title>
 					</Head>
-					<CompanyHeaderPorted company={company} />
-					<MenuPorted company={company} />
+					<CompanyHeaderPorted tabValue={1} company={company} />
+					{/* <MenuPorted tabValue={1} company={company} /> */}
 				</>
 			)}
 			<>

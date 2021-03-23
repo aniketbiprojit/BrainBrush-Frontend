@@ -26,7 +26,7 @@ const Company: React.FC<{ company_data: CompanyData }> = ({ company_data }) => {
 				<title>{company} | Brainbrush</title>
 			</Head>
 			<CompanyHeader company={company} />
-			<Overview />
+			{/* <Overview /> */}
 			{/* <Revenue company={company} /> */}
 			<Footer></Footer>
 		</Fragment>
