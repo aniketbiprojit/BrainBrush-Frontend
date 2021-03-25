@@ -1,20 +1,16 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-
-import Suggestion from './Suggestion'
-import Table from './Table'
-import Content from './Content'
-import BarChartRevenue from './BarChartRevenue'
-import PieChartRevenue from './PieChartRevenue'
+import Intro from '../../components/Intro/Intro'
+import Suggestion from '../../components/Suggestion/Suggestion'
+import Table from '../../components/Table/Table'
+import Content from '../../components/Content/Content'
+import BarChartRevenue from '../BarChartRevenue/BarChartRevenue'
+import PieChartRevenue from '../PieChartRevenue/PieChartRevenue'
 import { introdata, annualData, quarterlyData, pieannualData, piequarterlyData, annualtabledata, quarterlytabledata, demoData } from './RevenueData'
-
-// @ts-ignore
-import { Intro } from './Intro'
 
 const useStyles = makeStyles({
 	root: {
-		marginTop: '250px',
 		padding: '20px',
 		backgroundColor: '#F2F2F2',
 	},
@@ -31,7 +27,7 @@ const getData = (company: string) => {
 	}
 }
 
-const RevenuePorted: React.FC<{ company: string }> = ({ company }) => {
+const EmployeeLayout: React.FC<{ company: string }> = ({ company }) => {
 	const classes = useStyles()
 	const { annualData, quarterlyData } = getData(company)
 	return (
@@ -68,4 +64,4 @@ const RevenuePorted: React.FC<{ company: string }> = ({ company }) => {
 	)
 }
 
-export default RevenuePorted
+export default EmployeeLayout

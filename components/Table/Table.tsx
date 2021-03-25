@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import { Grid } from '@material-ui/core'
-import ToggleButton from './Togglebutton'
+import ToggleButton from '../../common/ToggleButton/Togglebutton'
 
 const StyledTableCell = withStyles((theme) => ({
 	head: {

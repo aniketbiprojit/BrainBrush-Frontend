@@ -67,7 +67,7 @@ class HomePage extends React.Component<PropsFromRedux & {}> {
 
 	render() {
 		// Home page found in /Components
-		return <Home></Home>
+		return <Home />
 	}
 }
 

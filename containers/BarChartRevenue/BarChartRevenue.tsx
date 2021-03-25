@@ -9,8 +9,8 @@ import TocIcon from '@material-ui/icons/Toc'
 import ShareIcon from '@material-ui/icons/Share'
 import GetAppIcon from '@material-ui/icons/GetApp'
 import CodeIcon from '@material-ui/icons/Code'
-import ToggleButton from './Togglebutton'
-import Pie from './Pie'
+import ToggleButton from '../../common/ToggleButton/Togglebutton'
+import Bar from '../../components/Charts/Bar'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -36,10 +36,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 }))
 
-const PieChartRevenue: React.FC<{ header: any; annual: any; quarterly: any }> = (props) => {
+const BarChartRevenue: React.FC<{ header: any; annual: any; quarterly: any }> = (props) => {
 	const { header, annual, quarterly } = props
 	const classes = useStyles()
-
 	const [toggleData, setToggleData] = useState(annual)
 
 	const changeState = (newAlignment: any) => {
@@ -65,7 +64,7 @@ const PieChartRevenue: React.FC<{ header: any; annual: any; quarterly: any }> = 
 					</Grid>{' '}
 				</div>
 				<CardContent className={classes.chart}>
-					<Pie data={toggleData} />
+					<Bar data={toggleData} />
 				</CardContent>
 				<CardActions>
 					<Grid container>
@@ -95,4 +94,4 @@ const PieChartRevenue: React.FC<{ header: any; annual: any; quarterly: any }> = 
 	)
 }
 
-export default PieChartRevenue
+export default BarChartRevenue

@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import ExpandHeader from './ExpandHeader'
+import ExpandHeader from '../../common/ExpandHeader/ExpandHeader'
 
 const useStyles = makeStyles({
 	root: {

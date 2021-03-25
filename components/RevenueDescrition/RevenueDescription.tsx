@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -9,8 +9,7 @@ import TocIcon from '@material-ui/icons/Toc'
 import ShareIcon from '@material-ui/icons/Share'
 import GetAppIcon from '@material-ui/icons/GetApp'
 import CodeIcon from '@material-ui/icons/Code'
-import ToggleButton from './Togglebutton'
-import Bar from './Bar'
+import ToggleButton from '../../common/ToggleButton/Togglebutton'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -31,24 +30,11 @@ const useStyles = makeStyles((theme) => ({
 	brandName: {
 		padding: '5px',
 	},
-	chart: {
-		height: '300px',
-	},
 }))
 
-const BarChartRevenue: React.FC<{ header: any; annual: any; quarterly: any }> = (props) => {
-	const { header, annual, quarterly } = props
+const RevenueDescription: React.FC<{ header: any; graphdata: any }> = (props) => {
+	const { header, graphdata } = props
 	const classes = useStyles()
-	const [toggleData, setToggleData] = useState(annual)
-
-	const changeState = (newAlignment: any) => {
-		if (newAlignment === 'left') {
-			setToggleData(annual)
-		} else if (newAlignment === 'right') {
-			setToggleData(quarterly)
-		}
-	}
-
 	return (
 		<div className={classes.root}>
 			<Card>
@@ -59,13 +45,11 @@ const BarChartRevenue: React.FC<{ header: any; annual: any; quarterly: any }> = 
 							{header}{' '}
 						</Grid>
 						<Grid item xs={3}>
-							<ToggleButton parentToggle={changeState} leftcontent={'Annual'} rightcontent={'Quarterly'} />
+							<ToggleButton leftcontent={'Annual'} rightcontent={'Quarterly'} />
 						</Grid>
 					</Grid>{' '}
 				</div>
-				<CardContent className={classes.chart}>
-					<Bar data={toggleData} />
-				</CardContent>
+				<CardContent></CardContent>
 				<CardActions>
 					<Grid container>
 						<Grid item xs={10}>
@@ -94,4 +78,4 @@ const BarChartRevenue: React.FC<{ header: any; annual: any; quarterly: any }> = 
 	)
 }
 
-export default BarChartRevenue
+export default RevenueDescription

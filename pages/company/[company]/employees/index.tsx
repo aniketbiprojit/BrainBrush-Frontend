@@ -1,11 +1,8 @@
+import React from 'react'
 import { useRouter } from 'next/dist/client/router'
 import Head from 'next/head'
-// import Link from 'next/link'
-import React from 'react'
-import { EmployeesLayout } from '../../../../components/Company/Employees/EmployeesLayout'
-
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
-import MenuPorted from '../../../../components/Company/Header/MenuPorted'
+import { EmployeesLayout } from '../../../../containers/Employees/Layout'
 import Footer from '../../../../components/Home/Footer/Footer'
 
 const Revenue: React.FC<{ company: string }> = ({ company }) => {
@@ -22,13 +19,12 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 						<title>{company} Revenue | Brainbrush</title>
 					</Head>
 					<CompanyHeaderPorted tabValue={3} company={company} />
-					{/* <MenuPorted tabValue={3} company={company} /> */}
 				</>
 			)}
-			<EmployeesLayout company={company}></EmployeesLayout>
+			<EmployeesLayout company={company} />
 			{isAbsolute && (
 				<>
-					<Footer></Footer>
+					<Footer />
 				</>
 			)}
 		</>
