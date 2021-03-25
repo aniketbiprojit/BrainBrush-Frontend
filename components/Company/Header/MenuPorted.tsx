@@ -48,7 +48,16 @@ const MenuPorted = ({ company, tabValue }) => {
 					</Link>
 				</li>
 				<Tab icon={<FaCoins />} label='Financials' />
-				<li className={router.pathname == '/company/[company]/employees' ? 'active' : null}>
+				<li
+					className={
+						router.pathname == '/company/[company]/employees' ||
+						router.pathname == '/company/[company]/employees/executive-team' ||
+						router.pathname == '/company/[company]/employees/revenue-per-employee' ||
+						router.pathname == '/company/[company]/employees/net-income-per-employee'
+							? 'active'
+							: null
+					}
+				>
 					<Link href={`/company/${company}/employees`}>
 						<Tab icon={<BsPeopleFill />} label='Employees' />
 					</Link>
