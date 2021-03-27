@@ -12,9 +12,9 @@ interface CompanyData {
 	company: string
 }
 
-const Overview: React.FC = () => {
-	return <Fragment></Fragment>
-}
+// const Overview: React.FC = () => {
+// 	return <Fragment></Fragment>
+// }
 
 const Company: React.FC<{ company_data: CompanyData }> = ({ company_data }) => {
 	const { query } = useRouter()
