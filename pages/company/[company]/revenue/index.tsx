@@ -5,7 +5,6 @@ import React, { useEffect } from 'react'
 import { revenue, ExtractType } from '../../../../api/RevenueDataFetch'
 
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
-import MenuPorted from '../../../../components/Company/Header/MenuPorted'
 
 import RevenuePorted from '../../../../components/Company/Revenue/Ported/Revenue/Revenue'
 import Footer from '../../../../components/Home/Footer/Footer'
@@ -34,8 +33,8 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 					<Head>
 						<title>{company} Revenue | Brainbrush</title>
 					</Head>
-					<CompanyHeaderPorted company={company} />
-					<MenuPorted company={company} />
+					<CompanyHeaderPorted tabValue={1} company={company} />
+					{/* <MenuPorted tabValue={1} company={company} /> */}
 				</>
 			)}
 			<>

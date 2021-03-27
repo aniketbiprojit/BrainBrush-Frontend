@@ -61,3 +61,19 @@
 	padding: 5px 20px !important;
 	transition: ease-out 1s;
 }
+
+/* Employee Header */
+.employee-header {
+	margin-top: 270px;
+	padding: 20px 30px;
+	background-color: #0396ff;
+	display: flex;
+}
+
+.employee-header .box {
+	background-color: #fff;
+	margin-right: 20px;
+	padding: 10px 15px;
+	border-radius: 10px;
+	cursor: pointer;
+}

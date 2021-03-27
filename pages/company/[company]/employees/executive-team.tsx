@@ -1,6 +1,5 @@
 import { useRouter } from 'next/dist/client/router'
 import Head from 'next/head'
-// import Link from 'next/link'
 import React from 'react'
 import { EmployeesLayout } from '../../../../components/Company/Employees/EmployeesLayout'
 
@@ -8,9 +7,9 @@ import { CompanyHeaderPorted } from '../../../../components/Company/Header/Compa
 import EmployeeHeader from '../../../../components/Company/Employees/EmployeeHeader'
 import Footer from '../../../../components/Home/Footer/Footer'
 
-const Revenue: React.FC<{ company: string }> = ({ company }) => {
+const ExecutiveTeam: React.FC<{ company: string }> = ({ company }) => {
 	const { route, query } = useRouter()
-	const isAbsolute = route === '/company/[company]/employees'
+	const isAbsolute = route === '/company/[company]/employees/executive-team'
 	if (isAbsolute) {
 		company = query.company as string
 	}
@@ -23,7 +22,7 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 					</Head>
 					<CompanyHeaderPorted tabValue={3} company={company} />
 					<EmployeeHeader company={company} />
-					Index Page
+					Executive Team
 				</>
 			)}
 			<EmployeesLayout company={company}></EmployeesLayout>
@@ -36,4 +35,4 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 	)
 }
 
-export default Revenue
+export default ExecutiveTeam
