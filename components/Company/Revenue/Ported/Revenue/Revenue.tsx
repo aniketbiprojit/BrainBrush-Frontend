@@ -38,19 +38,29 @@ const getData = (revenue_data: {
 	}>
 }) => {
 	const colors = ['#0396ff', '#d9d9d9', '#457b9d', '#3fa7d7', '#a8dadc', '#a8dadc']
-	let annualData_ = revenue_data.income_statement
+	let annualData_ = revenue_data?.income_statement
 		.map((elem) => {
-			if (elem.annual === true) return elem
+			if (elem.annual === true) {
+				elem['year'] = elem['fiscalDateEnding']
+				elem['value'] = elem['totalRevenue']
+				elem['color'] = colors[Math.floor(Math.random() * colors.length)]
+				return elem
+			}
 		})
 		.filter((elem) => elem !== undefined)
-	let quarterlyData_ = revenue_data.income_statement
+	let quarterlyData_ = revenue_data?.income_statement
 		.map((elem) => {
-			if (elem.annual !== true) return elem
+			if (elem.annual !== true) {
+				elem['year'] = elem['fiscalDateEnding']
+				elem['value'] = elem['totalRevenue']
+				elem['color'] = colors[Math.floor(Math.random() * colors.length)]
+				return elem
+			}
 		})
 		.filter((elem) => elem !== undefined)
 	console.log(annualData_, quarterlyData_)
 	return {
-		annualData,
+		annualData: annualData,
 		quarterlyData,
 	}
 }
