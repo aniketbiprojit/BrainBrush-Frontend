@@ -23,7 +23,7 @@ const Navbar = () => {
 	)
 }
 
-class Header extends React.Component<{ company: string }> {
+class Header extends React.Component<{ company: string; logo?: string }> {
 	state = { header: false }
 
 	componentDidMount() {
@@ -47,7 +47,7 @@ class Header extends React.Component<{ company: string }> {
 			<div className={`header ${this.state.header && 'scrolled'}`}>
 				<div className='brand'>
 					<div className='brand-image'>
-						<img alt='' src='/apple.svg'></img>
+						<img alt='' src={this.props.logo ?? '/apple.svg'}></img>
 					</div>
 					<div className='brand-name'>{this.props.company}</div>
 				</div>
@@ -61,12 +61,16 @@ class Header extends React.Component<{ company: string }> {
 	}
 }
 
-export const CompanyHeaderPorted = ({ company, tabValue }) => {
+export const CompanyHeaderPorted: React.FC<{
+	company: string
+	tabValue: any
+	logo?: string
+}> = ({ company, tabValue, logo }) => {
 	return (
 		<div>
 			<div className='sticky'>
 				<Navbar />
-				<Header company={company} />
+				<Header logo={logo} company={company} />
 				<MenuPorted tabValue={tabValue} company={company} />
 			</div>
 		</div>

@@ -1,8 +1,9 @@
 import { useRouter } from 'next/dist/client/router'
 import Head from 'next/head'
 
-import React, { useEffect } from 'react'
-import { revenue, ExtractType } from '../../../../api/RevenueDataFetch'
+import React, { useEffect, useState } from 'react'
+import { ExtractType } from '../../../../api/Commons'
+import { companyData } from '../../../../api/CompanyDataFetch'
 
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
 
@@ -12,33 +13,37 @@ import Footer from '../../../../components/Home/Footer/Footer'
 const Revenue: React.FC<{ company: string }> = ({ company }) => {
 	const { route, query } = useRouter()
 	const isAbsolute = route === '/company/[company]/revenue'
-
-	let revenue_data = ExtractType(revenue)
+	// let revenue_data = ExtractType(revenue)
 
 	if (isAbsolute) {
 		company = query.company as string
 	}
+	const [companyState, setCompanyState] = useState(company)
+	const [logo, setLogo] = useState<string>()
+	const [revenue, setRevenueState] = useState(ExtractType(companyData))
 	useEffect(() => {
-		revenue(company)
-			.then((res) => {
-				revenue_data = res.data
-				console.log(revenue_data)
+		setCompanyState(company)
+		if (company !== undefined) {
+			companyData(company).then((res) => {
+				setCompanyState(res.data.company_name)
+				console.log(res.data.logo)
+				setLogo(res.data.logo.url)
 			})
-			.catch((err) => console.error(err))
-	}, [revenue_data])
+		}
+	}, [company])
 	return (
 		<>
 			{isAbsolute && (
 				<>
 					<Head>
-						<title>{company} Revenue | Brainbrush</title>
+						<title>{companyState} Revenue | Brainbrush</title>
 					</Head>
-					<CompanyHeaderPorted tabValue={1} company={company} />
+					<CompanyHeaderPorted logo={logo} tabValue={1} company={companyState} />
 					{/* <MenuPorted tabValue={1} company={company} /> */}
 				</>
 			)}
 			<>
-				<RevenuePorted company={company}></RevenuePorted>
+				<RevenuePorted company={companyState}></RevenuePorted>
 			</>
 			{isAbsolute && (
 				<>
