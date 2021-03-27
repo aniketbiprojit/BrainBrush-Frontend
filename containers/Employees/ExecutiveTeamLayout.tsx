@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid'
 import ExecutiveTeam from '../../components/ExecutiveTeam/ExecutiveTeam'
 import Suggestion from '../../components/Suggestion/Suggestion'
 
+import { demoData, employeesData } from './EmployeeData'
+
 const useStyles = makeStyles({
 	root: {
 		padding: '20px',
@@ -15,8 +17,11 @@ const useStyles = makeStyles({
 	},
 })
 
-const ExecutiveTeamLayout: React.FC<{ employeesData: any; demoData: any }> = (props) => {
-	const { employeesData, demoData } = props
+const ExecutiveTeamLayout: React.FC<{
+	// employeesData: any;
+	// demoData: any
+}> = () => {
+	//const { employeesData, demoData } = props
 	const classes = useStyles()
 	return (
 		<div className={classes.root}>

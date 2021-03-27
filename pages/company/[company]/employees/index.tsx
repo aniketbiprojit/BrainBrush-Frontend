@@ -2,10 +2,11 @@ import React from 'react'
 import { useRouter } from 'next/dist/client/router'
 import Head from 'next/head'
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
-import { EmployeesLayout } from '../../../../containers/Employees/Layout'
+import EmployeeHeader from '../../../../components/Company/Employees/EmployeeHeader'
+import EmployeeLayout from '../../../../containers/Employees/EmployeeLayout'
 import Footer from '../../../../components/Home/Footer/Footer'
 
-const Revenue: React.FC<{ company: string }> = ({ company }) => {
+const Employee: React.FC<{ company: string }> = ({ company }) => {
 	const { route, query } = useRouter()
 	const isAbsolute = route === '/company/[company]/employees'
 	if (isAbsolute) {
@@ -19,9 +20,10 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 						<title>{company} Revenue | Brainbrush</title>
 					</Head>
 					<CompanyHeaderPorted tabValue={3} company={company} />
+					<EmployeeHeader company={company} />
 				</>
 			)}
-			<EmployeesLayout company={company} />
+			<EmployeeLayout company={company} />
 			{isAbsolute && (
 				<>
 					<Footer />
@@ -31,4 +33,4 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 	)
 }
 
-export default Revenue
+export default Employee
