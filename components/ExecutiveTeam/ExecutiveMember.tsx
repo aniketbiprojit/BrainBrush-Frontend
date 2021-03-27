@@ -27,9 +27,7 @@ const ExecutiveMember: React.FC<{}> = () => {
 						<Typography variant='h5' component='h2'>
 							Tim Cook
 						</Typography>
-						<Typography justify='center' component='h5'>
-							CEO
-						</Typography>
+						<Typography component='h5'>CEO</Typography>
 					</Grid>
 				</Grid>
 				<Grid item md={8}>

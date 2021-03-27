@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const RevenueDescription: React.FC<{ header: any; graphdata: any }> = (props) => {
-	const { header, graphdata } = props
+	const { header } = props
 	const classes = useStyles()
 	return (
 		<div className={classes.root}>
