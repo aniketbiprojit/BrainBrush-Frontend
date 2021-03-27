@@ -65,13 +65,14 @@ export const CompanyHeaderPorted: React.FC<{
 	company: string
 	tabValue: any
 	logo?: string
-}> = ({ company, tabValue, logo }) => {
+	symbol: string
+}> = ({ company, tabValue, logo, symbol }) => {
 	return (
 		<div>
 			<div className='sticky'>
 				<Navbar />
 				<Header logo={logo} company={company} />
-				<MenuPorted tabValue={tabValue} company={company} />
+				<MenuPorted tabValue={tabValue} company={symbol} />
 			</div>
 		</div>
 	)

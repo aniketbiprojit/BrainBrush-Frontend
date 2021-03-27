@@ -11,6 +11,8 @@ import { introdata, annualData, quarterlyData, pieannualData, piequarterlyData, 
 
 // @ts-ignore
 import { Intro } from './Intro'
+import { ExtractType } from '../../../../../api/Commons'
+import { revenue } from '../../../../../api/RevenueDataFetch'
 
 const useStyles = makeStyles({
 	root: {
@@ -25,13 +27,15 @@ const useStyles = makeStyles({
 })
 
 const getData = (company: string) => {
+	const colors = ['#0396ff', '#d9d9d9', '#457b9d', '#3fa7d7', '#a8dadc', '#a8dadc']
 	return {
 		annualData,
 		quarterlyData,
 	}
 }
 
-const RevenuePorted: React.FC<{ company: string }> = ({ company }) => {
+const RevenuePorted: React.FC<{ company: string; revenue_data: any }> = ({ company }) => {
+	type x = typeof ExtractType
 	const classes = useStyles()
 	const { annualData, quarterlyData } = getData(company)
 	return (

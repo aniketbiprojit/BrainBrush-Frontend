@@ -4,6 +4,7 @@ import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
 import { ExtractType } from '../../../../api/Commons'
 import { companyData } from '../../../../api/CompanyDataFetch'
+import { revenue } from '../../../../api/RevenueDataFetch'
 
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
 
@@ -20,7 +21,7 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 	}
 	const [companyState, setCompanyState] = useState(company)
 	const [logo, setLogo] = useState<string>()
-	const [revenue, setRevenueState] = useState(ExtractType(companyData))
+	const [revenueData, setRevenueData] = useState(ExtractType(revenue))
 	useEffect(() => {
 		setCompanyState(company)
 		if (company !== undefined) {
@@ -29,6 +30,9 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 				console.log(res.data.logo)
 				setLogo(res.data.logo.url)
 			})
+			revenue(company).then((res) => {
+				setRevenueData(res.data)
+			})
 		}
 	}, [company])
 	return (
@@ -36,14 +40,14 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 			{isAbsolute && (
 				<>
 					<Head>
-						<title>{companyState} Revenue | Brainbrush</title>
+						<title>{companyState} | Revenue | Brainbrush</title>
 					</Head>
-					<CompanyHeaderPorted logo={logo} tabValue={1} company={companyState} />
+					<CompanyHeaderPorted logo={logo} tabValue={1} company={companyState} symbol={company} />
 					{/* <MenuPorted tabValue={1} company={company} /> */}
 				</>
 			)}
 			<>
-				<RevenuePorted company={companyState}></RevenuePorted>
+				<RevenuePorted revenue_data={revenueData} company={companyState}></RevenuePorted>
 			</>
 			{isAbsolute && (
 				<>
