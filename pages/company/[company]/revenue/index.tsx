@@ -19,7 +19,7 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 		company = query.company as string
 	}
 	useEffect(() => {
-		revenue('GOOG')
+		revenue(company)
 			.then((res) => {
 				revenue_data = res.data
 				console.log(revenue_data)
