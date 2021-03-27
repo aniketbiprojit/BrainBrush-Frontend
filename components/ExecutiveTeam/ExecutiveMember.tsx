@@ -4,6 +4,9 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import CustomProgressBar from '../../common/ProgressBar/CustomProgressBar'
 
+const profile =
+	'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=100'
+
 const useStyles = makeStyles({
 	root: {
 		padding: '20px',
@@ -18,7 +21,7 @@ const ExecutiveMember: React.FC<{}> = () => {
 			<Grid container>
 				<Grid item md={4}>
 					<Grid item justify='center' md={12}>
-						<img src={''} />
+						<img src={profile} />
 					</Grid>
 					<Grid item justify='center' md={12}>
 						<Typography variant='h5' component='h2'>

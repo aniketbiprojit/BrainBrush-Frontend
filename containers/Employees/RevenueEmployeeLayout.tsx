@@ -7,7 +7,6 @@ import Table from '../../components/Table/Table'
 import Content from '../../components/Content/Content'
 import BarChartRevenue from '../BarChartRevenue/BarChartRevenue'
 import PieChartRevenue from '../PieChartRevenue/PieChartRevenue'
-import { introdata, annualData, quarterlyData, pieannualData, piequarterlyData, annualtabledata, quarterlytabledata, demoData } from './RevenueData'
 
 const useStyles = makeStyles({
 	root: {
@@ -20,16 +19,20 @@ const useStyles = makeStyles({
 	},
 })
 
-const getData = (company: string) => {
-	return {
-		annualData,
-		quarterlyData,
-	}
-}
-
-const RevenueEmployeesLayout: React.FC<{ company: string }> = ({ company }) => {
+const RevenueEmployeesLayout: React.FC<{
+	company: string
+	introdata: any
+	annualData: any
+	quarterlyData: any
+	pieannualData: any
+	piequarterlyData: any
+	annualtabledata: any
+	quarterlytabledata: any
+	demoData: any
+}> = (props) => {
+	const { introdata, annualData, quarterlyData, pieannualData, piequarterlyData, annualtabledata, quarterlytabledata, demoData, company } = props
 	const classes = useStyles()
-	const { annualData, quarterlyData } = getData(company)
+
 	return (
 		<div className={classes.root}>
 			<Grid container spacing={3}>

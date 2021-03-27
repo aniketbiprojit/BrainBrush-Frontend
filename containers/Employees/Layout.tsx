@@ -8,7 +8,18 @@ import ExecutiveLayout from './ExecutiveTeamLayout'
 import NetIncomeLayout from './NetIncomeLayout'
 import RevenueEmployeeLayout from './RevenueEmployeeLayout'
 
-// import { introdata, annualData, quarterlyData, pieannualData, piequarterlyData, annualtabledata, quarterlytabledata, demoData } from './RevenueData'
+// all data
+import {
+	introdata,
+	annualData,
+	quarterlyData,
+	pieannualData,
+	piequarterlyData,
+	annualtabledata,
+	quarterlytabledata,
+	demoData,
+	employeesData,
+} from './EmployeeData'
 
 interface TabPanelProps {
 	children?: React.ReactNode
@@ -61,16 +72,46 @@ export const EmployeesLayout: React.FC<{ company: string }> = ({ company }) => {
 				<Tab className={classes.tab} label='Net Income per Employee' {...a11yProps(3)} />
 			</Tabs>
 			<TabPanel value={value} index={0}>
-				<EmployeeLayout company={company} />
+				<EmployeeLayout
+					company={company}
+					introdata={introdata}
+					annualData={annualData}
+					quarterlyData={quarterlyData}
+					pieannualData={pieannualData}
+					piequarterlyData={piequarterlyData}
+					annualtabledata={annualtabledata}
+					quarterlytabledata={quarterlytabledata}
+					demoData={demoData}
+				/>
 			</TabPanel>
 			<TabPanel value={value} index={1}>
-				<ExecutiveLayout />
+				<ExecutiveLayout employeesData={employeesData} demoData={demoData} />
 			</TabPanel>
 			<TabPanel value={value} index={2}>
-				<NetIncomeLayout company={company} />
+				<NetIncomeLayout
+					company={company}
+					introdata={introdata}
+					annualData={annualData}
+					quarterlyData={quarterlyData}
+					pieannualData={pieannualData}
+					piequarterlyData={piequarterlyData}
+					annualtabledata={annualtabledata}
+					quarterlytabledata={quarterlytabledata}
+					demoData={demoData}
+				/>
 			</TabPanel>
 			<TabPanel value={value} index={3}>
-				<RevenueEmployeeLayout company={company} />
+				<RevenueEmployeeLayout
+					company={company}
+					introdata={introdata}
+					annualData={annualData}
+					quarterlyData={quarterlyData}
+					pieannualData={pieannualData}
+					piequarterlyData={piequarterlyData}
+					annualtabledata={annualtabledata}
+					quarterlytabledata={quarterlytabledata}
+					demoData={demoData}
+				/>
 			</TabPanel>
 		</div>
 	)

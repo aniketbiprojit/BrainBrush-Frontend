@@ -1,6 +1,7 @@
 //paragraph intro data
 export const introdata =
 	'The below chart shows Apple’s annual revenue starting from $65.234 Billion in 2010 to $274.51 Billion in 2020 Throughout the period, Apple’s revenue has been increasing year-over-year and only declined in 2016 but rose back in 2017 and then dipped in 2019. The largest dip was in 2016 and followed by one of the largest revenues jumps the year 2018. In the fiscal year 2020, Apple’s annual revenue was $274.17 Billion, which increased +5.5% compared to 2019 In the fiscal year 2019, Apple’s annual revenue was $260.17 Billion, which declined -2.04% compared to 2018 To learn more about revenue, its formula and definition, check out our glossary. The below chart shows Apple’s annual revenue starting from $65.234 Billion in 2010 to $274.51 Billion in 2020 Throughout the period, Apple’s revenue has been increasing year-over-year and only declined in 2016 but rose back in 2017 and then dipped in 2019. The largest dip was in 2016 and followed by one of the largest revenues jumps the year 2018. In the fiscal year 2020, Apple’s annual revenue was $274.17 Billion, which increased +5.5% compared to 2019 In the fiscal year 2019, Apple’s annual revenue was $260.17 Billion, which declined -2.04% compared to 2018 To learn more about revenue, its formula and definition, check out our glossary '
+
 //suggestion company data
 export const demoData = [
 	{ icon: 'H', name: 'Microsoft Revenue' },
@@ -10,6 +11,26 @@ export const demoData = [
 	{ icon: 'L', name: 'Lenovo Revenue' },
 	{ icon: 'A', name: 'Asus Revenue' },
 ]
+
+//employe data
+const profile =
+	'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=100'
+
+export const employeesData = [
+	{ image: profile, exec: 'Exec 1', title: 'title' },
+	{ image: profile, exec: 'Exec 2', title: 'title' },
+	{ image: profile, exec: 'Exec 3', title: 'title' },
+	{ image: profile, exec: 'Exec 4', title: 'title' },
+	{ image: profile, exec: 'Exec 5', title: 'title' },
+	{ image: profile, exec: 'Exec 6', title: 'title' },
+	{ image: profile, exec: 'Exec 7', title: 'title' },
+	{ image: profile, exec: 'Exec 8', title: 'title' },
+	{ image: profile, exec: 'Exec 9', title: 'title' },
+	{ image: profile, exec: 'Exec 10', title: 'title' },
+	{ image: profile, exec: 'Exec 11', title: 'title' },
+	{ image: profile, exec: 'Exec 12', title: 'title' },
+]
+
 //table Data
 export const annualtabledata = [
 	{ id: 0, Period: 2020, Revenue: '$ 272 Bilion', Growth: '+90%' },
