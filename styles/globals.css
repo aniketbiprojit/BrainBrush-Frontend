@@ -109,7 +109,7 @@ a {
 
 .object-box-1 {
 	position: absolute;
-	top: 120%;
+	top: 245%;
 	left: 15%;
 	z-index: 2;
 	height: 25vw;
@@ -130,7 +130,7 @@ a {
 
 .object-box-2 {
 	position: absolute;
-	top: 200%;
+	top: 400%;
 	left: 60%;
 	z-index: 2;
 	height: 25vw;
@@ -151,7 +151,7 @@ a {
 
 .object-box-3 {
 	position: absolute;
-	top: 285%;
+	top: 550%;
 	left: 15%;
 	z-index: 3;
 	height: 25vw;
