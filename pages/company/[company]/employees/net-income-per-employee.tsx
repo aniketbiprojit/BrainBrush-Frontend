@@ -1,8 +1,7 @@
 import { useRouter } from 'next/dist/client/router'
 import Head from 'next/head'
 import React from 'react'
-import { EmployeesLayout } from '../../../../components/Company/Employees/EmployeesLayout'
-
+import NetIncomePerEmployeeLayout from '../../../../containers/Employees/NetIncomeLayout'
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
 import EmployeeHeader from '../../../../components/Company/Employees/EmployeeHeader'
 import Footer from '../../../../components/Home/Footer/Footer'
@@ -22,10 +21,9 @@ const netIncomePerEmployee: React.FC<{ company: string }> = ({ company }) => {
 					</Head>
 					<CompanyHeaderPorted tabValue={3} company={company} />
 					<EmployeeHeader company={company} />
-					Net Income
 				</>
 			)}
-			<EmployeesLayout company={company}></EmployeesLayout>
+			<NetIncomePerEmployeeLayout company={company} />
 			{isAbsolute && (
 				<>
 					<Footer></Footer>

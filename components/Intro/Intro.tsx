@@ -5,7 +5,7 @@ import CardContent from '@material-ui/core/CardContent'
 // @ts-ignore
 import ShowMoreText from 'react-show-more-text'
 
-const useStylesIntro = makeStyles({
+const useStyles = makeStyles({
 	root: {
 		margin: '20px',
 		minWidth: 275,
@@ -16,9 +16,10 @@ const useStylesIntro = makeStyles({
 		fontWeight: 'bold',
 	},
 })
-export const Intro: React.FC<{ data: any; header: any }> = (props) => {
+
+const Intro: React.FC<{ data: any; header: any }> = (props) => {
 	const { data, header } = props
-	const classes = useStylesIntro()
+	const classes = useStyles()
 
 	const executeOnClick = (isExpanded: any) => {
 		console.log(isExpanded)
@@ -45,3 +46,5 @@ export const Intro: React.FC<{ data: any; header: any }> = (props) => {
 		</div>
 	)
 }
+
+export default Intro

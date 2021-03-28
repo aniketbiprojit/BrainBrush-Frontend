@@ -7,14 +7,12 @@ import { companyData } from '../../../../api/CompanyDataFetch'
 import { revenue } from '../../../../api/RevenueDataFetch'
 
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
-
-import RevenuePorted from '../../../../components/Company/Revenue/Ported/Revenue/Revenue'
 import Footer from '../../../../components/Home/Footer/Footer'
+import RevenueLayout from '../../../../containers/Revenue/Layout'
 
 const Revenue: React.FC<{ company: string }> = ({ company }) => {
 	const { route, query } = useRouter()
 	const isAbsolute = route === '/company/[company]/revenue'
-	// let revenue_data = ExtractType(revenue)
 
 	if (isAbsolute) {
 		company = query.company as string
@@ -43,15 +41,14 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 						<title>{companyState} | Revenue | Brainbrush</title>
 					</Head>
 					<CompanyHeaderPorted logo={logo} tabValue={1} company={companyState} symbol={company} />
-					{/* <MenuPorted tabValue={1} company={company} /> */}
 				</>
 			)}
 			<>
-				<RevenuePorted revenue_data={revenueData} company={companyState}></RevenuePorted>
+				<RevenueLayout revenue_data={revenueData} company={company} />
 			</>
 			{isAbsolute && (
 				<>
-					<Footer></Footer>
+					<Footer />
 				</>
 			)}
 		</>
