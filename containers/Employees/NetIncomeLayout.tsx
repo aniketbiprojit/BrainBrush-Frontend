@@ -39,23 +39,23 @@ const NetIncomeLayout: React.FC<{
 			<Grid container spacing={3}>
 				<Grid item xs={9}>
 					<Grid item xs={12}>
-						<Intro data={introdata} header={`${company} Revenue (2015 – 2020)`} />
+						<Intro data={introdata} header={`${company} Net Income Per Employee`} />
 					</Grid>
 					<Grid item xs={12}>
-						<BarChartRevenue annual={annualData} quarterly={quarterlyData} header={`${company} Revenue`} />
+						<BarChartRevenue annual={annualData} quarterly={quarterlyData} header={`${company} Net Income Per Employee`} />
 					</Grid>
 					<Grid item xs={12}>
-						<Content header={`${company} Revenue Year over Year (Y/Y) Growth`} />
+						<Content header={`${company} Net Income Per Employee - Year over Year (Y/Y) Growth`} />
 					</Grid>
 					<Grid item xs={12}>
 						<PieChartRevenue
 							annual={pieannualData}
 							quarterly={piequarterlyData}
-							header={`${company} Revenue Year over Year (Y/Y) Growth`}
+							header={`${company} Net Income Per Employee - Year over Year (Y/Y) Growth`}
 						/>
 					</Grid>
 					<Grid item xs={12}>
-						<Table annual={annualtabledata} quarterly={quarterlytabledata} header={`${company} Revenue (Tabular)`} />
+						<Table annual={annualtabledata} quarterly={quarterlytabledata} header={`${company} Net Income Per Employee - (Tabular)`} />
 					</Grid>
 				</Grid>
 				<Grid item xs={3}>

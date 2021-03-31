@@ -40,23 +40,23 @@ const EmployeeLayout: React.FC<{
 			<Grid container spacing={3}>
 				<Grid item xs={9}>
 					<Grid item xs={12}>
-						<Intro data={introdata} header={`${company} Revenue (2015 – 2020)`} />
+						<Intro data={introdata} header={`${company} Employees`} />
 					</Grid>
 					<Grid item xs={12}>
 						<BarChartRevenue annual={annualData} quarterly={quarterlyData} header={`${company} Revenue`} />
 					</Grid>
 					<Grid item xs={12}>
-						<Content header={`${company} Revenue Year over Year (Y/Y) Growth`} />
+						<Content header={`${company} Employees Year over Year (Y/Y) Growth`} />
 					</Grid>
 					<Grid item xs={12}>
 						<PieChartRevenue
 							annual={pieannualData}
 							quarterly={piequarterlyData}
-							header={`${company} Revenue Year over Year (Y/Y) Growth`}
+							header={`${company} Employees Year over Year (Y/Y) Growth`}
 						/>
 					</Grid>
 					<Grid item xs={12}>
-						<Table annual={annualtabledata} quarterly={quarterlytabledata} header={`${company} Revenue (Tabular)`} />
+						<Table annual={annualtabledata} quarterly={quarterlytabledata} header={`${company} Employees (Tabular)`} />
 					</Grid>
 				</Grid>
 				<Grid item xs={3}>
