@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: '5px',
 	},
 	chart: {
-		height: '300px',
+		height: '450px',
 	},
 }))
 

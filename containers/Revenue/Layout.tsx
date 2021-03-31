@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 	root: {
 		padding: '20px',
 		backgroundColor: '#F2F2F2',
-		marginTop: '240px',
+		marginTop: '270px',
 	},
 	stickyItem: {
 		position: 'sticky',
