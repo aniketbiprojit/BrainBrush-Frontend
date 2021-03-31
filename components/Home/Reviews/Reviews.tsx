@@ -7,8 +7,8 @@ import Review from './Review.module'
 const Reviews = () => {
 	return (
 		<section className='flex flex-col justify-center w-full p-4 pt-10 lg:p-20 lg:py-48 '>
-			<h1 className='p-6 mb-20 text-5xl font-semibold text-center lg:p-0 text-primary header '>Hear from our Customers!</h1>
-			<div className='flex flex-row flex-wrap justify-center m-auto lg:gap-28 blogs'>
+			<h1 className='p-6 mb-20 text-5xl font-semibold text-center lg:p-0 text-primary'>Hear from our Customers!</h1>
+			<div className='grid grid-cols-3 justify-center m-auto lg:gap-12 blogs'>
 				<Review companyName='Miran A.' msg={placeholder} color='bg-yellow-300' center='bg-safed ' />
 				<Review companyName='John R.' msg={placeholder} color='bg-gray-400' center='bg-red text-white' />
 				<Review companyName='Bella B.' msg={placeholder} color='bg-blue-400' center='bg-safed ' />
