@@ -9,6 +9,8 @@ import { useRouter } from 'next/router'
 
 const MenuPorted = ({ company, tabValue }) => {
 	const router = useRouter()
+	let FinancialsUrl = '/company/[company]/financials'
+	let EmployeeUrl = '/company/[company]/employees'
 	return (
 		<div className='tabs'>
 			<Tabs value={tabValue} indicatorColor='primary' textColor='primary' centered>
@@ -18,13 +20,28 @@ const MenuPorted = ({ company, tabValue }) => {
 						<Tab icon={<FaDollarSign />} label='Revenue' />
 					</Link>
 				</li>
-				<Tab icon={<FaCoins />} label='Financials' />
 				<li
 					className={
-						router.pathname == '/company/[company]/employees' ||
-						router.pathname == '/company/[company]/employees/executive-team' ||
-						router.pathname == '/company/[company]/employees/revenue-per-employee' ||
-						router.pathname == '/company/[company]/employees/net-income-per-employee'
+						router.pathname == `${FinancialsUrl}` ||
+						router.pathname == `${FinancialsUrl}/income-statement` ||
+						router.pathname == `${FinancialsUrl}/balance-sheet` ||
+						router.pathname == `${FinancialsUrl}/cashflow-statement` ||
+						router.pathname == `${FinancialsUrl}/profitability` ||
+						router.pathname == `${FinancialsUrl}/ratios`
+							? 'active'
+							: null
+					}
+				>
+					<Link href={`/company/${company}/financials/income-statement`}>
+						<Tab icon={<FaCoins />} label='Financials' />
+					</Link>
+				</li>
+				<li
+					className={
+						router.pathname == `${EmployeeUrl}` ||
+						router.pathname == `${EmployeeUrl}/executive-team` ||
+						router.pathname == `${EmployeeUrl}/revenue-per-employee` ||
+						router.pathname == `${EmployeeUrl}/net-income-per-employee`
 							? 'active'
 							: null
 					}
