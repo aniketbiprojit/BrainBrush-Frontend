@@ -33,28 +33,28 @@ const getData = (revenue_data: {
 		updatedAt: Date
 	}>
 }) => {
-	const colors = ['#0396ff', '#d9d9d9', '#457b9d', '#3fa7d7', '#a8dadc', '#a8dadc']
-	let annualData_ = revenue_data?.income_statement
-		.map((elem) => {
-			if (elem.annual === true) {
-				elem['year'] = elem['fiscalDateEnding']
-				elem['value'] = elem['totalRevenue']
-				elem['color'] = colors[Math.floor(Math.random() * colors.length)]
-				return elem
-			}
-		})
-		.filter((elem) => elem !== undefined)
-	let quarterlyData_ = revenue_data?.income_statement
-		.map((elem) => {
-			if (elem.annual !== true) {
-				elem['year'] = elem['fiscalDateEnding']
-				elem['value'] = elem['totalRevenue']
-				elem['color'] = colors[Math.floor(Math.random() * colors.length)]
-				return elem
-			}
-		})
-		.filter((elem) => elem !== undefined)
-	console.log(annualData_, quarterlyData_)
+	// const colors = ['#0396ff', '#d9d9d9', '#457b9d', '#3fa7d7', '#a8dadc', '#a8dadc']
+	// let annualData_ = revenue_data?.income_statement
+	// 	.map((elem) => {
+	// 		if (elem.annual === true) {
+	// 			elem['year'] = elem['fiscalDateEnding']
+	// 			elem['value'] = elem['totalRevenue']
+	// 			elem['color'] = colors[Math.floor(Math.random() * colors.length)]
+	// 			return elem
+	// 		}
+	// 	})
+	// 	.filter((elem) => elem !== undefined)
+	// let quarterlyData_ = revenue_data?.income_statement
+	// 	.map((elem) => {
+	// 		if (elem.annual !== true) {
+	// 			elem['year'] = elem['fiscalDateEnding']
+	// 			elem['value'] = elem['totalRevenue']
+	// 			elem['color'] = colors[Math.floor(Math.random() * colors.length)]
+	// 			return elem
+	// 		}
+	// 	})
+	// 	.filter((elem) => elem !== undefined)
+	// console.log(annualData_, quarterlyData_)
 	return {
 		annualData: annualData,
 		quarterlyData,
@@ -62,7 +62,7 @@ const getData = (revenue_data: {
 }
 
 const RevenuePorted: React.FC<{ company: string; revenue_data: any }> = ({ company, revenue_data }) => {
-	// console.log(revenue_data)
+	console.log(revenue_data, 'revenue')
 	const classes = useStyles()
 	const { annualData, quarterlyData } = getData(revenue_data)
 	return (

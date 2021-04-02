@@ -19,7 +19,7 @@ const Employee: React.FC<{ company: string }> = ({ company }) => {
 					<Head>
 						<title>{company} Revenue | Brainbrush</title>
 					</Head>
-					<CompanyHeaderPorted tabValue={3} company={company} />
+					<CompanyHeaderPorted symbol={company} tabValue={3} company={company} />
 					<EmployeeHeader company={company} />
 				</>
 			)}
