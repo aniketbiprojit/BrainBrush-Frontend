@@ -66,7 +66,7 @@ const getData = (revenue_data: {
 }
 
 const RevenuePorted: React.FC<{ company: string; revenue_data: any }> = ({ company, revenue_data }) => {
-	// console.log(revenue_data)
+	console.log(revenue_data, 'revenue')
 	const classes = useStyles()
 	const { annualData, quarterlyData } = getData(revenue_data)
 	return (
