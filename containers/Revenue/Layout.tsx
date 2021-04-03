@@ -8,7 +8,7 @@ import Table from '../../components/Table/Table'
 import Content from '../../components/Content/Content'
 import BarChartRevenue from '../BarChartRevenue/BarChartRevenue'
 import PieChartRevenue from '../PieChartRevenue/PieChartRevenue'
-import { introdata, annualData, quarterlyData, pieannualData, piequarterlyData, annualtabledata, quarterlytabledata, demoData } from './RevenueData'
+import { introdata, pieannualData, piequarterlyData, annualtabledata, quarterlytabledata, demoData } from './RevenueData'
 
 const useStyles = makeStyles({
 	root: {
@@ -33,38 +33,46 @@ const getData = (revenue_data: {
 		updatedAt: Date
 	}>
 }) => {
-	// const colors = ['#0396ff', '#d9d9d9', '#457b9d', '#3fa7d7', '#a8dadc', '#a8dadc']
-	// let annualData_ = revenue_data?.income_statement
-	// 	.map((elem) => {
-	// 		if (elem.annual === true) {
-	// 			elem['year'] = elem['fiscalDateEnding']
-	// 			elem['value'] = elem['totalRevenue']
-	// 			elem['color'] = colors[Math.floor(Math.random() * colors.length)]
-	// 			return elem
-	// 		}
-	// 	})
-	// 	.filter((elem) => elem !== undefined)
-	// let quarterlyData_ = revenue_data?.income_statement
-	// 	.map((elem) => {
-	// 		if (elem.annual !== true) {
-	// 			elem['year'] = elem['fiscalDateEnding']
-	// 			elem['value'] = elem['totalRevenue']
-	// 			elem['color'] = colors[Math.floor(Math.random() * colors.length)]
-	// 			return elem
-	// 		}
-	// 	})
-	// 	.filter((elem) => elem !== undefined)
-	// console.log(annualData_, quarterlyData_)
+	const colors = ['#0396ff', '#d9d9d9', '#457b9d', '#3fa7d7', '#a8dadc', '#a8dadc']
+	let annualData_ = revenue_data?.income_statement
+		.map((elem) => {
+			if (elem.annual === true) {
+				elem['year'] = elem['fiscalDateEnding']
+				elem['value'] = elem['totalRevenue']
+				elem['color'] = colors[Math.floor(Math.random() * colors.length)]
+				return elem
+			}
+		})
+		.filter((elem) => elem !== undefined)
+	let quarterlyData_ = revenue_data?.income_statement
+		.map((elem) => {
+			if (elem.annual !== true) {
+				elem['year'] = elem['fiscalDateEnding']
+				elem['value'] = elem['totalRevenue']
+				elem['color'] = colors[Math.floor(Math.random() * colors.length)]
+				return elem
+			}
+		})
+		.filter((elem) => elem !== undefined)
+	// console.log(annualData_, defAnnualData)
 	return {
-		annualData: annualData,
-		quarterlyData,
+		annualData: annualData_,
+		quarterlyData: quarterlyData_,
 	}
 }
 
 const RevenuePorted: React.FC<{ company: string; revenue_data: any }> = ({ company, revenue_data }) => {
 	console.log(revenue_data, 'revenue')
 	const classes = useStyles()
-	const { annualData, quarterlyData } = getData(revenue_data)
+	const [annualData, setAnnualData] = React.useState(getData(revenue_data).annualData)
+	const [quarterlyData, setQuarterlyData] = React.useState(getData(revenue_data).quarterlyData)
+	let i = 0
+	React.useEffect(() => {
+		const revenue_data_ = getData(revenue_data)
+		setAnnualData(revenue_data_.annualData)
+		setQuarterlyData(revenue_data_.quarterlyData)
+		console.log(i++, revenue_data)
+	}, [revenue_data])
 	return (
 		<div className={classes.root}>
 			<Grid container spacing={3}>
@@ -73,7 +81,7 @@ const RevenuePorted: React.FC<{ company: string; revenue_data: any }> = ({ compa
 						<Intro data={introdata} header={`${company} Revenue (2015 – 2020)`} />
 					</Grid>
 					<Grid item xs={12}>
-						<BarChartRevenue annual={annualData} quarterly={quarterlyData} header={`${company} Revenue`} />
+						{annualData && <BarChartRevenue annual={annualData} quarterly={quarterlyData} header={`${company} Revenue`} />}
 					</Grid>
 					<Grid item xs={12}>
 						<Content header={`${company} Revenue Year over Year (Y/Y) Growth`} />
