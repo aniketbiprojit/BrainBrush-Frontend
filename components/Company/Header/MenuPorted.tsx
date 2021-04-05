@@ -18,7 +18,19 @@ const MenuPorted = ({ company, tabValue }) => {
 						<Tab icon={<FaDollarSign />} label='Revenue' />
 					</Link>
 				</li>
-				<Tab icon={<FaCoins />} label='Financials' />
+				<li
+					className={
+						router.pathname == '/company/[company]/financial/balance_sheet' ||
+						router.pathname == '/company/[company]/financial/cashflow_statement' ||
+						router.pathname == '/company/[company]/financial/income_statement'
+							? 'active'
+							: null
+					}
+				>
+					<Link href={`/company/${company}/financial`}>
+						<Tab icon={<FaCoins />} label='Financials' />
+					</Link>
+				</li>
 				<li
 					className={
 						router.pathname == '/company/[company]/employees' ||
