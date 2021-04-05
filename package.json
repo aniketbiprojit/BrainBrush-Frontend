@@ -52,6 +52,7 @@
 		"autoprefixer": "^10.1.0",
 		"axios": "^0.21.1",
 		"axois": "^0.0.1-security",
+		"clsx": "^1.1.1",
 		"firebase": "^8.2.0",
 		"next": "^10.0.3",
 		"next-redux-wrapper": "^6.0.2",
