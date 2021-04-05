@@ -32,12 +32,13 @@ const useStyles = makeStyles((theme) => ({
 		padding: '5px',
 	},
 	chart: {
-		height: '300px',
+		height: '450px',
 	},
 }))
 
 const BarChartRevenue: React.FC<{ header: any; annual: any; quarterly: any }> = (props) => {
 	const { header, annual, quarterly } = props
+	console.log('bar chart', annual, quarterly)
 	const classes = useStyles()
 	const [toggleData, setToggleData] = useState(annual)
 

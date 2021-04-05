@@ -27,7 +27,7 @@ const ToggleButtons = (props) => {
 
 	return (
 		<ToggleButtonGroup value={alignment} exclusive onChange={handleAlignment} aria-label='text alignment'>
-			<ToggleButton selected classes={{ root: classes.root, selected: classes.selected }} value='left' aria-label='left aligned'>
+			<ToggleButton classes={{ root: classes.root, selected: classes.selected }} value='left' aria-label='left aligned'>
 				{leftcontent}
 			</ToggleButton>
 			<ToggleButton classes={{ root: classes.root, selected: classes.selected }} value='right' aria-label='right aligned'>

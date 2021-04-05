@@ -12,6 +12,7 @@ import Footer from './Footer/Footer'
 import Navbar from './Navbar/Navbar'
 import Reviews from './Reviews/Reviews'
 import Search from './Search/Search'
+import { YellowScrollDownButton } from './Features/YellowScrollDownButton'
 
 /** HOME PAGE LAYOUT CLASS
  * @class Home
@@ -46,6 +47,9 @@ class Home extends React.Component {
 				</div>
 				<div className='p-0 m-0'>
 					<Reviews />
+				</div>
+				<div className='relative mb-24'>
+					<YellowScrollDownButton />
 				</div>
 				<Footer />
 			</div>

@@ -11,7 +11,6 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import { Grid } from '@material-ui/core'
 import ToggleButton from '../../common/ToggleButton/Togglebutton'
-
 const StyledTableCell = withStyles((theme) => ({
 	head: {
 		padding: '10px',
@@ -50,15 +49,15 @@ const Tabular: React.FC<{ header: any; annual: any; quarterly: any }> = (props) 
 	const { annual, quarterly, header } = props
 	const classes = useStyles()
 
-	const [toggleData, setToggleData] = useState(annual)
+	// const [toggleData, setToggleData] = useState(annual)
 
-	const changeState = (newAlignment: any) => {
-		if (newAlignment === 'left') {
-			setToggleData(annual)
-		} else if (newAlignment === 'right') {
-			setToggleData(quarterly)
-		}
-	}
+	// const changeState = (newAlignment: any) => {
+	// 	if (newAlignment === 'left') {
+	// 		setToggleData(annual)
+	// 	} else if (newAlignment === 'right') {
+	// 		setToggleData(quarterly)
+	// 	}
+	// }
 
 	const checkValue = (growthData: any) => {
 		if (growthData.includes('+')) {
@@ -69,42 +68,80 @@ const Tabular: React.FC<{ header: any; annual: any; quarterly: any }> = (props) 
 	}
 
 	return (
-		<div className={classes.root}>
-			<Card>
-				<div className={classes.header}>
-					<Grid container>
-						<Grid item xs={9}>
-							{' '}
-							{header}{' '}
+		<div>
+			<div className={classes.root}>
+				<Card>
+					<div className={classes.header}>
+						<Grid container>
+							<Grid item xs={9}>
+								{' '}
+								{header}
+								{' - Annual'}
+							</Grid>
+							{/* <Grid item xs={3}>
+								<ToggleButton parentToggle={changeState} leftcontent={'Annual'} rightcontent={'Quarterly'} />
+							</Grid> */}
 						</Grid>
-						<Grid item xs={3}>
-							<ToggleButton parentToggle={changeState} leftcontent={'Annual'} rightcontent={'Quarterly'} />
+					</div>
+					<CardContent>
+						<TableContainer component={Paper}>
+							<Table aria-label='customized table'>
+								<TableHead>
+									<TableRow>
+										<StyledTableCell>Period</StyledTableCell>
+										<StyledTableCell align='left'>Revenue</StyledTableCell>
+										<StyledTableCell align='left'>Growth</StyledTableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{annual.map((row: any) => (
+										<StyledTableRow key={row.id}>
+											<StyledTableCell align='left'>{row.Period}</StyledTableCell>
+											<StyledTableCell align='left'>{row.Revenue}</StyledTableCell>
+											<StyledTableCell align='left'>{checkValue(row.Growth)}</StyledTableCell>
+										</StyledTableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+					</CardContent>
+				</Card>
+			</div>
+			<div className={classes.root}>
+				<Card>
+					<div className={classes.header}>
+						<Grid container>
+							<Grid item xs={9}>
+								{' '}
+								{header}
+								{' - Quarterly'}
+							</Grid>
 						</Grid>
-					</Grid>
-				</div>
-				<CardContent>
-					<TableContainer component={Paper}>
-						<Table aria-label='customized table'>
-							<TableHead>
-								<TableRow>
-									<StyledTableCell>Period</StyledTableCell>
-									<StyledTableCell align='left'>Revenue</StyledTableCell>
-									<StyledTableCell align='left'>Growth</StyledTableCell>
-								</TableRow>
-							</TableHead>
-							<TableBody>
-								{toggleData.map((row: any) => (
-									<StyledTableRow key={row.id}>
-										<StyledTableCell align='left'>{row.Period}</StyledTableCell>
-										<StyledTableCell align='left'>{row.Revenue}</StyledTableCell>
-										<StyledTableCell align='left'>{checkValue(row.Growth)}</StyledTableCell>
-									</StyledTableRow>
-								))}
-							</TableBody>
-						</Table>
-					</TableContainer>
-				</CardContent>
-			</Card>
+					</div>
+					<CardContent>
+						<TableContainer component={Paper}>
+							<Table aria-label='customized table'>
+								<TableHead>
+									<TableRow>
+										<StyledTableCell>Period</StyledTableCell>
+										<StyledTableCell align='left'>Revenue</StyledTableCell>
+										<StyledTableCell align='left'>Growth</StyledTableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{quarterly.map((row: any) => (
+										<StyledTableRow key={row.id}>
+											<StyledTableCell align='left'>{row.Period}</StyledTableCell>
+											<StyledTableCell align='left'>{row.Revenue}</StyledTableCell>
+											<StyledTableCell align='left'>{checkValue(row.Growth)}</StyledTableCell>
+										</StyledTableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+					</CardContent>
+				</Card>
+			</div>
 		</div>
 	)
 }

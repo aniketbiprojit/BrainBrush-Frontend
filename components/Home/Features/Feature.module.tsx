@@ -1,6 +1,9 @@
 /** Feature Module
  * @param props pos, img
  */
+
+import { FloatingObjects } from './FloatingObjects'
+
 const Feature = (props: any) => {
 	let image: any
 	if (props.pos === 'left') {
@@ -20,7 +23,7 @@ const Feature = (props: any) => {
 			<div id='text' className='flex flex-col max-h-max'>
 				<h1 className='mb-12 font-bold uppercase text-5xl'>Feature Name</h1>
 				<span style={{ height: '3px', width: '250px', backgroundColor: props.colored === 'yes' ? '#eee' : '#333' }} className='mb-12'></span>
-				<p className='text-xl font-thin leading-relaxed'>
+				<p className='text-xl font-thin leading-relaxed text-justify'>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quaerat perspiciatis incidunt voluptatum mollitia corporis
 					accusamus impedit sint voluptate? Debitis dignissimos vitae veritatis. Mollitia laborum aperiam id rerum excepturi illo neque
 					animi rem quo perferendis officiis vitae corrupti perspiciatis consequuntur, quibusdam nemo itaque quia vel accusamus.
@@ -28,6 +31,7 @@ const Feature = (props: any) => {
 			</div>
 			<div id='image' className={image}>
 				{props.img}
+				<FloatingObjects name='object-box-1' id='image-1' imgId='img1' />
 			</div>
 		</section>
 	)

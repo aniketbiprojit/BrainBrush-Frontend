@@ -4,12 +4,12 @@ export const introdata =
 
 //suggestion company data
 export const demoData = [
-	{ icon: 'H', name: 'Microsoft Revenue' },
-	{ icon: 'S', name: 'Samsung Revenue' },
-	{ icon: 'D', name: 'Dell Revenue' },
-	{ icon: 'N', name: 'Netflix Revenue' },
-	{ icon: 'L', name: 'Lenovo Revenue' },
-	{ icon: 'A', name: 'Asus Revenue' },
+	{ icon: 'H', name: 'Microsoft Employees' },
+	{ icon: 'S', name: 'Samsung Employees' },
+	{ icon: 'D', name: 'Dell Employees' },
+	{ icon: 'N', name: 'Netflix Employees' },
+	{ icon: 'L', name: 'Lenovo Employees' },
+	{ icon: 'A', name: 'Asus Employees' },
 ]
 
 //employe data

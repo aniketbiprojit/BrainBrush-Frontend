@@ -51,14 +51,14 @@ const links_company = [
 
 const styles = {
 	logo: 'text-4xl font-semibold text-white',
-	container: 'bg-gray-900 flex flex-col md:flex-row text-left justify-evenly px-14 py-36',
+	container: 'bg-gray-900 flex flex-col md:flex-row text-left justify-evenly p-14',
 	menu: {
 		header: 'font-bold text-lg p-2 py-8 md:pt-0 text-white flex flex-row',
 		icon: 'px-2 text-2xl text-secondary-light',
 		container: 'flex flex-col items-right space-x-5',
 		text: 'text-gray-400 font-medium no-underline hover:text-secondary-light',
 	},
-	copyContainer: 'bg-gray-900 flex text-left justify-evenly p-16 border-t border-gray-600',
+	copyContainer: 'bg-gray-900 flex text-left justify-evenly p-10 border-t border-gray-600',
 	copy: 'text-white no-underline text-center w-full',
 	search: {
 		box: 'flex flex-col justify-start mt-5 md:w-1/3 lg:w-1/4 lg:ml-2 lg:mr-10 lg:mt-0',

@@ -112,10 +112,8 @@ a {
 	top: 245%;
 	left: 15%;
 	z-index: 2;
-	height: 25vw;
-	width: 25vw;
-	border: 0 solid #000;
-	@apply hidden xl:block;
+	height: 24vw;
+	width: 24vw;
 }
 
 .object-box-1 .img1 {
@@ -126,6 +124,17 @@ a {
 	background-size: contain;
 	filter: drop-shadow(50px -15px 25px rgba(0, 0, 0, 0.3));
 	border-style: none;
+}
+
+/* .object-box-1 {
+	position: absolute;
+	top: 120%;
+	left: 15%;
+	z-index: 2;
+	height: 25vw;
+	width: 25vw;
+	border: 0 solid #000;
+	@apply hidden xl:block;
 }
 
 .object-box-2 {
@@ -168,7 +177,7 @@ a {
 	background-size: contain;
 	filter: drop-shadow(50px -15px 25px rgba(0, 0, 0, 0.3));
 	border-style: none;
-}
+} */
 
 #feature-card {
 	z-index: 1;
