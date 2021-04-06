@@ -5,6 +5,8 @@ import { CompanyHeaderPorted } from '../../../../components/Company/Header/Compa
 import FinancialHeader from '../../../../components/Company/Financials/FinancialHeader'
 import Footer from '../../../../components/Home/Footer/Footer'
 
+import CashFlowStatementLayout from '../../../../containers/financial/cashflow_statement'
+
 const CashflowStatement: React.FC<{ company: string }> = ({ company }) => {
 	const { route, query } = useRouter()
 	const isAbsolute = route === '/company/[company]/financials/cashflow-statement'
@@ -22,6 +24,7 @@ const CashflowStatement: React.FC<{ company: string }> = ({ company }) => {
 					<FinancialHeader company={company} />
 				</>
 			)}
+			<CashFlowStatementLayout company={company} />
 			{isAbsolute && (
 				<>
 					<Footer></Footer>

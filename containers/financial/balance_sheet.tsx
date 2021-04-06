@@ -9,7 +9,6 @@ const useStyles = makeStyles({
 	root: {
 		padding: '20px',
 		backgroundColor: '#F2F2F2',
-		marginTop: '270px',
 	},
 	stickyItem: {
 		position: 'sticky',
@@ -32,10 +31,10 @@ const BalanceSheetLayout: React.FC<{
 		<div className={classes.root}>
 			<Grid container spacing={3}>
 				<Grid item xs={12}>
-					<h2 className={classes.heading}>{`${company} Income Statement`}</h2>
+					<h2 className={classes.heading}>{`${company} Balance Sheet Statement`}</h2>
 				</Grid>
 				<Grid item xs={12}>
-					<Layout company={company} data={balancedata} name={'Income Statement'} />
+					<Layout company={company} data={balancedata} name={'Balance Sheet Statement'} />
 				</Grid>
 			</Grid>
 		</div>

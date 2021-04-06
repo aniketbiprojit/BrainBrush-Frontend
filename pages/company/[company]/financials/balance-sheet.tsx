@@ -3,6 +3,7 @@ import Head from 'next/head'
 import React from 'react'
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
 import FinancialHeader from '../../../../components/Company/Financials/FinancialHeader'
+import BalanceSheetLayout from '../../../../containers/financial/balance_sheet'
 import Footer from '../../../../components/Home/Footer/Footer'
 
 const BalanceSheet: React.FC<{ company: string }> = ({ company }) => {
@@ -22,6 +23,7 @@ const BalanceSheet: React.FC<{ company: string }> = ({ company }) => {
 					<FinancialHeader company={company} />
 				</>
 			)}
+			<BalanceSheetLayout company={company} />
 			{isAbsolute && (
 				<>
 					<Footer></Footer>

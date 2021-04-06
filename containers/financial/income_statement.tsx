@@ -3,11 +3,12 @@ import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Layout from '../../components/Financial/financial_format'
 
+import { balancedata } from './data'
+
 const useStyles = makeStyles({
 	root: {
 		padding: '20px',
 		backgroundColor: '#F2F2F2',
-		marginTop: '270px',
 	},
 	stickyItem: {
 		position: 'sticky',
@@ -33,7 +34,7 @@ const IncomeStatementLayout: React.FC<{
 					<h2 className={classes.heading}>{`${company} Income Statement`}</h2>
 				</Grid>
 				<Grid item xs={12}>
-					<Layout company={company} />
+					<Layout company={company} data={balancedata} name={'Income Statement'} />
 				</Grid>
 			</Grid>
 		</div>

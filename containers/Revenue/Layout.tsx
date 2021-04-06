@@ -54,7 +54,6 @@ const getData = (revenue_data: {
 			}
 		})
 		.filter((elem) => elem !== undefined)
-	// console.log(annualData_, defAnnualData)
 	return {
 		annualData: annualData_,
 		quarterlyData: quarterlyData_,
@@ -94,7 +93,7 @@ const RevenuePorted: React.FC<{ company: string; revenue_data: any }> = ({ compa
 						/>
 					</Grid>
 					<Grid item xs={12}>
-						<Table annual={annualtabledata} quarterly={quarterlytabledata} header={`${company} Revenue (Tabular)`} />
+						<Table annual={annualData} quarterly={quarterlyData} header={`${company} Revenue (Tabular)`} />
 					</Grid>
 				</Grid>
 				<Grid item xs={3}>
