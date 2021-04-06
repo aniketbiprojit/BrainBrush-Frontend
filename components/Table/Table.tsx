@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { withStyles, makeStyles } from '@material-ui/core/styles'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import { Grid } from '@material-ui/core'
-import ToggleButton from '../../common/ToggleButton/Togglebutton'
+
 const StyledTableCell = withStyles((theme) => ({
 	head: {
 		padding: '10px',
@@ -47,17 +47,8 @@ const useStyles = makeStyles({
 
 const Tabular: React.FC<{ header: any; annual: any; quarterly: any }> = (props) => {
 	const { annual, quarterly, header } = props
+	console.log('annual', annual)
 	const classes = useStyles()
-
-	// const [toggleData, setToggleData] = useState(annual)
-
-	// const changeState = (newAlignment: any) => {
-	// 	if (newAlignment === 'left') {
-	// 		setToggleData(annual)
-	// 	} else if (newAlignment === 'right') {
-	// 		setToggleData(quarterly)
-	// 	}
-	// }
 
 	const checkValue = (growthData: any) => {
 		if (growthData.includes('+')) {
@@ -78,9 +69,6 @@ const Tabular: React.FC<{ header: any; annual: any; quarterly: any }> = (props) 
 								{header}
 								{' - Annual'}
 							</Grid>
-							{/* <Grid item xs={3}>
-								<ToggleButton parentToggle={changeState} leftcontent={'Annual'} rightcontent={'Quarterly'} />
-							</Grid> */}
 						</Grid>
 					</div>
 					<CardContent>
@@ -94,13 +82,14 @@ const Tabular: React.FC<{ header: any; annual: any; quarterly: any }> = (props) 
 									</TableRow>
 								</TableHead>
 								<TableBody>
-									{annual.map((row: any) => (
-										<StyledTableRow key={row.id}>
-											<StyledTableCell align='left'>{row.Period}</StyledTableCell>
-											<StyledTableCell align='left'>{row.Revenue}</StyledTableCell>
-											<StyledTableCell align='left'>{checkValue(row.Growth)}</StyledTableCell>
-										</StyledTableRow>
-									))}
+									{annual &&
+										annual.map((row: any) => (
+											<StyledTableRow key={row.id}>
+												<StyledTableCell align='left'>{row.year}</StyledTableCell>
+												<StyledTableCell align='left'>{row.totalRevenue}</StyledTableCell>
+												<StyledTableCell align='left'>{row.Growth && checkValue(row.Growth)}</StyledTableCell>
+											</StyledTableRow>
+										))}
 								</TableBody>
 							</Table>
 						</TableContainer>
@@ -129,13 +118,14 @@ const Tabular: React.FC<{ header: any; annual: any; quarterly: any }> = (props) 
 									</TableRow>
 								</TableHead>
 								<TableBody>
-									{quarterly.map((row: any) => (
-										<StyledTableRow key={row.id}>
-											<StyledTableCell align='left'>{row.Period}</StyledTableCell>
-											<StyledTableCell align='left'>{row.Revenue}</StyledTableCell>
-											<StyledTableCell align='left'>{checkValue(row.Growth)}</StyledTableCell>
-										</StyledTableRow>
-									))}
+									{quarterly &&
+										quarterly.map((row: any) => (
+											<StyledTableRow key={row.id}>
+												<StyledTableCell align='left'>{row.year}</StyledTableCell>
+												<StyledTableCell align='left'>{row.totalRevenue}</StyledTableCell>
+												<StyledTableCell align='left'>{row.Growth && checkValue(row.Growth)}</StyledTableCell>
+											</StyledTableRow>
+										))}
 								</TableBody>
 							</Table>
 						</TableContainer>
