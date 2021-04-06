@@ -3,6 +3,7 @@ import { ResponsiveBar } from '@nivo/bar'
 
 const Bar: React.FC<{ data: any }> = (props) => {
 	const { data } = props
+
 	return (
 		<ResponsiveBar
 			theme={{
@@ -13,7 +14,7 @@ const Bar: React.FC<{ data: any }> = (props) => {
 			indexBy='year'
 			margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
 			padding={0.3}
-			maxValue={300}
+			maxValue={'auto'}
 			valueScale={{ type: 'linear' }}
 			indexScale={{ type: 'band', round: true }}
 			colors={{ datum: 'data.color' }}
