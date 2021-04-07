@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
 
-import ExpandableTable from '../Table/ExpandableTable'
+import BalanceSheetFormat from './balance_sheet_format'
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -24,15 +24,29 @@ const useStyles = makeStyles((theme: Theme) =>
 const FinanicalFormat: React.FC<{ company: string; data: any; name: string }> = ({ company, data, name }) => {
 	const classes = useStyles()
 
+	const renderComponent = (componentName) => {
+		componentName = componentName.trim()
+		switch (componentName) {
+			case 'Income Statement':
+				return ''
+			case 'Balance Sheet Statement':
+				return <BalanceSheetFormat />
+			case 'Cashflow Statement':
+				return ''
+			case 'Profitability':
+				return ''
+			case 'Ratios':
+				return ''
+		}
+	}
+
 	return (
 		<div>
 			<Grid container>
 				<Grid item xs={12}>
 					<Card className={classes.root}>
 						<CardHeader className={classes.cardheader} title={name} subheader='$ in millions' />
-						<CardContent>
-							<ExpandableTable />
-						</CardContent>
+						<CardContent>{renderComponent(name)}</CardContent>
 					</Card>
 				</Grid>
 			</Grid>

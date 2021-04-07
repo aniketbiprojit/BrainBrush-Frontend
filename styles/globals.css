@@ -248,3 +248,26 @@ input[type='checkbox']:checked + label:before {
 		width: 75vw;
 	}
 }
+
+/* CUSTOM_TABLE */
+
+.custom-table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.custom-table th {
+	background: #0396ff;
+	color: white;
+	border: 2px solid white;
+}
+
+.custom-table th,
+td {
+	text-align: right;
+	padding: 8px;
+}
+
+.custom-table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
