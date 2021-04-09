@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { withStyles, makeStyles } from '@material-ui/core/styles'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
@@ -47,14 +47,45 @@ const useStyles = makeStyles({
 
 const Tabular: React.FC<{ header: any; annual: any; quarterly: any }> = (props) => {
 	const { annual, quarterly, header } = props
+	const [annualGrowth, setAnnualGrowth] = useState([])
+	const [quarterlyGrowth, setQuarterlyGrowth] = useState([])
+
 	console.log('annual', annual)
 	const classes = useStyles()
 
+	useEffect(() => {
+		if (annual !== undefined) {
+			let x: number[] = []
+			annual.forEach(function (item, index) {
+				if (index < annual.length - 1) {
+					let growth: number = item.totalRevenue - annual[index + 1].totalRevenue
+					let growthRate: number = (growth / item.totalRevenue) * 100
+					x.push(+growthRate.toFixed(2))
+				}
+			})
+			setAnnualGrowth(x)
+		}
+	}, [annual])
+
+	useEffect(() => {
+		if (quarterly !== undefined) {
+			let x: number[] = []
+			quarterly.forEach(function (item, index) {
+				if (index < quarterly.length - 1) {
+					let growth: number = item.totalRevenue - quarterly[index + 1].totalRevenue
+					let growthRate: number = (growth / item.totalRevenue) * 100
+					x.push(+growthRate.toFixed(2))
+				}
+			})
+			setQuarterlyGrowth(x)
+		}
+	}, [quarterly])
+
 	const checkValue = (growthData: any) => {
-		if (growthData.includes('+')) {
-			return <div style={{ color: 'green' }}>{growthData}</div>
+		if (growthData > 0) {
+			return <div style={{ color: 'green' }}>{growthData + ' %'}</div>
 		} else {
-			return <div style={{ color: 'red' }}>{growthData}</div>
+			return <div style={{ color: 'red' }}>{growthData + ' %'}</div>
 		}
 	}
 
@@ -83,11 +114,11 @@ const Tabular: React.FC<{ header: any; annual: any; quarterly: any }> = (props) 
 								</TableHead>
 								<TableBody>
 									{annual &&
-										annual.map((row: any) => (
+										annual.map((row: any, i: number) => (
 											<StyledTableRow key={row.id}>
 												<StyledTableCell align='left'>{row.year}</StyledTableCell>
 												<StyledTableCell align='left'>{row.totalRevenue}</StyledTableCell>
-												<StyledTableCell align='left'>{row.Growth && checkValue(row.Growth)}</StyledTableCell>
+												<StyledTableCell align='left'>{annualGrowth[i] && checkValue(annualGrowth[i])}</StyledTableCell>
 											</StyledTableRow>
 										))}
 								</TableBody>
@@ -119,11 +150,11 @@ const Tabular: React.FC<{ header: any; annual: any; quarterly: any }> = (props) 
 								</TableHead>
 								<TableBody>
 									{quarterly &&
-										quarterly.map((row: any) => (
+										quarterly.map((row: any, i: number) => (
 											<StyledTableRow key={row.id}>
 												<StyledTableCell align='left'>{row.year}</StyledTableCell>
 												<StyledTableCell align='left'>{row.totalRevenue}</StyledTableCell>
-												<StyledTableCell align='left'>{row.Growth && checkValue(row.Growth)}</StyledTableCell>
+												<StyledTableCell align='left'>{quarterlyGrowth[i] && checkValue(quarterlyGrowth[i])}</StyledTableCell>
 											</StyledTableRow>
 										))}
 								</TableBody>
