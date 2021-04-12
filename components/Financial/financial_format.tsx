@@ -6,6 +6,7 @@ import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
 
 import BalanceSheetFormat from './balance_sheet_format'
+import IncomeStatementFormat from './income_statement_format'
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -28,7 +29,7 @@ const FinanicalFormat: React.FC<{ company: string; data: any; name: string }> = 
 		componentName = componentName.trim()
 		switch (componentName) {
 			case 'Income Statement':
-				return ''
+				return <IncomeStatementFormat />
 			case 'Balance Sheet Statement':
 				return <BalanceSheetFormat />
 			case 'Cashflow Statement':

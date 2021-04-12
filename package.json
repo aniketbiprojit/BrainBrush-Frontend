@@ -37,6 +37,7 @@
 		}
 	},
 	"dependencies": {
+		"@devexpress/dx-react-grid-material-ui": "^2.7.5",
 		"@fortawesome/fontawesome-svg-core": "^1.2.32",
 		"@fortawesome/free-solid-svg-icons": "^5.15.1",
 		"@fortawesome/react-fontawesome": "^0.1.14",

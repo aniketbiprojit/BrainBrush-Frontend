@@ -271,3 +271,43 @@ td {
 .custom-table tr:nth-child(even) {
 	background-color: #f2f2f2;
 }
+
+.hide:nth-last-child(1) {
+	display: none !important;
+}
+
+/* Income Statement Custom Table START */
+.income-statement {
+	font-size: 16px;
+}
+
+.income-statement .MuiTableRow-root td {
+	font-size: 16px;
+}
+
+.income-statement .MuiTableRow-root th:nth-child(-n + 2) {
+	z-index: 1 !important;
+	font-weight: 500;
+}
+
+.income-statement .MuiTableRow-root td:nth-child(-n + 2) {
+	z-index: 1 !important;
+}
+
+.income-statement .MuiTableRow-root:nth-child(odd) td:nth-child(-n + 2) {
+	background-color: rgb(238, 238, 238);
+}
+
+.income-statement .MuiTableRow-head th {
+	background-color: #0396ff;
+	border: 1px solid white;
+	font-size: 18px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.income-statement .MuiTableBody-root tr:nth-child(odd) {
+	background-color: rgb(238, 238, 238) !important;
+}
+
+/* Income Statement Custom Table END */
