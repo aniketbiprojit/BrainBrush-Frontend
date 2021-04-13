@@ -52,7 +52,11 @@ const MenuPorted = ({ company, tabValue }) => {
 				</li>
 				<Tab icon={<FaPiggyBank />} label='Investors' />
 				<Tab icon={<GiTrophyCup />} label='Competitors' />
-				<Tab icon={<FaMapMarkedAlt />} label='Location' />
+				<li className={router.pathname == '/company/[company]/location' ? 'active' : null}>
+					<Link href={`/company/${company}/location`}>
+						<Tab icon={<FaMapMarkedAlt />} label='Location' />
+					</Link>
+				</li>
 				<Tab icon={<BsFillBarChartFill />} label='Other' />
 			</Tabs>
 		</div>
