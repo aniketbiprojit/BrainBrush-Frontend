@@ -62,10 +62,10 @@ class Header extends React.Component<{ company: string; logo?: string }> {
 }
 
 export const CompanyHeaderPorted: React.FC<{
-	company: string
-	tabValue: any
+	company?: string
+	tabValue?: any
 	logo?: string
-	symbol: string
+	symbol?: string
 }> = ({ company, tabValue, logo, symbol }) => {
 	return (
 		<div>

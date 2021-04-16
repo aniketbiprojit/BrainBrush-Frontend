@@ -21,15 +21,15 @@ const useStyles = makeStyles({
 })
 
 const EmployeeLayout: React.FC<{
-	company: string
-	// introdata: any
-	// annualData: any
-	// quarterlyData: any
-	// pieannualData: any
-	// piequarterlyData: any
-	// annualtabledata: any
-	// quarterlytabledata: any
-	// demoData: any
+	company?: string
+	introdata?: any
+	annualData?: any
+	quarterlyData?: any
+	pieannualData?: any
+	piequarterlyData?: any
+	annualtabledata?: any
+	quarterlytabledata?: any
+	demoData?: any
 }> = (props) => {
 	const { company } = props
 

@@ -18,8 +18,8 @@ const useStyles = makeStyles({
 })
 
 const ExecutiveTeamLayout: React.FC<{
-	// employeesData: any;
-	// demoData: any
+	employeesData?: any
+	demoData?: any
 }> = () => {
 	//const { employeesData, demoData } = props
 	const classes = useStyles()

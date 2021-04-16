@@ -22,14 +22,14 @@ const useStyles = makeStyles({
 
 const RevenueEmployeesLayout: React.FC<{
 	company: string
-	// introdata: any
-	// annualData: any
-	// quarterlyData: any
-	// pieannualData: any
-	// piequarterlyData: any
-	// annualtabledata: any
-	// quarterlytabledata: any
-	// demoData: any
+	introdata?: any
+	annualData?: any
+	quarterlyData?: any
+	pieannualData?: any
+	piequarterlyData?: any
+	annualtabledata?: any
+	quarterlytabledata?: any
+	demoData?: any
 }> = (props) => {
 	const { company } = props
 	const classes = useStyles()
