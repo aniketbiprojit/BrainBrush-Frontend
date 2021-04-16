@@ -80,7 +80,9 @@ const RevenuePorted: React.FC<{ company: string; revenue_data: any }> = ({ compa
 						<Intro data={introdata} header={`${company} Revenue (2015 – 2020)`} />
 					</Grid>
 					<Grid item xs={12}>
-						{annualData && <BarChartRevenue annual={annualData} quarterly={quarterlyData} header={`${company} Revenue`} />}
+						{annualData && (
+							<BarChartRevenue annual={annualData} quarterly={quarterlyData} header={`${company} Revenue`} company={company} />
+						)}
 					</Grid>
 					<Grid item xs={12}>
 						<Content header={`${company} Revenue Year over Year (Y/Y) Growth`} />
