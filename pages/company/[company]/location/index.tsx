@@ -29,9 +29,9 @@ const Location: React.FC<{ company: string }> = ({ company }) => {
 						width='100%'
 						height='450'
 						frameBorder='0'
-						allowFullScreen=''
+						allowFullScreen={false}
 						aria-hidden='false'
-						tabIndex='0'
+						tabIndex={0}
 						style={{ border: 0 }}
 					/>
 				</div>

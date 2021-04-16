@@ -6,7 +6,7 @@ import { companyData } from '../../../../../api/CompanyDataFetch'
 import { revenue } from '../../../../../api/RevenueDataFetch'
 import BarChartRevenue from './../../../../../containers/BarChartRevenue/BarChartRevenue'
 
-import { UseRouter } from 'next/router'
+// import { UseRouter } from 'next/router'
 
 const RevenueAnnualGraph = () => {
 	// const { route, query } = useRouter()
