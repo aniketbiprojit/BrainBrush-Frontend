@@ -19,7 +19,7 @@ const BalanceSheet: React.FC<{ company: string }> = ({ company }) => {
 					<Head>
 						<title>{company} Financials | Brainbrush</title>
 					</Head>
-					<CompanyHeaderPorted tabValue={2} company={company} />
+					<CompanyHeaderPorted symbol={company} tabValue={2} company={company} />
 					<FinancialHeader company={company} />
 				</>
 			)}
