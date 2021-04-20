@@ -24,7 +24,7 @@ const Revenue: React.FC<{ company: string }> = ({ company }) => {
 		setCompanyState(company)
 		if (company !== undefined) {
 			companyData(company).then((res) => {
-				setCompanyState(res.data.company_name)
+				// setCompanyState(res.data.company_name)
 				console.log(res.data.logo)
 				setLogo(res.data.logo.url)
 			})

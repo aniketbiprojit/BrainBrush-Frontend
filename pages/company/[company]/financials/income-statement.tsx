@@ -1,10 +1,9 @@
 import { useRouter } from 'next/dist/client/router'
 import Head from 'next/head'
-import React from 'react'
+import React, { useState } from 'react'
 import { CompanyHeaderPorted } from '../../../../components/Company/Header/CompanyHeader'
 import FinancialHeader from '../../../../components/Company/Financials/FinancialHeader'
 import Footer from '../../../../components/Home/Footer/Footer'
-
 import IncomeStatementLayout from '../../../../containers/financial/income_statement'
 
 const IncomeStatement: React.FC<{ company: string }> = ({ company }) => {
@@ -13,6 +12,7 @@ const IncomeStatement: React.FC<{ company: string }> = ({ company }) => {
 	if (isAbsolute) {
 		company = query.company as string
 	}
+
 	return (
 		<>
 			{isAbsolute && (
@@ -20,7 +20,7 @@ const IncomeStatement: React.FC<{ company: string }> = ({ company }) => {
 					<Head>
 						<title>{company} Financials | Brainbrush</title>
 					</Head>
-					<CompanyHeaderPorted tabValue={2} company={company} />
+					<CompanyHeaderPorted symbol={company} tabValue={2} company={company} />
 					<FinancialHeader company={company} />
 				</>
 			)}
