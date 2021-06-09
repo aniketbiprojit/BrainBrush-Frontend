@@ -1,21 +1,51 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+// @ts-ignore
+import ShowMoreText from 'react-show-more-text'
 
-function InitialTextBox() {
-  return (
-    <>
-      <Card border="light" style={{ width: '18rem' }}>
-        <Card.Header>Header</Card.Header>
-        <Card.Body>
-          <Card.Title>Light Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the bulk
-            of the card's content.
-      </Card.Text>
-        </Card.Body>
-      </Card>
-    </>
-  );
+const useStyles = makeStyles({
+	root: {
+		margin: '20px',
+		minWidth: 275,
+	},
+	header: {
+		padding: '10px',
+		fontSize: '25px',
+		fontWeight: 'bold',
+	},
+})
+
+const InitialTextBox: React.FC<{ data: any; }> = (props) => {
+	const { data } = props
+	const classes = useStyles()
+
+	const executeOnClick = (isExpanded: any) => {
+		console.log(isExpanded)
+	}
+
+	return (
+		<div className={classes.root}>
+			{/* <div className={classes.header}> {header} </div> */}
+			<Card>
+				<CardContent>
+					<ShowMoreText
+						lines={3}
+						more='Show more'
+						less='Show less'
+						className='content-css'
+						anchorClass='my-anchor-css-class'
+						onClick={executeOnClick}
+						expanded={false}
+            width={280}
+					>
+						{data}
+					</ShowMoreText>
+				</CardContent>
+			</Card>
+		</div>
+	)
 }
 
-export default InitialTextBox;
+export default InitialTextBox

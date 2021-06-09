@@ -8,8 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
     "@nivo/bar": "^0.70.1",
     "@nivo/core": "^0.70.1",
     "bootstrap": "^4.6.0",
@@ -17,7 +22,9 @@
     "nivo": "^0.31.0",
     "react": "17.0.2",
     "react-bootstrap": "^1.6.1",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-show-more": "^2.0.0",
+    "react-show-more-text": "^1.4.6"
   },
   "devDependencies": {
     "@types/react": "17.0.9",
