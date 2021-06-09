@@ -25,9 +25,12 @@ export default function AlignItemsList() {
     const classes = useStyles();
 
     return (
-        <List className={classes.root}>
+            <List className={classes.root}>
             <ListItem alignItems="flex-start">
-                <h3>RELATED</h3>
+                <ListItemText primary="RELATED">
+                
+                </ListItemText>
+            
             </ListItem>
             <ListItem alignItems="flex-start">
                 <ListItemAvatar>

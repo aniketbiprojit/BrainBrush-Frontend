@@ -4,6 +4,8 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 // @ts-ignore
 import ShowMoreText from 'react-show-more-text'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown, faAngleUp, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const useStyles = makeStyles({
 	root: {
@@ -15,6 +17,8 @@ const useStyles = makeStyles({
 		fontSize: '25px',
 		fontWeight: 'bold',
 	},
+	icon: {
+		fontSize: '25px'	}
 })
 
 const InitialTextBox: React.FC<{ data: any;  header: string }> = (props) => {
@@ -25,6 +29,9 @@ const InitialTextBox: React.FC<{ data: any;  header: string }> = (props) => {
 		console.log(isExpanded)
 	}
 
+	const upWard = <FontAwesomeIcon className={classes.icon} icon={faAngleUp} />
+	const downWard = <FontAwesomeIcon className={classes.icon} icon={faAngleDown} />
+
 	return (
 		<div className={classes.root}>
 			<div className={classes.header}> {header} </div>
@@ -32,13 +39,13 @@ const InitialTextBox: React.FC<{ data: any;  header: string }> = (props) => {
 				<CardContent>
 					<ShowMoreText
 						lines={3}
-						more='Show more'
-						less='Show less'
+						more={downWard}
+						less={upWard}
 						className='content-css'
 						anchorClass='my-anchor-css-class'
 						onClick={executeOnClick}
 						expanded={false}
-            width={280}
+            			width={280}
 					>
 						{data}
 					</ShowMoreText>

@@ -24,19 +24,20 @@ const useStyles = makeStyles({
 	stickyItem: {
 		position: 'sticky',
 		top: 150,
+		float: 'left',
 	},
 })
 
 export const Company: React.FC = ({ company }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
 	const classes = useStyles()
 	return <Fragment>
-		<div>
+		<Container className="mt-5 pt-3">
 			<Grid item xs={9}>
-				<Grid item xs={12}>
-				<InitialTextBox data={"data"} header={company} ></InitialTextBox>
+				<Grid className="mb-5 pb-3" item xs={12}>
+				<InitialTextBox data={introdata} header={company} ></InitialTextBox>
 				</Grid>
 				<Grid item xs={12}>
-				<RevenueDescription header='gd' />
+				<RevenueDescription header='' />
 				</Grid>
 				<Grid item xs={12}>
 
@@ -46,7 +47,7 @@ export const Company: React.FC = ({ company }: InferGetServerSidePropsType<typeo
 			<Grid item xs={3}  className={classes.stickyItem}>
 			<RelatedListGroupItem></RelatedListGroupItem>
 			</Grid>
-		</div>
+		</Container>
 
 
 
