@@ -52,7 +52,6 @@ export const RevenueDescription: React.FC<{ header: string;}> = (props) => {
 					</Grid>{' '}
 				</div>
 				<CardContent style={{"height": "90vh"}}>
-                    <h3>bar here</h3>
                     {/* {JSON.stringify(annualData)} */}
                     <Bar data={annualData}/>
                 </CardContent>
