@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
 
 const ToggleButtons = (props) => {
 	const classes = useStyles()
-	const { leftcontent, rightcontent, parentToggle } = props
+	const { leftcontent, rightcontent } = props
 	const [alignment, setAlignment] = React.useState('left')
 
 	const handleAlignment = (event, newAlignment) => {
-		parentToggle(newAlignment)
+		// parentToggle(newAlignment)
 		setAlignment(newAlignment)
 	}
 

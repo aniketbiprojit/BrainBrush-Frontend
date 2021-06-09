@@ -17,8 +17,8 @@ const useStyles = makeStyles({
 	},
 })
 
-const InitialTextBox: React.FC<{ data: any; }> = (props) => {
-	const { data } = props
+const InitialTextBox: React.FC<{ data: any;  header: string }> = (props) => {
+	const { data, header } = props
 	const classes = useStyles()
 
 	const executeOnClick = (isExpanded: any) => {
@@ -27,7 +27,7 @@ const InitialTextBox: React.FC<{ data: any; }> = (props) => {
 
 	return (
 		<div className={classes.root}>
-			{/* <div className={classes.header}> {header} </div> */}
+			<div className={classes.header}> {header} </div>
 			<Card>
 				<CardContent>
 					<ShowMoreText

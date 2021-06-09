@@ -27,6 +27,9 @@ export default function AlignItemsList() {
     return (
         <List className={classes.root}>
             <ListItem alignItems="flex-start">
+                <h3>RELATED</h3>
+            </ListItem>
+            <ListItem alignItems="flex-start">
                 <ListItemAvatar>
                     <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
                 </ListItemAvatar>

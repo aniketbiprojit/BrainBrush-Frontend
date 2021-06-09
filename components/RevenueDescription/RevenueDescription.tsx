@@ -10,6 +10,8 @@ import ShareIcon from '@material-ui/icons/Share'
 import GetAppIcon from '@material-ui/icons/GetApp'
 import CodeIcon from '@material-ui/icons/Code'
 import ToggleButton from '../../common/Togglebutton/Togglebutton'
+import { Bar } from '../Charts/Bar'
+import { annualData } from '../RevenueData/RevenueData'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -32,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }))
 
-export const RevenueDescription: React.FC<{ header: any; graphdata: any }> = (props) => {
+export const RevenueDescription: React.FC<{ header: string;}> = (props) => {
 	const { header } = props
 	const classes = useStyles()
 	return (
@@ -49,7 +51,11 @@ export const RevenueDescription: React.FC<{ header: any; graphdata: any }> = (pr
 						</Grid>
 					</Grid>{' '}
 				</div>
-				<CardContent></CardContent>
+				<CardContent style={{"height": "90vh"}}>
+                    <h3>bar here</h3>
+                    {/* {JSON.stringify(annualData)} */}
+                    <Bar data={annualData}/>
+                </CardContent>
 				<CardActions>
 					<Grid container>
 						<Grid item xs={10}>

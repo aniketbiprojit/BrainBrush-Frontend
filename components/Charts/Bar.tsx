@@ -6,7 +6,7 @@ import { annualData } from '../RevenueData/RevenueData'
     
 // ]}
 
-export const Bar: React.FC<{data: {}}> = ({ data }) => {
+export const Bar: React.FC<{data: {};}> = ({ data }) => {
    
     
     return <ResponsiveBar
@@ -36,6 +36,20 @@ export const Bar: React.FC<{data: {}}> = ({ data }) => {
                 rotation: -45,
                 lineWidth: 6,
                 spacing: 10
+            }
+        ]}
+        fill={[
+            {
+                match: {
+                    id: 'fries'
+                },
+                id: 'dots'
+            },
+            {
+                match: {
+                    id: 'sandwich'
+                },
+                id: 'lines'
             }
         ]}
         borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
