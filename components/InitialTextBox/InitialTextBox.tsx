@@ -45,7 +45,7 @@ const InitialTextBox: React.FC<{ data: any;  header: string }> = (props) => {
 						anchorClass='my-anchor-css-class'
 						onClick={executeOnClick}
 						expanded={false}
-            			width={280}
+            			// width={280}
 					>
 						{data}
 					</ShowMoreText>

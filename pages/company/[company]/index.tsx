@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { Button, Container } from 'react-bootstrap'
@@ -9,6 +9,7 @@ import { annualData, introdata } from '../../../components/RevenueData/RevenueDa
 import { RevenueDescription } from '../../../components/RevenueDescription/RevenueDescription'
 import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+import { ScrollNav } from '../../../components/ScrollNav/ScrollNav'
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	return { props: { company: context.query.company } }
@@ -29,8 +30,30 @@ const useStyles = makeStyles({
 })
 
 export const Company: React.FC = ({ company }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+	const [minimize, setMinimize] = useState(false)
+
+	useEffect(() => {
+		function handleScroll() {
+			return () => {
+				if (window.pageYOffset > 100) {
+					if (minimize === false) {
+						setMinimize(true)
+					}
+				} else {
+					if (minimize === true) {
+						setMinimize(false)
+					}
+				}
+			}
+		}
+		window.addEventListener('scroll', handleScroll())
+		return () => window.removeEventListener('scroll', handleScroll)
+	})
+
+
 	const classes = useStyles()
 	return <Fragment>
+		<ScrollNav company ={company}/>
 		<Container className="mt-5 pt-3">
 			<Grid item xs={9}>
 				<Grid className="mb-5 pb-3" item xs={12}>
@@ -48,29 +71,6 @@ export const Company: React.FC = ({ company }: InferGetServerSidePropsType<typeo
 			<RelatedListGroupItem></RelatedListGroupItem>
 			</Grid>
 		</Container>
-
-
-
-		{/* <Container className="mt-5 pt-3">
-			
-
-	
-			<div>
-				<h1 className="pb-3">{company} Revenue (2015 – 2020)</h1>
-			</div>
-			<div className="mt-5 pt-3">
-				
-			</div>
-			<div>
-				<Bar data={annualData}></Bar>
-			</div>
-			<div className="mt-5 pt-3">
-				
-			</div>
-			<div className="mt-5 pt-3">
-				
-			</div>
-		</Container> */}
 	</Fragment>
 }
 
