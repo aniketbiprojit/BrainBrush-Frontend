@@ -1,15 +1,15 @@
 import React, { Fragment, useEffect, useState } from 'react'
 
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
-import { Button, Container } from 'react-bootstrap'
-import {Bar} from '../../../components/Charts/Bar'
+import { Button, Col, Container, Row } from 'react-bootstrap'
+import { Bar } from '../../../components/Charts/Bar'
 import RelatedListGroupItem from '../../../components/RelatedListGroupItem/RelatedListGroupItem'
 import InitialTextBox from '../../../components/InitialTextBox/InitialTextBox'
 import { annualData, introdata } from '../../../components/RevenueData/RevenueData'
 import { RevenueDescription } from '../../../components/RevenueDescription/RevenueDescription'
 import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import { ScrollNav } from '../../../components/ScrollNav/ScrollNav'
+// import { ScrollNav } from '../../../components/ScrollNav/ScrollNav'
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	return { props: { company: context.query.company } }
@@ -53,23 +53,19 @@ export const Company: React.FC = ({ company }: InferGetServerSidePropsType<typeo
 
 	const classes = useStyles()
 	return <Fragment>
-		<ScrollNav company ={company}/>
 		<Container className="mt-5 pt-3">
-			<Grid item xs={9}>
-				<Grid className="mb-5 pb-3" item xs={12}>
-				<InitialTextBox data={introdata} header={company} ></InitialTextBox>
-				</Grid>
-				<Grid item xs={12}>
-				<RevenueDescription header='' />
-				</Grid>
-				<Grid item xs={12}>
 
-				</Grid>
-			</Grid>
-
-			<Grid item xs={3}  className={classes.stickyItem}>
-			<RelatedListGroupItem></RelatedListGroupItem>
-			</Grid>
+			<Row>
+				<Col sm={8}>
+					<InitialTextBox data={introdata} header={company} ></InitialTextBox>
+					<RevenueDescription header='' />
+				</Col>
+				<Col sm={4}>
+					<div style={{height:"100%"}} className="d-flex justify-content-center align-items-center">
+					<RelatedListGroupItem></RelatedListGroupItem>
+					</div>
+				</Col>
+			</Row>
 		</Container>
 	</Fragment>
 }

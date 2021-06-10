@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent'
 import ShowMoreText from 'react-show-more-text'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleUp, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { Button, IconButton } from '@material-ui/core'
+import { FaCoffee } from 'react-icons/fa'
 
 const useStyles = makeStyles({
 	root: {
@@ -21,36 +23,47 @@ const useStyles = makeStyles({
 		fontSize: '25px'	}
 })
 
+// const [fullData, setFullData] = useState()
+
 const InitialTextBox: React.FC<{ data: any;  header: string }> = (props) => {
+	
 	const { data, header } = props
 	const classes = useStyles()
 
-	const executeOnClick = (isExpanded: any) => {
-		console.log(isExpanded)
-	}
+	 
+	const revenueData = data.split(" ");
+	const revenueDataArray = revenueData.slice(0, 50);
+	const revenue = revenueDataArray.join(" ");
+	// console.log(revenue);
+	// console.log(data);
 
-	const upWard = <FontAwesomeIcon className={classes.icon} icon={faAngleUp} />
-	const downWard = <FontAwesomeIcon className={classes.icon} icon={faAngleDown} />
+	// console.log(data.split(" "));
+	// console.log(revenueData.slice(0, 10));
+	// console.log(revenueDataArray.join(" "));
+
+	const [isExpand, setIsExpand] = React.useState(false);
+
+	const handleData = () => {
+		const state = !isExpand;
+		setIsExpand(state);
+		// console.log(state);
+	}
 
 	return (
 		<div className={classes.root}>
 			<div className={classes.header}> {header} </div>
 			<Card>
 				<CardContent>
-					<ShowMoreText
-						lines={3}
-						more={downWard}
-						less={upWard}
-						className='content-css'
-						anchorClass='my-anchor-css-class'
-						onClick={executeOnClick}
-						expanded={false}
-            			// width={280}
-					>
-						{data}
-					</ShowMoreText>
+					{isExpand ? data : revenue}
 				</CardContent>
 			</Card>
+			<div className="d-flex justify-content-center">
+			<span onClick={handleData}>
+				{
+					isExpand? <FontAwesomeIcon icon={faAngleUp} /> : <FontAwesomeIcon icon={faAngleDown} />
+				}
+			</span>
+			</div>
 		</div>
 	)
 }
