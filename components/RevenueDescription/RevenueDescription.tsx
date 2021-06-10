@@ -147,7 +147,7 @@ const useStyles = makeStyles((theme) => ({
 export const RevenueDescription: React.FC<{ header: string;}> = (props) => {
 	const { header } = props
 	const classes = useStyles()
-	
+
 	return (
 		<div className={classes.root}>
 			<Card>
@@ -163,7 +163,6 @@ export const RevenueDescription: React.FC<{ header: string;}> = (props) => {
 					</Grid>{' '}
 				</div>
 				<CardContent style={{"height": "90vh"}}>
-                    {/* {JSON.stringify(annualData)} */}
                     <Bar data={data}/>
                 </CardContent>
 				<CardActions>

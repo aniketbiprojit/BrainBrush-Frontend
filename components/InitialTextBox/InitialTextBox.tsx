@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleUp, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { Button, IconButton } from '@material-ui/core'
 import { FaCoffee } from 'react-icons/fa'
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles({
 	root: {
@@ -58,11 +60,11 @@ const InitialTextBox: React.FC<{ data: any;  header: string }> = (props) => {
 				</CardContent>
 			</Card>
 			<div className="d-flex justify-content-center">
-			<span onClick={handleData}>
+			<IconButton onClick={handleData} >
 				{
-					isExpand? <FontAwesomeIcon icon={faAngleUp} /> : <FontAwesomeIcon icon={faAngleDown} />
+					isExpand? <ExpandLessIcon fontSize="large" /> : <ExpandMoreIcon fontSize="large" />
 				}
-			</span>
+			</IconButton >
 			</div>
 		</div>
 	)

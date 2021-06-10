@@ -5,9 +5,9 @@ import { Bar } from '../../../components/Charts/Bar'
 const annual:React.FC<{data : {}[]}> = (props) => {
     const {data} = props
     return (
-        <Container style={{height: '100%'}}>
+        <Container style={{height:"90vh"}}>
             <h4>bar</h4>
-            <Bar data={data}/>
+            {/* <Bar data={data}/> */}
         </Container>
     )
 }
