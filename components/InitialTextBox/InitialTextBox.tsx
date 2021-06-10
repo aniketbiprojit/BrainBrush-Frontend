@@ -53,7 +53,7 @@ const InitialTextBox: React.FC<{ data: any;  header: string }> = (props) => {
 
 	return (
 		<div className={classes.root}>
-			<div className={classes.header}> {header} </div>
+			<div className={classes.header}> <h3>{header} Revenue (2015-2020)</h3></div>
 			<Card>
 				<CardContent>
 					{isExpand ? data : revenue}

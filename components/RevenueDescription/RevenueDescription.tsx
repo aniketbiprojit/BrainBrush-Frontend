@@ -144,12 +144,13 @@ const useStyles = makeStyles((theme) => ({
 	},
 }))
 
-export const RevenueDescription: React.FC<{ header: string;}> = (props) => {
-	const { header } = props
+export const RevenueDescription: React.FC<{ header: string; company: string;}> = (props) => {
+	const { header, company } = props
 	const classes = useStyles()
 
 	return (
 		<div className={classes.root}>
+      <div><h3>{company} Revenue</h3></div>
 			<Card>
 				<div className={classes.header}>
 					<Grid container>

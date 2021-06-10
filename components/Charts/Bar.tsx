@@ -3,9 +3,6 @@ import { ResponsiveBar } from '@nivo/bar'
 import { annualData } from '../RevenueData/RevenueData'
 // import { annualData } from '../RevenueData/RevenueData'
 
-// interface IProp = {[
-    
-// ]}
 
 
 export const Bar: React.FC<{data: {}[];}> = ({ data }) => {
@@ -61,7 +58,7 @@ export const Bar: React.FC<{data: {}[];}> = ({ data }) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'country',
+        legend: '',
         legendPosition: 'middle',
         legendOffset: 32
     }}
@@ -69,7 +66,7 @@ export const Bar: React.FC<{data: {}[];}> = ({ data }) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'food',
+        legend: '',
         legendPosition: 'middle',
         legendOffset: -40
     }}
@@ -87,7 +84,7 @@ export const Bar: React.FC<{data: {}[];}> = ({ data }) => {
             itemsSpacing: 2,
             itemWidth: 100,
             itemHeight: 20,
-            itemDirection: 'left-to-right',
+            itemDirection: 'right-to-left',
             itemOpacity: 0.85,
             symbolSize: 20,
             effects: [

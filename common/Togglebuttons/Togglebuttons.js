@@ -2,7 +2,8 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import ToggleButton from '@material-ui/lab/ToggleButton'
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup'
-import annual from '../../pages/company/[company]/annual'
+// import revenue from '../../pages/company/[company]/revenue'
+import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -26,8 +27,10 @@ const ToggleButtons = (props) => {
 		setAlignment(newAlignment)
 	}
 
+	const router = useRouter()
+
 	const handleToggleButton = () =>{
-		console.log("clicked");
+		router.push('/company/google/revenue')
 	}
 
 
@@ -36,7 +39,7 @@ const ToggleButtons = (props) => {
 			<ToggleButton onClick={handleToggleButton} classes={{ root: classes.root, selected: classes.selected }} value='left' aria-label='left aligned'>
 				{leftcontent}
 			</ToggleButton>
-			<ToggleButton classes={{ root: classes.root, selected: classes.selected }} value='right' aria-label='right aligned'>
+			<ToggleButton onClick={handleToggleButton} classes={{ root: classes.root, selected: classes.selected }} value='right' aria-label='right aligned'>
 				{rightcontent}
 			</ToggleButton>
 		</ToggleButtonGroup>

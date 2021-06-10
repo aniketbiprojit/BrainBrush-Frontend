@@ -58,7 +58,7 @@ export const Company: React.FC = ({ company }: InferGetServerSidePropsType<typeo
 			<Row>
 				<Col sm={8}>
 					<InitialTextBox data={introdata} header={company} ></InitialTextBox>
-					<RevenueDescription header='' />
+					<RevenueDescription header='' company={company} />
 				</Col>
 				<Col sm={4}>
 					<div style={{height:"100%"}} className="d-flex justify-content-center align-items-center">
