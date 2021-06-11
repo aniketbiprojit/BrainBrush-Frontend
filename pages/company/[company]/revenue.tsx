@@ -1,15 +1,14 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import { Bar } from '../../../components/Charts/Bar'
+import BarChart from '../../../components/Charts/BarChart'
+// import { Bar } from '../../../components/Charts/BarChart'
 import { RevenueDescription } from '../../../components/RevenueDescription/RevenueDescription'
 
 const annual:React.FC<{data : {}[] ; company: string}> = (props) => {
     const {data, company} = props
     return (
-        <Container style={{height:"90vh"}}>
-            <h4>bar</h4>
-            {/* <Bar data={data}/> */}
-            <RevenueDescription header='' company={company}/>
+        <Container className="mt-5 pt-3" style={{height:"90vh"}}>
+            <BarChart/>
         </Container>
     )
 }

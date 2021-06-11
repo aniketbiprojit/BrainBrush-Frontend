@@ -10,117 +10,58 @@ import ShareIcon from '@material-ui/icons/Share'
 import GetAppIcon from '@material-ui/icons/GetApp'
 import CodeIcon from '@material-ui/icons/Code'
 import ToggleButtons from '../../common/Togglebuttons/Togglebuttons'
-import { Bar } from '../Charts/Bar'
-import { annualData } from '../RevenueData/RevenueData'
+import BarChart from '../Charts/BarChart'
+// import { Bar } from '../Charts/BarChart'
+// import { annualData } from '../RevenueData/RevenueData'
 
 
-const data = [
+const data = {
+  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  datasets: [
     {
-      "country": "AD",
-      "hot dog": 161,
-      "hot dogColor": "hsl(230, 70%, 50%)",
-      "burger": 151,
-      "burgerColor": "hsl(259, 70%, 50%)",
-      "sandwich": 9,
-      "sandwichColor": "hsl(272, 70%, 50%)",
-      "kebab": 74,
-      "kebabColor": "hsl(249, 70%, 50%)",
-      "fries": 4,
-      "friesColor": "hsl(237, 70%, 50%)",
-      "donut": 177,
-      "donutColor": "hsl(22, 70%, 50%)"
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)',
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+      ],
+      borderWidth: 1,
     },
-    {
-      "country": "AE",
-      "hot dog": 60,
-      "hot dogColor": "hsl(227, 70%, 50%)",
-      "burger": 79,
-      "burgerColor": "hsl(234, 70%, 50%)",
-      "sandwich": 186,
-      "sandwichColor": "hsl(264, 70%, 50%)",
-      "kebab": 145,
-      "kebabColor": "hsl(45, 70%, 50%)",
-      "fries": 29,
-      "friesColor": "hsl(333, 70%, 50%)",
-      "donut": 183,
-      "donutColor": "hsl(162, 70%, 50%)"
+  ],
+};
+
+const options = {
+  indexAxis: 'y',
+  // Elements options apply to all of the options unless overridden in a dataset
+  // In this case, we are setting the border of each horizontal bar to be 2px wide
+  elements: {
+    bar: {
+      borderWidth: 2,
     },
-    {
-      "country": "AF",
-      "hot dog": 82,
-      "hot dogColor": "hsl(199, 70%, 50%)",
-      "burger": 190,
-      "burgerColor": "hsl(25, 70%, 50%)",
-      "sandwich": 12,
-      "sandwichColor": "hsl(127, 70%, 50%)",
-      "kebab": 113,
-      "kebabColor": "hsl(272, 70%, 50%)",
-      "fries": 29,
-      "friesColor": "hsl(344, 70%, 50%)",
-      "donut": 175,
-      "donutColor": "hsl(173, 70%, 50%)"
+  },
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'right',
     },
-    {
-      "country": "AG",
-      "hot dog": 75,
-      "hot dogColor": "hsl(77, 70%, 50%)",
-      "burger": 68,
-      "burgerColor": "hsl(353, 70%, 50%)",
-      "sandwich": 162,
-      "sandwichColor": "hsl(321, 70%, 50%)",
-      "kebab": 69,
-      "kebabColor": "hsl(306, 70%, 50%)",
-      "fries": 71,
-      "friesColor": "hsl(71, 70%, 50%)",
-      "donut": 34,
-      "donutColor": "hsl(236, 70%, 50%)"
+    title: {
+      display: true,
+      text: 'Chart.js Horizontal Bar Chart',
     },
-    {
-      "country": "AI",
-      "hot dog": 17,
-      "hot dogColor": "hsl(347, 70%, 50%)",
-      "burger": 102,
-      "burgerColor": "hsl(98, 70%, 50%)",
-      "sandwich": 135,
-      "sandwichColor": "hsl(264, 70%, 50%)",
-      "kebab": 38,
-      "kebabColor": "hsl(33, 70%, 50%)",
-      "fries": 29,
-      "friesColor": "hsl(266, 70%, 50%)",
-      "donut": 74,
-      "donutColor": "hsl(274, 70%, 50%)"
-    },
-    {
-      "country": "AL",
-      "hot dog": 85,
-      "hot dogColor": "hsl(151, 70%, 50%)",
-      "burger": 45,
-      "burgerColor": "hsl(85, 70%, 50%)",
-      "sandwich": 60,
-      "sandwichColor": "hsl(60, 70%, 50%)",
-      "kebab": 34,
-      "kebabColor": "hsl(143, 70%, 50%)",
-      "fries": 20,
-      "friesColor": "hsl(327, 70%, 50%)",
-      "donut": 41,
-      "donutColor": "hsl(191, 70%, 50%)"
-    },
-    {
-      "country": "AM",
-      "hot dog": 107,
-      "hot dogColor": "hsl(30, 70%, 50%)",
-      "burger": 179,
-      "burgerColor": "hsl(83, 70%, 50%)",
-      "sandwich": 44,
-      "sandwichColor": "hsl(160, 70%, 50%)",
-      "kebab": 68,
-      "kebabColor": "hsl(57, 70%, 50%)",
-      "fries": 5,
-      "friesColor": "hsl(119, 70%, 50%)",
-      "donut": 85,
-      "donutColor": "hsl(308, 70%, 50%)"
-    }
-  ]
+  },
+};
 
 
 const useStyles = makeStyles((theme) => ({
@@ -150,8 +91,9 @@ export const RevenueDescription: React.FC<{ header: string; company: string;}> =
 
 	return (
 		<div className={classes.root}>
-      <div><h3>{company} Revenue</h3></div>
 			<Card>
+      <div><h3>{company} Revenue</h3></div>
+      <hr />
 				<div className={classes.header}>
 					<Grid container>
 						<Grid item xs={9}>
@@ -163,8 +105,9 @@ export const RevenueDescription: React.FC<{ header: string; company: string;}> =
 						</Grid>
 					</Grid>{' '}
 				</div>
-				<CardContent style={{"height": "90vh"}}>
-                    <Bar data={data}/>
+				<CardContent style={{"height": "80vh"}}>
+                    {/* <Bar data={data} options={options}/> */}
+                    <BarChart/>
                 </CardContent>
 				<CardActions>
 					<Grid container>

@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { Button, Col, Container, Row } from 'react-bootstrap'
-import { Bar } from '../../../components/Charts/Bar'
+// import { Bar } from '../../../components/Charts/BarChart'
 import RelatedListGroupItem from '../../../components/RelatedListGroupItem/RelatedListGroupItem'
 import InitialTextBox from '../../../components/InitialTextBox/InitialTextBox'
 import { annualData, introdata } from '../../../components/RevenueData/RevenueData'
