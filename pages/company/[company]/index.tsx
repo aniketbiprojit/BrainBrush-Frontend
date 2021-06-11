@@ -2,14 +2,12 @@ import React, { Fragment, useEffect, useState } from 'react'
 
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { Button, Col, Container, Row } from 'react-bootstrap'
-// import { Bar } from '../../../components/Charts/BarChart'
 import RelatedListGroupItem from '../../../components/RelatedListGroupItem/RelatedListGroupItem'
 import InitialTextBox from '../../../components/InitialTextBox/InitialTextBox'
 import { annualData, introdata } from '../../../components/RevenueData/RevenueData'
 import { RevenueDescription } from '../../../components/RevenueDescription/RevenueDescription'
-import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-// import { ScrollNav } from '../../../components/ScrollNav/ScrollNav'
+import {NegativeBarChartRevenue} from '../../../components/NegativeBarChartRevenue/NegativeBarChartRevenue';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	return { props: { company: context.query.company } }
@@ -57,8 +55,18 @@ export const Company: React.FC = ({ company }: InferGetServerSidePropsType<typeo
 
 			<Row>
 				<Col sm={8}>
-					<InitialTextBox data={introdata} header={company} ></InitialTextBox>
+					<div>
+					<InitialTextBox data={introdata} header={company} />
+					</div>
+					<div>
 					<RevenueDescription header='' company={company} />
+					</div>
+					<div>
+					<InitialTextBox data={introdata} header={company} />
+					</div>
+					<div>
+					<NegativeBarChartRevenue header='' company={company}  />
+					</div>
 				</Col>
 				<Col sm={4}>
 					<div style={{height:"100%"}} className="d-flex justify-content-center align-items-center">

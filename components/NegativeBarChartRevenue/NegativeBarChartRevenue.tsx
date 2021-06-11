@@ -10,7 +10,7 @@ import ShareIcon from '@material-ui/icons/Share'
 import GetAppIcon from '@material-ui/icons/GetApp'
 import CodeIcon from '@material-ui/icons/Code'
 import ToggleButtons from '../../common/Togglebuttons/Togglebuttons'
-import BarChart from '../Charts/BarChart/BarChart'
+import {BarChartWithNegative} from '../Charts/BarChart/BarChartWithNegative';
 import { Container } from 'react-bootstrap'
 // import { Bar } from '../Charts/BarChart'
 // import { annualData } from '../RevenueData/RevenueData'
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export const RevenueDescription: React.FC<{ header: string; company: string; }> = (props) => {
+export const NegativeBarChartRevenue: React.FC<{ header: string; company: string; }> = (props) => {
   const { header, company } = props
   const classes = useStyles()
 
@@ -106,7 +106,7 @@ export const RevenueDescription: React.FC<{ header: string; company: string; }> 
         </div>
         <CardContent style={{ "height": "80vh" }}>
          <Container fluid>
-         <BarChart />
+         <BarChartWithNegative />
          </Container>
         </CardContent>
         <CardActions>
