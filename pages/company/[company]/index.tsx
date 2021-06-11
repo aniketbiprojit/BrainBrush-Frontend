@@ -8,6 +8,7 @@ import { annualData, introdata } from '../../../components/RevenueData/RevenueDa
 import { RevenueDescription } from '../../../components/RevenueDescription/RevenueDescription'
 import { makeStyles } from '@material-ui/core/styles'
 import {NegativeBarChartRevenue} from '../../../components/NegativeBarChartRevenue/NegativeBarChartRevenue';
+import { PieRevenue } from '../../../components/RevenueDescription/RevenueDescriptionBySegment/PieRevenue'
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	return { props: { company: context.query.company } }
@@ -66,6 +67,12 @@ export const Company: React.FC = ({ company }: InferGetServerSidePropsType<typeo
 					</div>
 					<div>
 					<NegativeBarChartRevenue header='' company={company}  />
+					</div>
+					<div>
+					<InitialTextBox data={introdata} header={company} />
+					</div>
+					<div>
+					<PieRevenue  header='' company={company}  />
 					</div>
 				</Col>
 				<Col sm={4}>

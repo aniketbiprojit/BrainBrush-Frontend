@@ -30,7 +30,7 @@ const ToggleButtons = (props) => {
 	const router = useRouter()
 
 	const handleToggleButton = () =>{
-		router.push('/company/google/revenue')
+		router.push(`/`)
 	}
 
 

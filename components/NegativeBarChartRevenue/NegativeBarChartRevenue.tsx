@@ -12,6 +12,7 @@ import CodeIcon from '@material-ui/icons/Code'
 import ToggleButtons from '../../common/Togglebuttons/Togglebuttons'
 import {BarChartWithNegative} from '../Charts/BarChart/BarChartWithNegative';
 import { Container } from 'react-bootstrap'
+import { Button } from '@material-ui/core'
 // import { Bar } from '../Charts/BarChart'
 // import { annualData } from '../RevenueData/RevenueData'
 
@@ -91,8 +92,9 @@ export const NegativeBarChartRevenue: React.FC<{ header: string; company: string
   return (
     <div className={classes.root}>
       <Card>
-        <div><h3>{company} Revenue</h3></div>
-        <hr/>
+        <div>
+          <h3 style={{padding:"5px 20px ", borderBottom:'1px solid black'}}>{company} Revenue <Button style={{float:'right'}}>Period FY : 2020</Button></h3>
+          </div>
         <div className={classes.header}>
           <Grid container>
             <Grid item xs={9}>
@@ -104,7 +106,7 @@ export const NegativeBarChartRevenue: React.FC<{ header: string; company: string
             </Grid>
           </Grid>{' '}
         </div>
-        <CardContent style={{ "height": "80vh" }}>
+        <CardContent style={{ "height": "70vh" }}>
          <Container fluid>
          <BarChartWithNegative />
          </Container>

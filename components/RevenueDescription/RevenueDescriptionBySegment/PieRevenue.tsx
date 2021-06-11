@@ -9,8 +9,8 @@ import TocIcon from '@material-ui/icons/Toc'
 import ShareIcon from '@material-ui/icons/Share'
 import GetAppIcon from '@material-ui/icons/GetApp'
 import CodeIcon from '@material-ui/icons/Code'
-import ToggleButtons from '../../common/Togglebuttons/Togglebuttons'
-import BarChart from '../Charts/BarChart/BarChart'
+import ToggleButtons from '../../../common/Togglebuttons/Togglebuttons'
+import {PieChart} from '../../Charts/PieChart/PieChart'
 import { Container } from 'react-bootstrap'
 
 
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export const RevenueDescription: React.FC<{ header: string; company: string; }> = (props) => {
+export const PieRevenue: React.FC<{ header: string; company: string; }> = (props) => {
   const { header, company } = props
   const classes = useStyles()
 
@@ -52,14 +52,19 @@ export const RevenueDescription: React.FC<{ header: string; company: string; }> 
               {header}{' '}
             </Grid>
             <Grid item xs={3}>
-              <ToggleButtons leftcontent={'Annual'} rightcontent={'Quarterly'} />
+              {/* <div>
+              <small>Period FY 2020</small>
+              </div> */}
             </Grid>
           </Grid>{' '}
         </div>
-        <CardContent style={{ "height": "70vh" }}>
-          <Container fluid>
-            <BarChart />
-          </Container>
+        <CardContent style={{ "height": "80vh" }}>
+          <div className="d-flex justify-content-center">
+            <div  style={{height:'70vh', width:'70vh'}}>
+            <PieChart />
+            </div>
+
+          </div>
         </CardContent>
         <CardActions>
           <Grid container>

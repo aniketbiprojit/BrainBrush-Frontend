@@ -34,6 +34,7 @@ const BarChart = () => {
         height={400}
         width={600}
         options ={{ 
+          responsive: true,
             maintainAspectRatio: false
         }}
         />
